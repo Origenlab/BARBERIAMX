@@ -1,7 +1,12 @@
 /*! Barberia.mx — Editorial System v1
     Dirección: Editorial / Magazine · Negro + Crema + Cobre
     Carga DESPUÉS de style.css para overridear.
+
+    Mobile overhaul vive en /css/mobile.css y se importa al FINAL
+    de este archivo para ganar la cascada en cualquier viewport <1024px.
 */
+
+@import url('./mobile.css');
 
 /* ============================================
    1 · TOKENS
@@ -3173,3 +3178,4 @@ body.blog .ed-section + .ed-section { border-top-color: rgba(10,10,10,0.07); }
   .ed-section { page-break-inside: avoid; padding: 1rem 0; }
   .ed-blog-aside { position: static !important; max-height: none !important; overflow: visible !important; }
 }
+

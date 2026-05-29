@@ -1,0 +1,574 @@
+/* ════════════════════════════════════════════════════════════════════
+   BARBERIA.MX · Mobile.css
+   Overhaul mobile-first profesional · v1 · 2026-05-28
+
+   Estrategia
+   ──────────
+   · Última hoja del cascade — gana por orden de carga + !important quirúrgico
+   · Breakpoints unificados: 1024 (tablet), 768 (mobile L), 640 (mobile),
+     480 (small), 380 (XS · iPhone SE 1st gen)
+   · Touch targets ≥ 44px en todo lo tappable
+   · Container fluido aprovecha el viewport completo
+   · Tipografía clamp ya en editorial.css — aquí solo afinamos casos extremos
+   · Forms: 16px en mobile (anti-zoom iOS), min-height 48px
+   · Safe-area iOS (notch / Dynamic Island)
+   · Cero animaciones nuevas
+   ════════════════════════════════════════════════════════════════════ */
+
+
+/* ──────────────────────────────────────────────────────────────────
+   1 · CONTAINER FLUIDO · aprovecha todo el viewport en móvil
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  :root { --gutter-ed: 1.5rem; }
+}
+@media (max-width: 640px) {
+  :root { --gutter-ed: 1.125rem; }
+}
+@media (max-width: 380px) {
+  :root { --gutter-ed: 0.875rem; }
+}
+@supports (padding: max(0px)) {
+  .ed-wrap {
+    padding-left: max(var(--gutter-ed), env(safe-area-inset-left)) !important;
+    padding-right: max(var(--gutter-ed), env(safe-area-inset-right)) !important;
+  }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   2 · SECTION PADDING · respiración pero sin desperdiciar viewport
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ed-section { padding: 3rem 0 !important; }
+  .ed-cover { padding: 2rem 0 2.5rem !important; }
+  .ed-hero { padding: 1.5rem 0 2rem !important; }
+  .ed-manifesto { padding: 4rem 0 !important; }
+  .ed-cta { padding: 4rem 0 !important; }
+  .ed-news { padding: 2.5rem 0 !important; }
+  .ed-related { padding: 2.5rem 0 !important; }
+}
+@media (max-width: 480px) {
+  .ed-section { padding: 2.5rem 0 !important; }
+  .ed-cover { padding: 1.5rem 0 2rem !important; }
+  .ed-hero { padding: 1rem 0 1.5rem !important; }
+  .ed-manifesto { padding: 3rem 0 !important; }
+  .ed-cta { padding: 3rem 0 !important; }
+  .ed-news { padding: 2rem 0 !important; }
+  .ed-related { padding: 2rem 0 !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   3 · MASTHEAD · compactar y permitir que se vea siempre el contador
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .ed-masthead-inner { padding: 8px var(--gutter-ed); }
+  .ed-masthead { font-size: 10px; }
+  .ed-masthead-l, .ed-masthead-r > *:not(:first-child) { display: none; }
+}
+@media (max-width: 480px) {
+  .ed-masthead-inner { padding: 7px var(--gutter-ed); }
+  .ed-masthead { font-size: 9.5px; letter-spacing: .1em; }
+  .ed-masthead-r { gap: 0.5rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   4 · NAV / HEADER · burger 44px, logo proporcional
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .nav-container { padding: 14px var(--gutter-ed); }
+  .nav-logo-text { font-size: 1.25rem; }
+  .nav-logo-icon { width: 26px; height: 26px; }
+  .nav-toggle { width: 44px; height: 44px; min-width: 44px; }
+}
+@media (max-width: 480px) {
+  .nav-container { padding: 12px var(--gutter-ed); }
+  .nav-logo-text { font-size: 1.125rem; }
+  .nav-logo-icon { width: 24px; height: 24px; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   5 · BREADCRUMBS · wrap limpio + ocultar prefijo en XS
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .ed-crumbs { padding: 12px 0; font-size: 10px; letter-spacing: .12em; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .ed-crumbs { padding: 10px 0; font-size: 9.5px; gap: 6px; }
+  .ed-breadcrumbs-bar .ed-crumbs::before {
+    content: "→";
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 4px;
+    font-size: 11px;
+  }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   6 · HERO (homepage + covers) · jerarquía tighter
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .ed-hero-cols { gap: 1.75rem !important; }
+  .ed-hero-col-aside {
+    padding-left: 0 !important;
+    border-left: 0 !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid var(--rule) !important;
+  }
+  .ed-hero-title { font-size: clamp(1.875rem, 5.5vw, 2.75rem) !important; max-width: 100% !important; }
+  .ed-cover-title { font-size: clamp(2.25rem, 7vw, 3.5rem) !important; }
+}
+@media (max-width: 480px) {
+  .ed-hero-cols { gap: 1.25rem !important; margin-bottom: 1rem !important; }
+  .ed-hero-col-main { gap: 0.75rem !important; }
+  .ed-hero-title { font-size: clamp(1.625rem, 7vw, 2rem) !important; line-height: 1.08 !important; }
+  .ed-cover-title { font-size: clamp(1.875rem, 8vw, 2.5rem) !important; line-height: 1.05 !important; }
+  .ed-hero .ed-dek, .ed-cover .ed-dek {
+    font-size: 0.9375rem !important;
+    line-height: 1.55 !important;
+    max-width: 100% !important;
+  }
+  .ed-cover-dek { font-size: 0.9375rem !important; }
+  .ed-kicker { font-size: 10px !important; letter-spacing: .18em !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   7 · HERO SEARCH BAR · stack vertical con search prominente
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .ed-hero-search-bar { grid-template-columns: 1fr !important; gap: 0.5rem !important; padding-top: 1.5rem !important; }
+  .ed-hero-search-bar .ed-kicker-plain { font-size: 10px; letter-spacing: .18em; }
+  .ed-search input { font-size: 16px !important; min-height: 48px; padding: 14px 6px !important; }
+  .ed-search button { padding: 0 18px; min-height: 48px; font-size: 10px; }
+}
+@media (max-width: 480px) {
+  .ed-search-icon { padding: 0 12px; }
+  .ed-search button { padding: 0 14px; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   8 · QUICK NAV · scroll horizontal con snap profesional
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 1180px) and (min-width: 641px) {
+  .ed-quick-link { min-height: 100px; padding: 18px 18px 16px; }
+}
+@media (max-width: 640px) {
+  .ed-quick-grid {
+    grid-template-columns: repeat(6, minmax(72vw, 280px)) !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: var(--gutter-ed);
+    padding-left: var(--gutter-ed);
+    padding-right: var(--gutter-ed);
+    margin: 0 calc(-1 * var(--gutter-ed));
+    width: calc(100% + 2 * var(--gutter-ed));
+    max-width: none !important;
+  }
+  .ed-quick-link { scroll-snap-align: start; min-height: 100px; }
+  .ed-quick-name { font-size: 1rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   9 · SECTION INTRO · stack limpio sin doble divisor
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .ed-section-intro { gap: 1.5rem !important; margin-bottom: 2rem !important; padding-bottom: 1.25rem !important; }
+  .ed-section-intro-l { gap: 0.75rem !important; }
+  .ed-section-intro-r { padding-top: 1.25rem !important; }
+  .ed-section-intro-title { font-size: clamp(1.5rem, 4.5vw, 2rem) !important; }
+}
+@media (max-width: 480px) {
+  .ed-section-intro { gap: 1.25rem !important; }
+  .ed-section-intro-title { font-size: clamp(1.375rem, 5.5vw, 1.75rem) !important; }
+  .ed-section-intro-num { font-size: 10px !important; letter-spacing: .18em !important; }
+  .ed-section-intro-copy { font-size: 0.875rem !important; line-height: 1.6 !important; }
+  .ed-section-intro-r { gap: 0.9em !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   10 · STATE CARDS · 1col en small con padding ajustado
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ed-states-pro { gap: 1.25rem !important; margin-bottom: 2rem; }
+}
+@media (max-width: 480px) {
+  .ed-states-pro { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .ed-state-card-img { aspect-ratio: 16/9 !important; }
+  .ed-state-card-body { padding: 16px 16px 14px; }
+  .ed-state-card-title { font-size: 1.25rem !important; }
+  .ed-state-card-text { font-size: 0.875rem; line-height: 1.5; }
+  .ed-state-card-btn { min-height: 36px; padding: 8px 0; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   11 · STATS BAR · grid responsive limpio
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ed-stats-bar { grid-template-columns: repeat(3, 1fr) !important; }
+  .ed-stat-block:nth-child(n+4) { border-bottom: 0 !important; }
+  .ed-stat-block { padding: 1rem 0.875rem !important; min-height: 96px; }
+  .ed-stat-num { font-size: 1.5rem !important; }
+}
+@media (max-width: 560px) {
+  .ed-stats-bar { grid-template-columns: 1fr 1fr !important; }
+  .ed-stat-block { border-right: 1px solid var(--rule) !important; border-bottom: 1px solid var(--rule) !important; padding: 0.875rem !important; min-height: 88px; }
+  .ed-stat-block:nth-child(2n) { border-right: 0 !important; }
+  .ed-stat-block:last-child:nth-child(odd) { grid-column: 1 / 3; border-right: 0 !important; text-align: center; }
+  .ed-stat-num { font-size: 1.375rem !important; }
+  .ed-stat-label { font-size: 9.5px; }
+  .ed-stat-trend { font-size: 8.5px; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   12 · SORT BAR · stack vertical limpio, chips wrap
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .ed-sort-bar { padding: 14px 0 !important; gap: 0.875rem !important; }
+  .ed-sort-bar-l, .ed-sort-bar-r { gap: 4px; }
+  .ed-sort-tab, .ed-sort-chip {
+    min-height: 40px;
+    padding: 8px 10px;
+    font-size: 10px;
+    letter-spacing: .14em;
+  }
+  .ed-sort-label { font-size: 9px; letter-spacing: .18em; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   13 · REGIONES · cards full-width en small
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 560px) {
+  .ed-regions { grid-template-columns: 1fr !important; }
+  .ed-region { min-height: 180px; padding: 1.5rem 1.25rem !important; }
+  .ed-region-name { font-size: 1.5rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   14 · CHIPS · más legibles y tappables
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .ed-chips { gap: 8px; }
+  .ed-chip {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 10px;
+    letter-spacing: .15em;
+  }
+  .ed-chip-count { font-size: 9.5px; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   15 · FEATURES · big y small en mobile
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .ed-feature-big { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
+  .ed-feature-big .ed-feature-img { aspect-ratio: 16/10 !important; }
+  .ed-feature-big-body { padding: 0; }
+}
+@media (max-width: 480px) {
+  .ed-features { gap: 1.5rem !important; }
+  .ed-feature-sm { grid-column: 1 / 13 !important; }
+  .ed-feature-img { margin-bottom: 0.75rem !important; }
+  .ed-feature-name { font-size: 1.25rem !important; }
+  .ed-feature-big .ed-feature-name { font-size: 1.5rem !important; }
+  .ed-feature-dek { font-size: 1rem !important; }
+  .ed-feature-meta { font-size: 9px !important; gap: 0.5rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   16 · MARKETPLACE CATS · 1col @ 480
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ed-mkt-cats { grid-template-columns: 1fr 1fr; }
+  .ed-mkt-cat { min-height: 140px; padding: 24px 20px 20px; }
+}
+@media (max-width: 480px) {
+  .ed-mkt-cats { grid-template-columns: 1fr; }
+  .ed-mkt-cat-name { font-size: 1.5rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   17 · PRODUCTS · grid responsive
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ed-products { grid-template-columns: 1fr !important; gap: 1.25rem; }
+  .ed-product-img-wrap { aspect-ratio: 4/3 !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   18 · JOBS · layout limpio en mobile
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .ed-jobs-info { position: static !important; }
+  .ed-jobs-list { margin-top: 1.5rem; }
+}
+@media (max-width: 640px) {
+  .ed-job { grid-template-columns: 44px 1fr !important; gap: 14px !important; padding: 1.25rem 0.75rem !important; margin: 0 -0.75rem !important; }
+  .ed-job-logo { width: 44px; height: 44px; font-size: 0.9375rem; }
+  .ed-job-meta { grid-column: 1 / 3; padding-left: 58px !important; margin-top: 0.75rem; text-align: left !important; }
+  .ed-job-title { font-size: 1.125rem !important; }
+  .ed-job-tags { gap: 10px; }
+  .ed-jobs-stats { grid-template-columns: 1fr 1fr; margin: 1.5rem 0; }
+  .ed-jobs-stat-n { font-size: 2rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   19 · ARTICLES LIST · stack natural
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .ed-article-row { grid-template-columns: 1fr !important; }
+  .ed-article-num { display: none; }
+  .ed-article-thumb { order: -1; aspect-ratio: 16/9 !important; max-height: 220px; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   20 · ATLAS TILES · 1col @ 480
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ed-atlas { grid-template-columns: 1fr !important; gap: 1.5rem; }
+  .ed-atlas-name { font-size: 1.5rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   21 · DEPTS · 1col @ 720
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .ed-depts { grid-template-columns: 1fr !important; }
+  .ed-dept { grid-template-columns: 50px 1fr !important; padding: 1.75rem 1.25rem !important; min-height: 160px; }
+  .ed-dept-name { font-size: 1.75rem !important; }
+}
+@media (max-width: 480px) {
+  .ed-dept { grid-template-columns: 1fr !important; gap: 0.75rem; }
+  .ed-dept-num { padding-top: 0; }
+  .ed-dept-arrow { width: 16px; height: 16px; top: 1.25rem; right: 1rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   22 · BLOG TEASERS · stack limpio
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ed-blog-grid { grid-template-columns: 1fr !important; }
+  .ed-blog-img { aspect-ratio: 16/9 !important; }
+  .ed-blog-title { font-size: 1.25rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   23 · CTA REGISTRO · stack vertical, button full-width
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .ed-cta-grid { gap: 2rem !important; }
+}
+@media (max-width: 480px) {
+  .ed-cta-title { font-size: clamp(1.625rem, 7vw, 2.25rem) !important; }
+  .ed-cta-list li { grid-template-columns: 24px 1fr !important; padding: 12px 0 !important; font-size: 0.9375rem; }
+  .ed-cta-list li .n { font-size: 9.5px; }
+  .ed-actions .ed-btn { width: 100%; justify-content: center; min-height: 48px; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   24 · NEWSLETTER · form vertical limpio
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ed-news-title { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
+  .ed-news-dek { font-size: 0.9375rem !important; }
+  .ed-news-form { flex-direction: column; align-items: stretch; gap: 12px; border-bottom: 0; }
+  .ed-news-form input {
+    border-bottom: 1px solid var(--ink);
+    padding: 14px 4px !important;
+    font-size: 16px !important;
+    min-height: 48px;
+  }
+  .ed-news-form button {
+    padding: 14px !important;
+    border: 1px solid var(--ink) !important;
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+    min-height: 48px;
+  }
+  .ed-news-fine { font-size: 9.5px; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   25 · MANIFESTO · contain quote-mark + tipo responsive
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ed-manifesto::before {
+    font-size: clamp(10rem, 30vw, 18rem) !important;
+    top: -1.5rem !important;
+    left: -0.5rem !important;
+  }
+  .ed-manifesto p:not(.ed-manifesto-fine) { font-size: clamp(1.625rem, 5vw, 2.5rem) !important; }
+}
+@media (max-width: 480px) {
+  .ed-manifesto::before { font-size: 8rem !important; top: -0.5rem !important; left: 0 !important; opacity: .1; }
+  .ed-manifesto p:not(.ed-manifesto-fine) { font-size: 1.5rem !important; line-height: 1.15 !important; }
+  .ed-manifesto-fine { font-size: 0.9375rem !important; margin-top: 1.25rem !important; }
+  .ed-manifesto-sig { font-size: 9.5px !important; margin-top: 1.5rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   26 · RELATED · cards 1col en XS
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .ed-related-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 520px) {
+  .ed-related-grid { grid-template-columns: 1fr !important; }
+  .ed-related-link { min-height: 110px; }
+  .ed-related-title { font-size: 1.25rem !important; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   27 · 404 ERROR · responsive numerico + links
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .ed-error-num { font-size: clamp(7rem, 24vw, 12rem) !important; text-align: center; margin-bottom: 1rem; }
+  .ed-error-body { text-align: left; }
+  .ed-error-title { font-size: clamp(1.625rem, 5vw, 2.25rem) !important; }
+}
+@media (max-width: 480px) {
+  .ed-error-link { min-height: 48px; padding: 14px 0 !important; font-size: 10px; letter-spacing: .14em; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   28 · FOOTER · stack profesional + safe area
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+  .footer-col-brand { grid-column: 1 / -1; }
+  .footer-tagline { max-width: none; }
+}
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: 1fr !important; gap: 1.75rem !important; }
+  .footer-logo-text { font-size: 1.75rem; }
+  .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: 12px; font-size: 10px; }
+  .footer-social { gap: 14px; flex-wrap: wrap; }
+  .footer-col-title { font-size: 10px; letter-spacing: .18em; }
+}
+.footer-bottom-inner {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   29 · ACTIONS / BUTTONS · touch targets + stack full-width
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .ed-btn { padding: 14px 22px; min-height: 48px; font-size: 10px; letter-spacing: .18em; }
+  .ed-link-arrow { min-height: 36px; align-items: center; }
+  .ed-actions { gap: 10px; margin-top: 2rem !important; }
+}
+@media (max-width: 480px) {
+  .ed-actions:not(.ed-actions--center) { flex-direction: column; align-items: stretch; }
+  .ed-actions .ed-btn { width: 100%; justify-content: center; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   30 · FORMS · iOS no-zoom 16px en TODO input/select/textarea
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+    min-height: 48px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   31 · TYPOGRAPHIC FALLOUT · text-wrap balance global, hanging punct
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ed-hero-title,
+  .ed-cover-title,
+  .ed-section-intro-title,
+  .ed-cta-title,
+  .ed-news-title,
+  .ed-related-title { text-wrap: balance; hyphens: auto; -webkit-hyphens: auto; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   32 · TAP HIGHLIGHT · cleaner mobile interaction
+   ────────────────────────────────────────────────────────────────── */
+@media (hover: none) {
+  a, button { -webkit-tap-highlight-color: rgba(184, 115, 51, 0.15); }
+  /* Disable hover-only effects on touch devices */
+  .ed-state-card:hover { transform: none; }
+  .ed-feature:hover { transform: none; }
+  .ed-blog-card:hover { transform: none; }
+  .ed-related-link:hover { transform: none; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   33 · OVERFLOW PROTECTION · evitar scroll horizontal accidental
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+  .ed-section, .ed-cover, .ed-hero, .ed-cta, .ed-news, .ed-manifesto, .ed-related, .ed-breadcrumbs-bar {
+    overflow-x: hidden;
+  }
+  /* Excepción: quick-nav scroll horizontal sí permitido */
+  .ed-quick-nav { overflow-x: visible; }
+  .ed-quick-grid { overflow-x: auto; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────
+   34 · IMAGES · evitar overflow + base
+   ────────────────────────────────────────────────────────────────── */
+img, picture, video, svg { max-width: 100%; height: auto; }
+
+
+/* ──────────────────────────────────────────────────────────────────
+   35 · XS BREAKPOINT (380px · iPhone SE 1st gen) · ajustes finales
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 380px) {
+  :root { --gutter-ed: 0.875rem; }
+  .ed-hero-title { font-size: 1.5rem !important; }
+  .ed-cover-title { font-size: 1.75rem !important; }
+  .ed-section-intro-title { font-size: 1.25rem !important; }
+  .ed-section-intro-num { font-size: 9px !important; }
+  .ed-state-card-title { font-size: 1.125rem !important; }
+  .ed-quick-name { font-size: 0.9375rem !important; }
+  .ed-feature-name { font-size: 1.125rem !important; }
+  .ed-cta-title { font-size: 1.625rem !important; }
+  .ed-news-title { font-size: 1.5rem !important; }
+}
