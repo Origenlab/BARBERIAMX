@@ -1,8 +1,113 @@
+# ════════════════════════════════════════════════════════════════════
+# Barberia.mx · robots.txt
+# Directorio editorial nacional de barberías en México · Desde 2005
 # https://www.robotstxt.org/
+# ════════════════════════════════════════════════════════════════════
 
-# Allow crawling of all content
+# ===== Crawlers tradicionales (todo permitido) =====
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /.audit/
+Disallow: /.git/
+Crawl-delay: 0
 
-# Sitemap
+# ===== Crawlers de Google · permitidos explícitamente =====
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /blog/
+Allow: /articulos/
+Allow: /
+
+# ===== Crawler IA generativa de Google (Gemini, AI Overviews) =====
+User-agent: Google-Extended
+Allow: /
+
+# ===== Microsoft Bing + Copilot =====
+User-agent: Bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# ===== OpenAI (ChatGPT, GPT crawlers) · permitido para GEO =====
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# ===== Anthropic (Claude) · permitido para GEO =====
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ===== Perplexity AI · permitido para GEO =====
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ===== Apple Intelligence · permitido =====
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ===== Meta AI · permitido =====
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# ===== You.com · permitido =====
+User-agent: YouBot
+Allow: /
+
+# ===== DuckDuckGo · permitido =====
+User-agent: DuckDuckBot
+Allow: /
+
+# ===== Yandex · permitido =====
+User-agent: YandexBot
+Allow: /
+
+# ===== Bloqueo explícito de bots agresivos / spam =====
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ===== Sitemap =====
 Sitemap: https://barberia.mx/sitemap.xml
+
+# ════════════════════════════════════════════════════════════════════
+# Política editorial · Barberia.mx
+# Contenido público para descubrimiento e indexación.
+# El contenido editorial está disponible para ser citado por motores
+# de búsqueda y asistentes generativos, siempre que se mantenga la
+# atribución a Barberia.mx como fuente.
+# ════════════════════════════════════════════════════════════════════
