@@ -1,160 +1,73 @@
-<!-- ========== FOOTER PROFESIONAL ========== -->
-<footer class="footer">
-  <!-- Footer Main -->
+<!-- ============================================
+     SITE FOOTER · pie editorial
+     ============================================ -->
+<footer class="footer" role="contentinfo">
   <div class="footer-main">
     <div class="footer-container">
       <div class="footer-grid">
-        <!-- Column 1: Brand & Newsletter -->
+
         <div class="footer-col footer-col-brand">
-          <a href="/" class="footer-logo">
+          <a href="/" class="footer-logo" aria-label="Barberia.mx — Inicio">
             <span class="footer-logo-text">barberia<span class="footer-logo-accent">.mx</span></span>
           </a>
           <p class="footer-tagline">
-            El directorio de barberías más completo de México. Conectamos a los mejores barberos con clientes que buscan calidad.
+            Directorio editorial de la barbería mexicana. Una redacción independiente catalogando el oficio en los 32 estados desde 2005.
           </p>
-
-          <!-- Newsletter Mini -->
-          <div class="footer-newsletter">
-            <p class="footer-newsletter-title">Suscríbete al newsletter</p>
-            <form class="footer-newsletter-form">
-              <input type="email" placeholder="tu@email.com" class="footer-newsletter-input" required>
-              <button type="submit" class="footer-newsletter-btn">Enviar</button>
-            </form>
-          </div>
-
-          <!-- Social Links -->
-          <div class="footer-social">
-            <a href="#" class="footer-social-link">Instagram</a>
-            <a href="#" class="footer-social-link">Facebook</a>
-            <a href="#" class="footer-social-link">X</a>
-            <a href="#" class="footer-social-link">TikTok</a>
-            <a href="#" class="footer-social-link">YouTube</a>
-          </div>
+          <p class="footer-colophon">
+            Edición independiente · Hecho en CDMX · Tipografía Fraunces &amp; Inter
+          </p>
         </div>
 
-        <!-- Column 2: Directorio -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Directorio</h4>
-          <ul class="footer-list">
-            <li><a href="/zona.html" class="footer-link">Explorar zonas</a></li>
-            <li><a href="/ciudad-de-mexico/" class="footer-link">Ciudad de México</a></li>
-            <li>
-              <a href="#" class="footer-link footer-link-disabled">
-                Jalisco
-                <span class="footer-badge">Pronto</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer-link footer-link-disabled">
-                Nuevo León
-                <span class="footer-badge">Pronto</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="footer-link footer-link-disabled">
-                Estado de México
-                <span class="footer-badge">Pronto</span>
-              </a>
-            </li>
-            <li><a href="#" class="footer-link">Registrar mi barbería</a></li>
+        <nav class="footer-col" aria-labelledby="footer-col-1">
+          <h2 id="footer-col-1" class="footer-col-title">Directorio</h2>
+          <ul role="list">
+            <li><a href="/directorio/">Directorio Nacional</a></li>
+            <li><a href="/directorio/#por-estado">Por estado · 32</a></li>
+            <li><a href="/directorio/#por-region">Por región · 6</a></li>
+            <li><a href="/ciudad-de-mexico/">Guía CDMX</a></li>
+            <li><a href="/zona/">Atlas de zonas</a></li>
+            <li><a href="/#registro">Registrar barbería</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <!-- Column 3: Marketplace & Empleo -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Marketplace</h4>
-          <ul class="footer-list">
-            <li><a href="/index.html#marketplace" class="footer-link">Herramientas profesionales</a></li>
-            <li><a href="/index.html#marketplace" class="footer-link">Productos para cabello</a></li>
-            <li><a href="/index.html#marketplace" class="footer-link">Productos para barba</a></li>
-            <li><a href="/index.html#marketplace" class="footer-link">Mobiliario y equipo</a></li>
-            <li><a href="#" class="footer-link">Vender un producto</a></li>
+        <nav class="footer-col" aria-labelledby="footer-col-2">
+          <h2 id="footer-col-2" class="footer-col-title">Editorial</h2>
+          <ul role="list">
+            <li><a href="/blog/">Todos los artículos</a></li>
+            <li><a href="/categorias/tendencias/">Tendencias</a></li>
+            <li><a href="/categorias/tecnicas/">Técnicas</a></li>
+            <li><a href="/categorias/negocios/">Negocios</a></li>
+            <li><a href="/categorias/productos/">Productos</a></li>
+            <li><a href="/categorias/estilo-de-vida/">Estilo de vida</a></li>
           </ul>
+        </nav>
 
-          <h4 class="footer-heading footer-heading-mt">Empleo</h4>
-          <ul class="footer-list">
-            <li><a href="/index.html#empleo" class="footer-link">Buscar empleo</a></li>
-            <li><a href="#" class="footer-link">Publicar vacante</a></li>
+        <nav class="footer-col" aria-labelledby="footer-col-3">
+          <h2 id="footer-col-3" class="footer-col-title">Comunidad</h2>
+          <ul role="list">
+            <li><a href="/#marketplace">Marketplace</a></li>
+            <li><a href="/#empleo">Bolsa de trabajo</a></li>
+            <li><a href="/#registro">Para barberos</a></li>
+            <li><a href="#" aria-disabled="true">Sobre nosotros</a></li>
+            <li><a href="mailto:hola@barberia.mx">Contacto</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <!-- Column 4: Blog & Categorias -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Blog</h4>
-          <ul class="footer-list">
-            <li><a href="/blog.html" class="footer-link">Todos los articulos</a></li>
-            <li><a href="/categorias/" class="footer-link">Categorias</a></li>
-          </ul>
-
-          <h4 class="footer-heading footer-heading-mt">Categorias</h4>
-          <ul class="footer-list">
-            <li><a href="/categorias/tendencias/" class="footer-link">Tendencias</a></li>
-            <li><a href="/categorias/tecnicas/" class="footer-link">Tecnicas</a></li>
-            <li><a href="/categorias/productos/" class="footer-link">Productos</a></li>
-            <li><a href="/categorias/negocios/" class="footer-link">Negocios</a></li>
-            <li><a href="/categorias/estilo-de-vida/" class="footer-link">Estilo de vida</a></li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer Features Bar -->
-  <div class="footer-features">
-    <div class="footer-container">
-      <div class="footer-features-grid">
-        <div class="footer-feature">
-          <div class="footer-feature-text">
-            <span class="footer-feature-title">Barberías verificadas</span>
-            <span class="footer-feature-desc">Todas nuestras barberías pasan por un proceso de verificación</span>
-          </div>
-        </div>
-        <div class="footer-feature">
-          <div class="footer-feature-text">
-            <span class="footer-feature-title">Comunidad activa</span>
-            <span class="footer-feature-desc">Más de 10,000 barberos y clientes conectados</span>
-          </div>
-        </div>
-        <div class="footer-feature">
-          <div class="footer-feature-text">
-            <span class="footer-feature-title">Soporte dedicado</span>
-            <span class="footer-feature-desc">Atención personalizada de lunes a sábado</span>
-          </div>
-        </div>
-        <div class="footer-feature">
-          <div class="footer-feature-text">
-            <span class="footer-feature-title">100% Gratis</span>
-            <span class="footer-feature-desc">Registro y búsqueda sin costo alguno</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
   <div class="footer-bottom">
-    <div class="footer-container">
-      <div class="footer-bottom-content">
-        <div class="footer-bottom-left">
-          <p class="footer-copyright">© Barberia.mx. Todos los derechos reservados.</p>
-          <p class="footer-made">Hecho con pasión en Ciudad de México</p>
-        </div>
-        <div class="footer-bottom-center">
-          <div class="footer-legal">
-            <a href="#" class="footer-legal-link">Términos de servicio</a>
-            <span class="footer-legal-dot"></span>
-            <a href="#" class="footer-legal-link">Política de privacidad</a>
-            <span class="footer-legal-dot"></span>
-            <a href="#" class="footer-legal-link">Cookies</a>
-            <span class="footer-legal-dot"></span>
-            <a href="#" class="footer-legal-link">Aviso legal</a>
-          </div>
-        </div>
-        <div class="footer-bottom-right">
-          <div class="footer-lang">
-            <span>Español (MX)</span>
-          </div>
-        </div>
+    <div class="footer-bottom-inner">
+      <div class="footer-legal">
+        <span>© <span data-current-year>2026</span> Barberia.mx</span>
+        <span aria-hidden="true">·</span>
+        <span>Todos los derechos reservados</span>
+      </div>
+      <div class="footer-social" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/barberiamx" rel="noopener" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/barberiamx" rel="noopener" target="_blank">Facebook</a>
+        <a href="https://twitter.com/barberiamx" rel="noopener" target="_blank">Twitter</a>
       </div>
     </div>
   </div>
