@@ -27,6 +27,7 @@
 | 07 | [[07 - Decisiones del Cliente]] | Log cronológico de iteraciones |
 | 08 | [[08 - Auditoría Index 2026-05-28]] | 78 hallazgos · 21 fixes · estado actual del homepage |
 | 09 | [[09 - Interlinking Strategy]] | Sitemap · matriz de cross-links · componente `.ed-related` · checklist obligatorio |
+| 10 | [[10 - SEO + GEO Audit]] | Auditoría SEO + GEO profunda · 10 secciones · roadmap 30 fixes · scores por dimensión |
 
 ---
 
