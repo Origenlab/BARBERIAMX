@@ -1,7 +1,7 @@
 ---
 import PageLayout from '@layouts/PageLayout.astro';
 import BarberiaCard from '@components/BarberiaCard.astro';
-import { barberias, totalBarberias } from '@data/barberias';
+import { barberias, totalBarberias, totalSinWeb } from '@data/barberias';
 
 // Agrupar por estado (sólo estados con barberías reales).
 const porEstado = barberias.reduce((acc, b) => {
@@ -37,8 +37,10 @@ const estados = Object.keys(porEstado).sort();
     ))}
 
     <p class="dir-cta">
-      ¿Tienes una barbería y quieres aparecer? Pronto habilitamos el registro.
-      Mientras tanto, este directorio crece a mano y con datos reales.
+      <strong>Apoyamos a las barberías sin sitio web.</strong> {totalSinWeb} de estas barberías
+      están en Google pero no tienen página propia: les damos presencia aquí y, si son los dueños,
+      les ayudamos a crear su sitio. ¿Tienes una barbería? Pronto habilitamos el registro;
+      mientras tanto, el directorio crece a mano y con datos reales.
     </p>
   </section>
 </PageLayout>

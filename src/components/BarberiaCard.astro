@@ -14,6 +14,7 @@ const href = `/${b.estadoSlug}/${b.slug}/`;
   <p class="bcard-status" data-state={b.verificacion}>
     {b.verificacion === 'confirmada' ? '✓ Verificada' : 'Listada · verificación pendiente'}
   </p>
+  {b.sinWeb && <p class="bcard-apoyo">Sin sitio web · la apoyamos</p>}
 </article>
 <style>
   .bcard { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; background: var(--bg); transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease); }
@@ -27,4 +28,5 @@ const href = `/${b.estadoSlug}/${b.slug}/`;
   .bcard-services li { font-size: var(--fs-xs); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.2rem 0.6rem; color: var(--text-soft); }
   .bcard-status { font-size: var(--fs-xs); color: var(--text-soft); margin: 0; }
   .bcard-status[data-state='confirmada'] { color: #1a7f37; font-weight: 600; }
+  .bcard-apoyo { display: inline-block; margin: 0.5rem 0 0; font-size: var(--fs-xs); font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 0.2rem 0.6rem; }
 </style>
