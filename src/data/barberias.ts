@@ -184,6 +184,85 @@ export const barberias: Barberia[] = [
     servicios: ['Corte', 'Barba', 'Afeitado'],
     fuente: 'Listados públicos (cadena con varias sucursales en CDMX) — dirección por confirmar',
     verificacion: 'pendiente'
+  },
+
+  // ───── Guadalajara, Jalisco ─────
+  {
+    nombre: 'Barbería Capital (Lafayette)',
+    slug: 'barberia-capital-gdl',
+    estado: 'Jalisco',
+    estadoSlug: 'jalisco',
+    alcaldiaMunicipio: 'Guadalajara',
+    zona: 'Lafayette',
+    direccion: 'C. Miguel Lerdo de Tejada 2308, Col. Americana, Lafayette',
+    servicios: ['Corte', 'Barba', 'Afeitado'],
+    fuente: 'Fresha',
+    verificacion: 'pendiente'
+  },
+  {
+    nombre: 'Barbería Meryma’at (Providencia)',
+    slug: 'merymaat-gdl',
+    estado: 'Jalisco',
+    estadoSlug: 'jalisco',
+    alcaldiaMunicipio: 'Guadalajara',
+    zona: 'Providencia',
+    direccion: 'Puerto Bello 1594, Providencia 3a. Secc.',
+    servicios: ['Corte', 'Barba', 'Afeitado'],
+    fuente: 'Listados públicos (Google Maps)',
+    verificacion: 'pendiente'
+  },
+
+  // ───── San Pedro Garza García, Nuevo León ─────
+  {
+    nombre: 'Sala de Corte (San Pedro)',
+    slug: 'sala-de-corte-spgg',
+    estado: 'Nuevo León',
+    estadoSlug: 'nuevo-leon',
+    alcaldiaMunicipio: 'San Pedro Garza García',
+    zona: 'Del Valle',
+    direccion: 'Av. Manuel Gómez Morín 801, Plaza Comunia local 208, Del Valle',
+    web: 'https://saladecorte.mx',
+    servicios: ['Corte', 'Barba', 'Afeitado', 'Alta peluquería'],
+    fuente: 'Sitio oficial saladecorte.mx',
+    verificacion: 'pendiente'
+  },
+  {
+    nombre: 'Villa y Zapata BarberShop (San Pedro)',
+    slug: 'villa-y-zapata-spgg',
+    estado: 'Nuevo León',
+    estadoSlug: 'nuevo-leon',
+    alcaldiaMunicipio: 'San Pedro Garza García',
+    zona: 'Del Valle',
+    direccion: 'Río Amazonas 50, local 8, Del Valle',
+    web: 'https://villayzapata.mx',
+    servicios: ['Corte', 'Barba', 'Afeitado'],
+    fuente: 'Sitio oficial villayzapata.mx',
+    verificacion: 'pendiente'
+  },
+  {
+    nombre: 'Kraken Barber Club (San Pedro)',
+    slug: 'kraken-spgg',
+    estado: 'Nuevo León',
+    estadoSlug: 'nuevo-leon',
+    alcaldiaMunicipio: 'San Pedro Garza García',
+    zona: 'Valle Poniente',
+    direccion: 'Eje exterior 10, Privada Valle Poniente',
+    web: 'http://www.krakenbarberclub.com',
+    servicios: ['Corte', 'Barba', 'Afeitado'],
+    fuente: 'Sitio oficial krakenbarberclub.com',
+    verificacion: 'pendiente'
+  },
+  {
+    nombre: 'La Barbería 1983 (San Pedro)',
+    slug: 'la-barberia-1983-spgg',
+    estado: 'Nuevo León',
+    estadoSlug: 'nuevo-leon',
+    alcaldiaMunicipio: 'San Pedro Garza García',
+    zona: 'San Pedro',
+    direccion: 'Av. las Torres 208, San Pedro',
+    servicios: ['Corte', 'Barba', 'Afeitado'],
+    fuente: 'Listados públicos (Google Maps)',
+    verificacion: 'pendiente'
   }
 ];
 

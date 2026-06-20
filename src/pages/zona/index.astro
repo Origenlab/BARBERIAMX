@@ -2,12 +2,14 @@
 import PageLayout from '@layouts/PageLayout.astro';
 import { barberias } from '@data/barberias';
 
-// Zonas con barberías reales en el directorio.
+// Zonas con barberías reales en el directorio (con su estado).
 const porZona = barberias.reduce((acc, b) => {
-  acc[b.zona] = (acc[b.zona] ?? 0) + 1;
+  acc[b.zona] = { n: (acc[b.zona]?.n ?? 0) + 1, estado: b.estado, estadoSlug: b.estadoSlug };
   return acc;
-}, {} as Record<string, number>);
-const zonas = Object.entries(porZona).sort((a, b) => a[0].localeCompare(b[0]));
+}, {} as Record<string, { n: number; estado: string; estadoSlug: string }>);
+const zonas = Object.entries(porZona).sort(
+  (a, b) => a[1].estado.localeCompare(b[1].estado) || a[0].localeCompare(b[0])
+);
 ---
 <PageLayout
   title="Barberías por zona"
@@ -21,11 +23,11 @@ const zonas = Object.entries(porZona).sort((a, b) => a[0].localeCompare(b[0]));
       <p class="zona-dek">Por ahora, las zonas con barberías catalogadas. El mapa crece conforme sumamos barberías reales.</p>
     </header>
     <ul class="zona-list">
-      {zonas.map(([zona, n]) => (
+      {zonas.map(([zona, info]) => (
         <li class="zona-item">
-          <a href="/ciudad-de-mexico/">
-            <span class="zona-name">{zona}</span>
-            <span class="zona-count">{n} {n === 1 ? 'barbería' : 'barberías'}</span>
+          <a href={`/${info.estadoSlug}/`}>
+            <span class="zona-name">{zona} <span class="zona-edo">· {info.estado}</span></span>
+            <span class="zona-count">{info.n} {info.n === 1 ? 'barbería' : 'barberías'}</span>
           </a>
         </li>
       ))}
