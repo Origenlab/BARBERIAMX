@@ -1,0 +1,45 @@
+/**
+ * tokens.css — design system canónico de Barberia.mx
+ * Stack OrigenLab: CSS vanilla + variables :root.
+ * Estética editorial (negro/tinta + acento). Importar global en el layout.
+ */
+:root {
+  /* Color — base editorial */
+  --bg: #ffffff;
+  --bg-ink: #0a0a0a;
+  --surface: #f7f6f4;
+  --text: #14110f;
+  --text-soft: #5b5651;
+  --text-invert: #f7f6f4;
+  --border: #e7e3dd;
+  --border-strong: #cfc8bf;
+
+  /* Acento (barbería: rojo navaja / dorado) */
+  --accent: #b11226;
+  --accent-soft: #f3d8db;
+  --gold: #c9a227;
+
+  /* Tipografía */
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --fs-xs: 0.78rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.6rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3.25rem;
+  --leading: 1.6;
+
+  /* Espacio / layout */
+  --gutter: 1.25rem;
+  --container: 1180px;
+  --container-narrow: 760px;
+  --radius: 10px;
+  --header-h: 64px;
+
+  /* Sombra / motion */
+  --shadow-sm: 0 1px 3px rgba(10, 10, 10, 0.08);
+  --shadow: 0 8px 28px rgba(10, 10, 10, 0.10);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
