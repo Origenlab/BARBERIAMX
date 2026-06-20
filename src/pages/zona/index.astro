@@ -1,7 +1,46 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_head.html?raw';
-import main from './_main.html?raw';
-import pageScript from './_page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import { barberias } from '@data/barberias';
+
+// Zonas con barberías reales en el directorio.
+const porZona = barberias.reduce((acc, b) => {
+  acc[b.zona] = (acc[b.zona] ?? 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+const zonas = Object.entries(porZona).sort((a, b) => a[0].localeCompare(b[0]));
 ---
-<BaseLayout headExtra={head} mainHtml={main} bodyClass="" showMasthead={true} pageScript={pageScript} />
+<PageLayout
+  title="Barberías por zona"
+  description="Explora barberías de México por zona y colonia. Directorio independiente en construcción."
+  canonicalPath="/zona/"
+>
+  <section class="zona">
+    <header class="zona-head">
+      <p class="zona-kicker">Explorar</p>
+      <h1 class="zona-title">Barberías por zona</h1>
+      <p class="zona-dek">Por ahora, las zonas con barberías catalogadas. El mapa crece conforme sumamos barberías reales.</p>
+    </header>
+    <ul class="zona-list">
+      {zonas.map(([zona, n]) => (
+        <li class="zona-item">
+          <a href="/ciudad-de-mexico/">
+            <span class="zona-name">{zona}</span>
+            <span class="zona-count">{n} {n === 1 ? 'barbería' : 'barberías'}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</PageLayout>
+<style>
+  .zona { max-width: var(--container-narrow); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .zona-head { margin-bottom: 2rem; }
+  .zona-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .zona-title { font-family: var(--font-serif); font-size: var(--fs-3xl); margin: 0.3rem 0 0.4rem; }
+  .zona-dek { color: var(--text-soft); font-size: var(--fs-lg); }
+  .zona-list { list-style: none; padding: 0; margin: 0; }
+  .zona-item a { display: flex; justify-content: space-between; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid var(--border); text-decoration: none; }
+  .zona-name { font-family: var(--font-serif); font-size: var(--fs-lg); color: var(--text); }
+  .zona-item a:hover .zona-name { color: var(--accent); }
+  .zona-count { color: var(--text-soft); font-size: var(--fs-sm); }
+</style>

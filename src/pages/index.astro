@@ -1,7 +1,89 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_head.html?raw';
-import main from './_main.html?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import BarberiaCard from '@components/BarberiaCard.astro';
+import site from '@config/site';
+import { barberias, totalBarberias } from '@data/barberias';
+import { getCollection } from 'astro:content';
 
+const destacadas = barberias.slice(0, 4);
+const articulos = (await getCollection('articulos', ({ data }) => !data.draft)).slice(0, 3);
 ---
-<BaseLayout headExtra={head} mainHtml={main} bodyClass="home" showMasthead={true} />
+<PageLayout
+  title="El directorio de la barbería mexicana"
+  description="Directorio independiente de barberías profesionales en México. En construcción: barberías reales, sin reseñas inventadas."
+  canonicalPath="/"
+  withOrgSchema
+>
+  <section class="hero">
+    <p class="hero-kicker">Directorio independiente · en construcción</p>
+    <h1 class="hero-title">El directorio de la <em>barbería</em> mexicana.</h1>
+    <p class="hero-dek">
+      Estamos catalogando barberías profesionales reales en México, una por una, con su
+      información pública. Sin cifras infladas y sin reseñas inventadas.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/directorio/">Ver el directorio</a>
+      <a class="btn btn-ghost" href="/blog/">Leer el blog</a>
+    </div>
+  </section>
+
+  <section class="home-sec">
+    <header class="home-sec-head">
+      <h2 class="home-sec-title">Barberías en el directorio</h2>
+      <p class="home-sec-dek">{totalBarberias} {totalBarberias === 1 ? 'barbería' : 'barberías'} y creciendo. <a href="/directorio/">Ver todas →</a></p>
+    </header>
+    <div class="home-grid">
+      {destacadas.map((b) => <BarberiaCard b={b} />)}
+    </div>
+  </section>
+
+  {articulos.length > 0 && (
+    <section class="home-sec">
+      <header class="home-sec-head">
+        <h2 class="home-sec-title">Del blog</h2>
+        <p class="home-sec-dek"><a href="/blog/">Ver todos los artículos →</a></p>
+      </header>
+      <div class="home-articles">
+        {articulos.map((a) => (
+          <article class="home-art">
+            <p class="home-art-cat">{a.data.category}</p>
+            <h3 class="home-art-title"><a href={`/articulos/${a.id}/`}>{a.data.title}</a></h3>
+            <p class="home-art-dek">{a.data.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="home-soon">
+    <h2 class="home-soon-title">Próximamente</h2>
+    <p>Estamos construyendo {site.proximamente.join(', ').toLowerCase()}. Por ahora, el directorio crece a mano y con datos reales.</p>
+  </section>
+</PageLayout>
+<style>
+  .hero { max-width: var(--container); margin: 0 auto; padding: 4rem var(--gutter) 2rem; }
+  .hero-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .hero-title { font-family: var(--font-serif); font-size: var(--fs-3xl); line-height: 1.05; margin: 0.6rem 0 0.8rem; max-width: 16ch; }
+  .hero-title em { color: var(--accent); font-style: italic; }
+  .hero-dek { font-size: var(--fs-lg); color: var(--text-soft); max-width: 60ch; line-height: var(--leading); }
+  .hero-cta { display: flex; gap: 0.8rem; margin-top: 1.6rem; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 0.7rem 1.3rem; border-radius: var(--radius); font-weight: 600; text-decoration: none; font-size: var(--fs-base); }
+  .btn-primary { background: var(--bg-ink); color: var(--text-invert); }
+  .btn-ghost { border: 1px solid var(--border-strong); color: var(--text); }
+  .home-sec { max-width: var(--container); margin: 0 auto; padding: 2.5rem var(--gutter); }
+  .home-sec-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.6rem; margin-bottom: 1.5rem; }
+  .home-sec-title { font-family: var(--font-serif); font-size: var(--fs-xl); margin: 0; }
+  .home-sec-dek { color: var(--text-soft); margin: 0; font-size: var(--fs-sm); }
+  .home-sec-dek a, .home-art-title a { color: var(--accent); text-decoration: none; }
+  .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.25rem; }
+  .home-articles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+  .home-art { border-top: 2px solid var(--text); padding-top: 0.8rem; }
+  .home-art-cat { text-transform: uppercase; letter-spacing: 0.08em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0 0 0.3rem; }
+  .home-art-title { font-family: var(--font-serif); font-size: var(--fs-lg); margin: 0 0 0.4rem; }
+  .home-art-title a { color: var(--text); }
+  .home-art-dek { color: var(--text-soft); font-size: var(--fs-sm); margin: 0; }
+  .home-soon { max-width: var(--container); margin: 1.5rem auto 4rem; padding: 1.75rem var(--gutter); }
+  .home-soon { background: var(--surface); border-radius: var(--radius); }
+  .home-soon-title { font-family: var(--font-serif); font-size: var(--fs-lg); margin: 0 0 0.4rem; }
+  .home-soon p { color: var(--text-soft); margin: 0; }
+</style>
