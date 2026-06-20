@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tendencias | Blog Barberia.mx</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="description" content="Las ultimas tendencias en cortes de cabello masculino, estilos de barba y lo que esta de moda en el mundo de la barberia.">
+  <meta name="keywords" content="tendencias cortes cabello, tendencias barberia, cortes moda hombre, estilos barba tendencia">
+  <meta name="author" content="Barberia.mx">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://barberia.mx/categorias/tendencias/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Tendencias | Blog Barberia.mx">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://barberia.mx/categorias/tendencias/">
+  <meta property="og:image" content="https://barberia.mx/img/og-tendencias.jpg">
+  <meta property="og:description" content="Las ultimas tendencias en cortes de cabello masculino y estilos de barba.">
+  <meta property="og:site_name" content="Barberia.mx">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@barberiamx">
+  <meta name="twitter:title" content="Tendencias | Blog Barberia.mx">
+  <meta name="twitter:description" content="Las ultimas tendencias en cortes de cabello masculino y estilos de barba.">
+  <meta name="twitter:image" content="https://barberia.mx/img/og-tendencias.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://barberia.mx/categorias/tendencias/#collection",
+    "name": "Tendencias - Blog Barberia.mx",
+    "description": "Las ultimas tendencias en cortes de cabello masculino y estilos de barba",
+    "url": "https://barberia.mx/categorias/tendencias/",
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://barberia.mx/blog/#blog"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://barberia.mx"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://barberia.mx/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Tendencias",
+        "item": "https://barberia.mx/categorias/tendencias/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Category Hero */
+    .category-hero {
+      padding: calc(72px + var(--space-3xl)) 0 var(--space-2xl);
+      background: linear-gradient(180deg, rgba(139, 92, 246, 0.08) 0%, var(--color-white) 100%);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .category-hero-content {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .category-hero-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-xl);
+      background: #8B5CF6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-lg);
+    }
+
+    .category-hero-icon svg {
+      width: 36px;
+      height: 36px;
+      color: white;
+    }
+
+    .category-hero-title {
+      font-size: var(--text-4xl);
+      font-weight: var(--font-bold);
+      color: var(--color-black);
+      margin-bottom: var(--space-md);
+      line-height: 1.1;
+    }
+
+    .category-hero-description {
+      font-size: var(--text-lg);
+      color: var(--color-gray-500);
+      line-height: 1.6;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-gray-200);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: var(--text-sm);
+    }
+
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .breadcrumb-link {
+      color: var(--color-gray-500);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .breadcrumb-link:hover {
+      color: #8B5CF6;
+    }
+
+    .breadcrumb-separator {
+      color: var(--color-gray-300);
+    }
+
+    .breadcrumb-current {
+      color: #8B5CF6;
+      font-weight: var(--font-medium);
+    }
+
+    /* Articles Grid */
+    .articles-section {
+      padding-bottom: var(--space-3xl);
+    }
+
+    .articles-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .articles-count {
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+    }
+
+    .articles-count strong {
+      color: var(--color-black);
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+    }
+
+    /* Article Card */
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      text-decoration: none;
+      transition: all var(--transition-base);
+    }
+
+    .article-card:hover {
+      border-color: var(--color-gray-300);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .article-image {
+      aspect-ratio: 16/10;
+      background: var(--color-gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .article-image svg {
+      width: 40px;
+      height: 40px;
+      color: var(--color-gray-300);
+    }
+
+    .article-content {
+      padding: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .article-title {
+      font-size: var(--text-lg);
+      font-weight: var(--font-semibold);
+      color: var(--color-black);
+      line-height: 1.3;
+      margin-bottom: var(--space-xs);
+      transition: color var(--transition-fast);
+    }
+
+    .article-card:hover .article-title {
+      color: #8B5CF6;
+    }
+
+    .article-excerpt {
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+      flex: 1;
+    }
+
+    .article-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-gray-100);
+    }
+
+    .article-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .author-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: var(--font-semibold);
+      color: var(--color-gray-500);
+    }
+
+    .author-name {
+      font-size: var(--text-xs);
+      font-weight: var(--font-medium);
+      color: var(--color-gray-600);
+    }
+
+    .article-meta {
+      font-size: var(--text-xs);
+      color: var(--color-gray-400);
+    }
+
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+      background: var(--color-gray-50);
+      border-radius: var(--radius-xl);
+    }
+
+    .empty-state-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--space-lg);
+      color: var(--color-gray-300);
+    }
+
+    .empty-state-title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-semibold);
+      color: var(--color-black);
+      margin-bottom: var(--space-sm);
+    }
+
+    .empty-state-text {
+      font-size: var(--text-base);
+      color: var(--color-gray-500);
+      margin-bottom: var(--space-lg);
+    }
+
+    /* Navigation */
+    .category-nav {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      padding: var(--space-xl) 0;
+      border-top: 1px solid var(--color-gray-200);
+    }
+
+    .category-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-lg);
+      font-size: var(--text-sm);
+      font-weight: var(--font-medium);
+      color: var(--color-gray-600);
+      text-decoration: none;
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-full);
+      transition: all var(--transition-fast);
+    }
+
+    .category-nav-link:hover {
+      border-color: var(--color-black);
+      color: var(--color-black);
+    }
+
+    .category-nav-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .category-hero {
+        padding: calc(72px + var(--space-2xl)) 0 var(--space-xl);
+      }
+
+      .category-hero-title {
+        font-size: var(--text-3xl);
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+
+      .category-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M10 8v16M14 8v16M10 16h4M20 8l4 8-4 8M20 16h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="nav-logo-text">barberia<span class="nav-logo-accent">.mx</span></span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="/index/#directorio" class="nav-link">
+            <span class="nav-link-text">Directorio</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/zona/" class="nav-link">
+            <span class="nav-link-text">Zonas</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/index/#marketplace" class="nav-link">
+            <span class="nav-link-text">Marketplace</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/index/#empleo" class="nav-link">
+            <span class="nav-link-text">Empleo</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/blog/" class="nav-link nav-link-active">
+            <span class="nav-link-text">Blog</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/index/#registro" class="nav-btn nav-btn-outline">Ingresar</a>
+        <a href="/index/#registro" class="nav-btn nav-btn-primary">Registrar Barberia</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="nav-mobile">
+      <div class="nav-mobile-content">
+        <ul class="nav-mobile-menu">
+          <li><a href="/index/#directorio" class="nav-mobile-link">Directorio</a></li>
+          <li><a href="/zona/" class="nav-mobile-link">Zonas</a></li>
+          <li><a href="/index/#marketplace" class="nav-mobile-link">Marketplace</a></li>
+          <li><a href="/index/#empleo" class="nav-mobile-link">Empleo</a></li>
+          <li><a href="/blog/" class="nav-mobile-link">Blog</a></li>
+        </ul>
+        <div class="nav-mobile-actions">
+          <a href="/index/#registro" class="nav-btn nav-btn-outline nav-btn-full">Ingresar</a>
+          <a href="/index/#registro" class="nav-btn nav-btn-primary nav-btn-full">Registrar Barberia</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="category-hero">
+    <div class="container">
+      <div class="category-hero-content">
+        <div class="category-hero-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+            <polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <h1 class="category-hero-title">Tendencias</h1>
+        <p class="category-hero-description">
+          Los estilos y cortes que estan marcando pauta. Mantente al dia con lo que tus clientes van a pedir.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="/" class="breadcrumb-link">Inicio</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/blog/" class="breadcrumb-link">Blog</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/categorias/" class="breadcrumb-link">Categorias</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <span class="breadcrumb-current">Tendencias</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Articles Section -->
+    <section class="articles-section">
+
+      <div class="articles-header">
+        <span class="articles-count"><strong>12</strong> articulos en Tendencias</span>
+      </div>
+
+      <div class="articles-grid">
+
+        <!-- Article 1 -->
+        <a href="#" class="article-card">
+          <div class="article-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <div class="article-content">
+            <h3 class="article-title">Las 10 tendencias de cortes masculinos que debes conocer</h3>
+            <p class="article-excerpt">
+              Desde el regreso del mullet moderno hasta los fades texturizados que estan dominando las barberias.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <div class="author-avatar">CM</div>
+                <span class="author-name">Carlos Mendoza</span>
+              </div>
+              <span class="article-meta">8 min</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="#" class="article-card">
+          <div class="article-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <div class="article-content">
+            <h3 class="article-title">El regreso del corte clasico: por que los jovenes eligen lo vintage</h3>
+            <p class="article-excerpt">
+              Una nueva generacion esta redescubriendo los cortes de los anos 50 y 60. Analizamos este fenomeno.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <div class="author-avatar">CM</div>
+                <span class="author-name">Carlos Mendoza</span>
+              </div>
+              <span class="article-meta">6 min</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="#" class="article-card">
+          <div class="article-image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <div class="article-content">
+            <h3 class="article-title">Cortes texturizados: la tendencia que no puedes ignorar</h3>
+            <p class="article-excerpt">
+              Aprende como crear texturas naturales que estan revolucionando el look masculino moderno.
+            </p>
+            <div class="article-footer">
+              <div class="article-author">
+                <div class="author-avatar">RV</div>
+                <span class="author-name">Ricardo Vega</span>
+              </div>
+              <span class="article-meta">5 min</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Category Navigation -->
+      <nav class="category-nav">
+        <a href="/categorias/" class="category-nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Todas las categorias
+        </a>
+        <a href="/blog/" class="category-nav-link">
+          Volver al Blog
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </nav>
+
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col footer-col-brand">
+            <a href="/" class="footer-logo">
+              <span class="footer-logo-text">barberia<span class="footer-logo-accent">.mx</span></span>
+            </a>
+            <p class="footer-tagline">
+              El directorio de barberias mas completo de Mexico.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-link">Instagram</a>
+              <a href="#" class="footer-social-link">Facebook</a>
+              <a href="#" class="footer-social-link">X</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Directorio</h4>
+            <ul class="footer-list">
+              <li><a href="/zona/" class="footer-link">Explorar zonas</a></li>
+              <li><a href="/ciudad-de-mexico/" class="footer-link">Ciudad de Mexico</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Recursos</h4>
+            <ul class="footer-list">
+              <li><a href="/blog/" class="footer-link">Blog</a></li>
+              <li><a href="/categorias/" class="footer-link">Categorias</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">Empresa</h4>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Sobre nosotros</a></li>
+              <li><a href="#" class="footer-link">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <div class="footer-bottom-content">
+          <div class="footer-bottom-left">
+            <p class="footer-copyright">© Barberia.mx. Todos los derechos reservados.</p>
+          </div>
+          <div class="footer-bottom-right">
+            <div class="footer-lang"><span>Espanol (MX)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.getElementById('nav-toggle');
+      const navMobile = document.getElementById('nav-mobile');
+      if (navToggle && navMobile) {
+        navToggle.addEventListener('click', function() {
+          navMobile.classList.toggle('active');
+          navToggle.classList.toggle('active');
+          document.body.style.overflow = navMobile.classList.contains('active') ? 'hidden' : '';
+        });
+      }
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        window.addEventListener('scroll', function() {
+          navbar.classList.toggle('nav-scrolled', window.pageYOffset > 100);
+        }, { passive: true });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
