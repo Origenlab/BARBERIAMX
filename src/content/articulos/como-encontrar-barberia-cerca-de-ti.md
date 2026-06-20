@@ -1,5 +1,5 @@
 ---
-title: Cómo encontrar tu barbería ideal en México
+title: Cómo encontrar tu barbería ideal cerca de ti
 description: "Guía práctica para elegir barbería: qué mirar en servicios, higiene, estilo y reseñas antes de sentarte en la silla."
 category: Guías
 author: La Redacción
@@ -27,7 +27,7 @@ El detalle que más dice de una barbería: herramientas desinfectadas, toallas l
 
 ## 4. Estilo del barbero
 
-Mira el portafolio (redes sociales suelen ser la mejor referencia). Cada barbero tiene una mano y un estilo; busca trabajos parecidos a lo que tú quieres.
+Mira el portafolio (las redes sociales suelen ser la mejor referencia). Cada barbero tiene una mano y un estilo; busca trabajos parecidos a lo que tú quieres.
 
 ## 5. Reseñas con criterio
 

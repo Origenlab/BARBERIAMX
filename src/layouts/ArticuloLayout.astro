@@ -1,0 +1,83 @@
+---
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import site from '@config/site';
+import { article, jsonLd } from '@lib/seo';
+import '@styles/tokens.css';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  category?: string;
+  author?: string;
+  publishDate?: Date;
+  readingMinutes?: number;
+}
+const { title, description, slug, category, author = 'La Redacción', publishDate, readingMinutes } = Astro.props;
+const url = `${site.url}/articulos/${slug}/`;
+const ld = jsonLd(
+  article({ title, description, url, author, datePublished: publishDate?.toISOString() })
+);
+const fecha = publishDate
+  ? new Intl.DateTimeFormat('es-MX', { year: 'numeric', month: 'long', day: 'numeric' }).format(publishDate)
+  : '';
+---
+<!doctype html>
+<html lang={site.idioma}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — {site.nombre}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content={site.themeColor} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content={site.nombre} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <Fragment set:html={ld} />
+  </head>
+  <body class="ed-article-body">
+    <a href="#main" class="ed-skip">Saltar al contenido</a>
+    <Header />
+    <main id="main" class="ed-article">
+      <article class="ed-article-wrap">
+        {category && <p class="ed-article-kicker">{category}</p>}
+        <h1 class="ed-article-title">{title}</h1>
+        <p class="ed-article-dek">{description}</p>
+        <p class="ed-article-meta">
+          {author}{fecha && ` · ${fecha}`}{readingMinutes && ` · ${readingMinutes} min de lectura`}
+        </p>
+        <div class="ed-article-content"><slot /></div>
+        <p class="ed-article-foot"><a href="/blog/">← Volver al blog</a></p>
+      </article>
+    </main>
+    <Footer />
+    <script src="/js/ui.js" defer is:inline></script>
+  </body>
+</html>
+<style>
+  .ed-article { max-width: var(--container-narrow); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .ed-article-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .ed-article-title { font-family: var(--font-serif); font-size: var(--fs-3xl); line-height: 1.1; margin: 0.4rem 0 0.6rem; color: var(--text); }
+  .ed-article-dek { font-size: var(--fs-lg); color: var(--text-soft); margin: 0 0 1rem; }
+  .ed-article-meta { font-size: var(--fs-sm); color: var(--text-soft); border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin: 0 0 2rem; }
+  .ed-article-content { font-size: var(--fs-lg); line-height: var(--leading); color: var(--text); }
+  .ed-article-content :global(h2) { font-family: var(--font-serif); font-size: var(--fs-xl); margin: 2.2rem 0 0.6rem; }
+  .ed-article-content :global(h3) { font-size: var(--fs-lg); margin: 1.6rem 0 0.4rem; }
+  .ed-article-content :global(p) { margin: 0 0 1.1rem; }
+  .ed-article-content :global(ul), .ed-article-content :global(ol) { margin: 0 0 1.1rem 1.2rem; }
+  .ed-article-content :global(li) { margin: 0.3rem 0; }
+  .ed-article-content :global(a) { color: var(--accent); }
+  .ed-article-content :global(strong) { color: var(--text); }
+  .ed-article-content :global(hr) { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+  .ed-article-content :global(em) { color: var(--text-soft); }
+  .ed-article-foot { margin-top: 3rem; font-size: var(--fs-base); }
+  .ed-article-foot a { color: var(--accent); text-decoration: none; }
+  .ed-skip { position: absolute; left: -9999px; }
+  .ed-skip:focus { left: 1rem; top: 1rem; }
+</style>
