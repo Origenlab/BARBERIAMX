@@ -4,25 +4,25 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 
 interface Props {
-  headExtra?: string;
-  bodyClass?: string;
-  mainHtml?: string;
-  showMasthead?: boolean;
-  pageScript?: string;
+ headExtra?: string;
+ bodyClass?: string;
+ mainHtml?: string;
+ showMasthead?: boolean;
+ pageScript?: string;
 }
 const { headExtra = '', bodyClass = '', mainHtml = '', showMasthead = true, pageScript = '' } = Astro.props;
 ---
 <!doctype html>
 <html lang="es-MX">
-  <head set:html={headExtra}></head>
-  <body class={bodyClass}>
-    <a href="#main" class="ed-skip">Saltar al contenido</a>
-    {showMasthead && <Masthead />}
-    <Header />
-    <Fragment set:html={mainHtml} />
-    <Footer />
-    <script src="/js/ui.js" defer is:inline></script>
-    <script src="/js/app.js" defer is:inline></script>
-    {pageScript && <script is:inline set:html={pageScript} />}
-  </body>
+ <head set:html={headExtra}></head>
+ <body class={bodyClass}>
+  <a href="#main" class="ed-skip">Saltar al contenido</a>
+  {showMasthead && <Masthead />}
+  <Header />
+  <Fragment set:html={mainHtml} />
+  <Footer />
+  <script src="/js/ui.js" defer is:inline></script>
+  <script src="/js/app.js" defer is:inline></script>
+  {pageScript && <script is:inline set:html={pageScript} />}
+ </body>
 </html>
