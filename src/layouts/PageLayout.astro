@@ -1,0 +1,58 @@
+---
+import Masthead from '@components/Masthead.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import site from '@config/site';
+import { orgAndWebsite, jsonLd } from '@lib/seo';
+import '@styles/tokens.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;   // ej. "/directorio/"
+  showMasthead?: boolean;
+  withOrgSchema?: boolean;
+  bodyClass?: string;
+}
+const {
+  title,
+  description,
+  canonicalPath = '/',
+  showMasthead = true,
+  withOrgSchema = false,
+  bodyClass = '',
+} = Astro.props;
+const url = `${site.url}${canonicalPath}`;
+---
+<!doctype html>
+<html lang={site.idioma}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — {site.nombre}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content={site.themeColor} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content={site.nombre} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {withOrgSchema && <Fragment set:html={jsonLd(orgAndWebsite())} />}
+  </head>
+  <body class={bodyClass}>
+    <a href="#main" class="ed-skip">Saltar al contenido</a>
+    {showMasthead && <Masthead />}
+    <Header />
+    <main id="main"><slot /></main>
+    <Footer />
+    <script src="/js/ui.js" defer is:inline></script>
+    <script src="/js/app.js" defer is:inline></script>
+  </body>
+</html>
+<style>
+  .ed-skip { position: absolute; left: -9999px; }
+  .ed-skip:focus { left: 1rem; top: 1rem; }
+</style>

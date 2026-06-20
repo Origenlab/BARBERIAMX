@@ -1,7 +1,48 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_head.html?raw';
-import main from './_main.html?raw';
-import pageScript from './_page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import BarberiaCard from '@components/BarberiaCard.astro';
+import { barberias } from '@data/barberias';
+
+const cdmx = barberias.filter((b) => b.estadoSlug === 'ciudad-de-mexico');
+// Agrupar por zona/colonia.
+const porZona = cdmx.reduce((acc, b) => {
+  (acc[b.zona] ||= []).push(b);
+  return acc;
+}, {} as Record<string, typeof barberias>);
+const zonas = Object.keys(porZona).sort();
 ---
-<BaseLayout headExtra={head} mainHtml={main} bodyClass="" showMasthead={true} pageScript={pageScript} />
+<PageLayout
+  title="Barberías en la Ciudad de México"
+  description="Guía de barberías profesionales en CDMX por zona: Roma, Condesa, Polanco y más. Directorio independiente en construcción."
+  canonicalPath="/ciudad-de-mexico/"
+>
+  <section class="cdmx">
+    <header class="cdmx-head">
+      <p class="cdmx-kicker">Guía · Ciudad de México</p>
+      <h1 class="cdmx-title">Barberías en la CDMX</h1>
+      <p class="cdmx-dek">
+        La capital concentra una escena barbera muy activa. Estas son las barberías
+        que vamos catalogando por zona, con datos reales y verificación en proceso.
+      </p>
+    </header>
+
+    {zonas.map((zona) => (
+      <section class="cdmx-zona">
+        <h2 class="cdmx-zona-title">{zona}</h2>
+        <div class="cdmx-grid">
+          {porZona[zona].map((b) => <BarberiaCard b={b} />)}
+        </div>
+      </section>
+    ))}
+  </section>
+</PageLayout>
+<style>
+  .cdmx { max-width: var(--container); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .cdmx-head { max-width: var(--container-narrow); margin-bottom: 2.5rem; }
+  .cdmx-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .cdmx-title { font-family: var(--font-serif); font-size: var(--fs-3xl); line-height: 1.1; margin: 0.4rem 0 0.6rem; }
+  .cdmx-dek { font-size: var(--fs-lg); color: var(--text-soft); line-height: var(--leading); }
+  .cdmx-zona { margin-top: 2.5rem; }
+  .cdmx-zona-title { font-family: var(--font-serif); font-size: var(--fs-xl); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin: 0 0 1.25rem; }
+  .cdmx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+</style>

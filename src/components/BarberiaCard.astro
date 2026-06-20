@@ -1,0 +1,30 @@
+---
+import type { Barberia } from '@data/barberias';
+interface Props { b: Barberia; }
+const { b } = Astro.props;
+const href = `/${b.estadoSlug}/${b.slug}/`;
+---
+<article class="bcard">
+  <p class="bcard-zone">{b.zona} · {b.alcaldiaMunicipio}</p>
+  <h3 class="bcard-name"><a href={href}>{b.nombre}</a></h3>
+  {b.direccion && <p class="bcard-addr">{b.direccion}</p>}
+  <ul class="bcard-services">
+    {b.servicios.slice(0, 4).map((s) => <li>{s}</li>)}
+  </ul>
+  <p class="bcard-status" data-state={b.verificacion}>
+    {b.verificacion === 'confirmada' ? '✓ Verificada' : 'Listada · verificación pendiente'}
+  </p>
+</article>
+<style>
+  .bcard { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; background: var(--bg); transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease); }
+  .bcard:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .bcard-zone { text-transform: uppercase; letter-spacing: 0.08em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0 0 0.3rem; }
+  .bcard-name { font-family: var(--font-serif); font-size: var(--fs-lg); margin: 0 0 0.3rem; }
+  .bcard-name a { color: var(--text); text-decoration: none; }
+  .bcard-name a:hover { color: var(--accent); }
+  .bcard-addr { font-size: var(--fs-sm); color: var(--text-soft); margin: 0 0 0.6rem; }
+  .bcard-services { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0; margin: 0 0 0.8rem; }
+  .bcard-services li { font-size: var(--fs-xs); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.2rem 0.6rem; color: var(--text-soft); }
+  .bcard-status { font-size: var(--fs-xs); color: var(--text-soft); margin: 0; }
+  .bcard-status[data-state='confirmada'] { color: #1a7f37; font-weight: 600; }
+</style>
