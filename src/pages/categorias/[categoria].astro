@@ -1,0 +1,53 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const slugify = (s) =>
+    s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, '-');
+  const CATS = ['Guías', 'Técnicas', 'Negocios', 'Tendencias', 'Estilo de vida'];
+  const arts = await getCollection('articulos', ({ data }) => !data.draft);
+  return CATS.map((name) => ({
+    params: { categoria: slugify(name) },
+    props: { name, slug: slugify(name), arts: arts.filter((a) => a.data.category === name) },
+  }));
+}
+const { name, slug, arts } = Astro.props;
+---
+<PageLayout
+  title={`${name} · Blog`}
+  description={`Artículos de la categoría ${name} en Barberia.mx.`}
+  canonicalPath={`/categorias/${slug}/`}
+>
+  <section class="cat">
+    <header class="cat-head">
+      <p class="cat-kicker"><a href="/categorias/">← Categorías</a></p>
+      <h1 class="cat-title">{name}</h1>
+    </header>
+    {arts.length > 0 ? (
+      <div class="cat-grid">
+        {arts.map((a) => (
+          <article class="cat-art">
+            <h2 class="cat-art-title"><a href={`/articulos/${a.id}/`}>{a.data.title}</a></h2>
+            <p class="cat-art-dek">{a.data.description}</p>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <p class="cat-empty">Aún no hay artículos en esta categoría. Pronto publicaremos más.</p>
+    )}
+  </section>
+</PageLayout>
+<style>
+  .cat { max-width: var(--container); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .cat-head { margin-bottom: 2rem; }
+  .cat-kicker a { color: var(--accent); text-decoration: none; font-size: var(--fs-sm); }
+  .cat-title { font-family: var(--font-serif); font-size: var(--fs-3xl); margin: 0.4rem 0 0; }
+  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .cat-art { border-top: 2px solid var(--text); padding-top: 0.8rem; }
+  .cat-art-title { font-family: var(--font-serif); font-size: var(--fs-lg); margin: 0 0 0.4rem; }
+  .cat-art-title a { color: var(--text); text-decoration: none; }
+  .cat-art-title a:hover { color: var(--accent); }
+  .cat-art-dek { color: var(--text-soft); font-size: var(--fs-sm); margin: 0; }
+  .cat-empty { color: var(--text-soft); font-size: var(--fs-lg); padding: 2rem 0; }
+</style>

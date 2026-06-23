@@ -1,7 +1,57 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_head.html?raw';
-import main from './_main.html?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import BarberiaCard from '@components/BarberiaCard.astro';
+import { barberias, totalBarberias, totalSinWeb } from '@data/barberias';
 
+// Agrupar por estado (sólo estados con barberías reales).
+const porEstado = barberias.reduce((acc, b) => {
+  (acc[b.estado] ||= []).push(b);
+  return acc;
+}, {} as Record<string, typeof barberias>);
+const estados = Object.keys(porEstado).sort();
 ---
-<BaseLayout headExtra={head} mainHtml={main} bodyClass="" showMasthead={true} />
+<PageLayout
+  title="Directorio de barberías en México"
+  description="Directorio independiente de barberías profesionales en México. En construcción: sumamos barberías reales, sin reseñas inventadas."
+  canonicalPath="/directorio/"
+  withOrgSchema
+>
+  <section class="dir">
+    <header class="dir-head">
+      <p class="dir-kicker">Directorio nacional · en construcción</p>
+      <h1 class="dir-title">Barberías reales de México</h1>
+      <p class="dir-dek">
+        Estamos catalogando barberías profesionales, una por una, con su información pública.
+        Hoy el directorio tiene <strong>{totalBarberias}</strong> {totalBarberias === 1 ? 'barbería' : 'barberías'} y sigue creciendo.
+        Sin reseñas inventadas: cada perfil indica si está verificado.
+      </p>
+    </header>
+
+    {estados.map((estado) => (
+      <section class="dir-estado">
+        <h2 class="dir-estado-title">{estado}</h2>
+        <div class="dir-grid">
+          {porEstado[estado].map((b) => <BarberiaCard b={b} />)}
+        </div>
+      </section>
+    ))}
+
+    <p class="dir-cta">
+      <strong>Apoyamos a las barberías sin sitio web.</strong> {totalSinWeb} de estas barberías
+      están en Google pero no tienen página propia: les damos presencia aquí y, si son los dueños,
+      les ayudamos a crear su sitio. ¿Tienes una barbería? Pronto habilitamos el registro;
+      mientras tanto, el directorio crece a mano y con datos reales.
+    </p>
+  </section>
+</PageLayout>
+<style>
+  .dir { max-width: var(--container); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .dir-head { max-width: var(--container-narrow); margin-bottom: 2.5rem; }
+  .dir-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .dir-title { font-family: var(--font-serif); font-size: var(--fs-3xl); line-height: 1.1; margin: 0.4rem 0 0.6rem; }
+  .dir-dek { font-size: var(--fs-lg); color: var(--text-soft); line-height: var(--leading); }
+  .dir-estado { margin-top: 2.5rem; }
+  .dir-estado-title { font-family: var(--font-serif); font-size: var(--fs-xl); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin: 0 0 1.25rem; }
+  .dir-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .dir-cta { margin-top: 3rem; padding: 1.5rem; background: var(--surface); border-radius: var(--radius); color: var(--text-soft); font-size: var(--fs-base); }
+</style>

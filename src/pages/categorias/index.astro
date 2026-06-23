@@ -1,7 +1,48 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_head.html?raw';
-import main from './_main.html?raw';
-import pageScript from './_page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const slugify = (s: string) =>
+  s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, '-');
+
+const arts = await getCollection('articulos', ({ data }) => !data.draft);
+const CATS = ['Guías', 'Técnicas', 'Negocios', 'Tendencias', 'Estilo de vida'];
+const cats = CATS.map((name) => ({
+  name,
+  slug: slugify(name),
+  count: arts.filter((a) => a.data.category === name).length,
+}));
 ---
-<BaseLayout headExtra={head} mainHtml={main} bodyClass="" showMasthead={true} pageScript={pageScript} />
+<PageLayout
+  title="Categorías del blog"
+  description="Explora el contenido editorial de Barberia.mx por categoría: guías, técnicas, negocios, tendencias y estilo de vida."
+  canonicalPath="/categorias/"
+>
+  <section class="cats">
+    <header class="cats-head">
+      <p class="cats-kicker">Editorial</p>
+      <h1 class="cats-title">Categorías</h1>
+      <p class="cats-dek">Navega los artículos por tema.</p>
+    </header>
+    <div class="cats-grid">
+      {cats.map((c) => (
+        <a class="cat-card" href={`/categorias/${c.slug}/`}>
+          <h2 class="cat-card-title">{c.name}</h2>
+          <p class="cat-card-count">{c.count} {c.count === 1 ? 'artículo' : 'artículos'}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</PageLayout>
+<style>
+  .cats { max-width: var(--container); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .cats-head { margin-bottom: 2rem; }
+  .cats-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .cats-title { font-family: var(--font-serif); font-size: var(--fs-3xl); margin: 0.3rem 0 0.4rem; }
+  .cats-dek { color: var(--text-soft); font-size: var(--fs-lg); }
+  .cats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.25rem; }
+  .cat-card { display: block; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-decoration: none; transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease); }
+  .cat-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .cat-card-title { font-family: var(--font-serif); font-size: var(--fs-lg); margin: 0 0 0.3rem; color: var(--text); }
+  .cat-card-count { color: var(--text-soft); font-size: var(--fs-sm); margin: 0; }
+</style>

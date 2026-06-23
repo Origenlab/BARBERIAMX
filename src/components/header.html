@@ -1,75 +1,75 @@
 <!-- ============================================
-     SITE HEADER · navegación editorial
-     ============================================ -->
+   SITE HEADER · navegación editorial
+   ============================================ -->
 <nav class="nav" id="navbar" aria-label="Navegación principal">
-  <div class="nav-container">
+ <div class="nav-container">
 
-    <a href="/" class="nav-logo" aria-label="Barberia.mx — Inicio">
-      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
-        <rect width="32" height="32" rx="4" fill="currentColor"/>
-        <path d="M10 8v16M14 8v16M10 16h4M20 8l4 8-4 8M20 16h4" stroke="#f3ede3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="nav-logo-text">barberia<span class="nav-logo-accent">.mx</span></span>
+  <a href="/" class="nav-logo" aria-label="Barberia.mx — Inicio">
+   <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+    <rect width="32" height="32" rx="4" fill="currentColor"/>
+    <path d="M10 8v16M14 8v16M10 16h4M20 8l4 8-4 8M20 16h4" stroke="#f3ede3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+   </svg>
+   <span class="nav-logo-text">barberia<span class="nav-logo-accent">.mx</span></span>
+  </a>
+
+  <ul class="nav-menu" id="nav-menu" role="list">
+   <li class="nav-item"><a href="/directorio/" class="nav-link" data-match="directorio"><span class="nav-link-text">Directorio</span></a></li>
+   <li class="nav-item"><a href="/zona/" class="nav-link" data-match="zona"><span class="nav-link-text">Zonas</span></a></li>
+   <li class="nav-item"><a href="/#marketplace" class="nav-link" data-match="marketplace"><span class="nav-link-text">Marketplace</span></a></li>
+   <li class="nav-item"><a href="/#empleo" class="nav-link" data-match="empleo"><span class="nav-link-text">Empleo</span></a></li>
+   <li class="nav-item nav-item-dropdown">
+    <a href="/blog/" class="nav-link" data-match="blog|categorias|articulos" aria-haspopup="true" aria-expanded="false">
+     <span class="nav-link-text">Editorial</span>
+     <svg class="nav-dropdown-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
     </a>
-
-    <ul class="nav-menu" id="nav-menu" role="list">
-      <li class="nav-item"><a href="/directorio/" class="nav-link" data-match="directorio"><span class="nav-link-text">Directorio</span></a></li>
-      <li class="nav-item"><a href="/zona/" class="nav-link" data-match="zona"><span class="nav-link-text">Zonas</span></a></li>
-      <li class="nav-item"><a href="/#marketplace" class="nav-link" data-match="marketplace"><span class="nav-link-text">Marketplace</span></a></li>
-      <li class="nav-item"><a href="/#empleo" class="nav-link" data-match="empleo"><span class="nav-link-text">Empleo</span></a></li>
-      <li class="nav-item nav-item-dropdown">
-        <a href="/blog/" class="nav-link" data-match="blog|categorias|articulos" aria-haspopup="true" aria-expanded="false">
-          <span class="nav-link-text">Editorial</span>
-          <svg class="nav-dropdown-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
-        </a>
-        <div class="nav-dropdown" role="menu">
-          <a href="/blog/" class="nav-dropdown-link" role="menuitem">Todos los artículos</a>
-          <a href="/categorias/" class="nav-dropdown-link" role="menuitem">Ver categorías</a>
-          <div class="nav-dropdown-divider" role="separator"></div>
-          <a href="/categorias/tendencias/" class="nav-dropdown-link" role="menuitem">Tendencias</a>
-          <a href="/categorias/tecnicas/" class="nav-dropdown-link" role="menuitem">Técnicas</a>
-          <a href="/categorias/productos/" class="nav-dropdown-link" role="menuitem">Productos</a>
-          <a href="/categorias/negocios/" class="nav-dropdown-link" role="menuitem">Negocios</a>
-          <a href="/categorias/estilo-de-vida/" class="nav-dropdown-link" role="menuitem">Estilo de vida</a>
-        </div>
-      </li>
-    </ul>
-
-    <div class="nav-actions">
-      <a href="/#registro" class="nav-btn nav-btn-outline">Ingresar</a>
-      <a href="/#registro" class="nav-btn nav-btn-primary">Registrar barbería</a>
+    <div class="nav-dropdown" role="menu">
+     <a href="/blog/" class="nav-dropdown-link" role="menuitem">Todos los artículos</a>
+     <a href="/categorias/" class="nav-dropdown-link" role="menuitem">Ver categorías</a>
+     <div class="nav-dropdown-divider" role="separator"></div>
+     <a href="/categorias/tendencias/" class="nav-dropdown-link" role="menuitem">Tendencias</a>
+     <a href="/categorias/tecnicas/" class="nav-dropdown-link" role="menuitem">Técnicas</a>
+     <a href="/categorias/productos/" class="nav-dropdown-link" role="menuitem">Productos</a>
+     <a href="/categorias/negocios/" class="nav-dropdown-link" role="menuitem">Negocios</a>
+     <a href="/categorias/estilo-de-vida/" class="nav-dropdown-link" role="menuitem">Estilo de vida</a>
     </div>
+   </li>
+  </ul>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile" type="button">
-      <span class="nav-toggle-line" aria-hidden="true"></span>
-      <span class="nav-toggle-line" aria-hidden="true"></span>
-      <span class="nav-toggle-line" aria-hidden="true"></span>
-    </button>
+  <div class="nav-actions">
+   <a href="/#registro" class="nav-btn nav-btn-outline">Ingresar</a>
+   <a href="/#registro" class="nav-btn nav-btn-primary">Registrar barbería</a>
   </div>
 
-  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
-    <div class="nav-mobile-content">
-      <ul class="nav-mobile-menu" role="list">
-        <li><a href="/directorio/" class="nav-mobile-link" data-match="directorio">Directorio</a></li>
-        <li><a href="/zona/" class="nav-mobile-link" data-match="zona">Zonas</a></li>
-        <li><a href="/#marketplace" class="nav-mobile-link" data-match="marketplace">Marketplace</a></li>
-        <li><a href="/#empleo" class="nav-mobile-link" data-match="empleo">Empleo</a></li>
-        <li><a href="/blog/" class="nav-mobile-link" data-match="blog">Editorial</a></li>
-        <li class="nav-mobile-submenu">
-          <span class="nav-mobile-submenu-title">Categorías</span>
-          <ul class="nav-mobile-submenu-list" role="list">
-            <li><a href="/categorias/tendencias/" class="nav-mobile-link nav-mobile-sublink">Tendencias</a></li>
-            <li><a href="/categorias/tecnicas/" class="nav-mobile-link nav-mobile-sublink">Técnicas</a></li>
-            <li><a href="/categorias/productos/" class="nav-mobile-link nav-mobile-sublink">Productos</a></li>
-            <li><a href="/categorias/negocios/" class="nav-mobile-link nav-mobile-sublink">Negocios</a></li>
-            <li><a href="/categorias/estilo-de-vida/" class="nav-mobile-link nav-mobile-sublink">Estilo de vida</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div class="nav-mobile-actions">
-        <a href="/#registro" class="nav-btn nav-btn-outline nav-btn-full">Ingresar</a>
-        <a href="/#registro" class="nav-btn nav-btn-primary nav-btn-full">Registrar barbería</a>
-      </div>
-    </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile" type="button">
+   <span class="nav-toggle-line" aria-hidden="true"></span>
+   <span class="nav-toggle-line" aria-hidden="true"></span>
+   <span class="nav-toggle-line" aria-hidden="true"></span>
+  </button>
+ </div>
+
+ <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <div class="nav-mobile-content">
+   <ul class="nav-mobile-menu" role="list">
+    <li><a href="/directorio/" class="nav-mobile-link" data-match="directorio">Directorio</a></li>
+    <li><a href="/zona/" class="nav-mobile-link" data-match="zona">Zonas</a></li>
+    <li><a href="/#marketplace" class="nav-mobile-link" data-match="marketplace">Marketplace</a></li>
+    <li><a href="/#empleo" class="nav-mobile-link" data-match="empleo">Empleo</a></li>
+    <li><a href="/blog/" class="nav-mobile-link" data-match="blog">Editorial</a></li>
+    <li class="nav-mobile-submenu">
+     <span class="nav-mobile-submenu-title">Categorías</span>
+     <ul class="nav-mobile-submenu-list" role="list">
+      <li><a href="/categorias/tendencias/" class="nav-mobile-link nav-mobile-sublink">Tendencias</a></li>
+      <li><a href="/categorias/tecnicas/" class="nav-mobile-link nav-mobile-sublink">Técnicas</a></li>
+      <li><a href="/categorias/productos/" class="nav-mobile-link nav-mobile-sublink">Productos</a></li>
+      <li><a href="/categorias/negocios/" class="nav-mobile-link nav-mobile-sublink">Negocios</a></li>
+      <li><a href="/categorias/estilo-de-vida/" class="nav-mobile-link nav-mobile-sublink">Estilo de vida</a></li>
+     </ul>
+    </li>
+   </ul>
+   <div class="nav-mobile-actions">
+    <a href="/#registro" class="nav-btn nav-btn-outline nav-btn-full">Ingresar</a>
+    <a href="/#registro" class="nav-btn nav-btn-primary nav-btn-full">Registrar barbería</a>
+   </div>
   </div>
+ </div>
 </nav>

@@ -1,0 +1,60 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import BarberiaCard from '@components/BarberiaCard.astro';
+import { barberias } from '@data/barberias';
+
+export async function getStaticPaths() {
+  const byEstado = {};
+  for (const b of barberias) {
+    (byEstado[b.estadoSlug] ||= { estado: b.estado, list: [] });
+    byEstado[b.estadoSlug].list.push(b);
+  }
+  return Object.entries(byEstado).map(([estadoSlug, v]) => ({
+    params: { estado: estadoSlug },
+    props: { estado: v.estado, list: v.list },
+  }));
+}
+const { estado, list } = Astro.props;
+const porZona = list.reduce((acc, b) => {
+  (acc[b.zona] ||= []).push(b);
+  return acc;
+}, {} as Record<string, typeof list>);
+const zonas = Object.keys(porZona).sort();
+const slugEstado = list[0].estadoSlug;
+---
+<PageLayout
+  title={`Barberías en ${estado}`}
+  description={`Directorio de barberías profesionales en ${estado}, por zona. Directorio independiente en construcción, con datos reales.`}
+  canonicalPath={`/${slugEstado}/`}
+>
+  <section class="est">
+    <header class="est-head">
+      <p class="est-kicker">Directorio · {estado}</p>
+      <h1 class="est-title">Barberías en {estado}</h1>
+      <p class="est-dek">
+        {list.length} {list.length === 1 ? 'barbería catalogada' : 'barberías catalogadas'} con datos reales. El directorio crece, una barbería a la vez.
+      </p>
+    </header>
+    {zonas.map((zona) => (
+      <section class="est-zona">
+        <h2 class="est-zona-title">{zona}</h2>
+        <div class="est-grid">
+          {porZona[zona].map((b) => <BarberiaCard b={b} />)}
+        </div>
+      </section>
+    ))}
+    <p class="est-back"><a href="/directorio/">← Todo el directorio</a></p>
+  </section>
+</PageLayout>
+<style>
+  .est { max-width: var(--container); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .est-head { max-width: var(--container-narrow); margin-bottom: 2.5rem; }
+  .est-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .est-title { font-family: var(--font-serif); font-size: var(--fs-3xl); line-height: 1.1; margin: 0.4rem 0 0.6rem; }
+  .est-dek { font-size: var(--fs-lg); color: var(--text-soft); }
+  .est-zona { margin-top: 2.5rem; }
+  .est-zona-title { font-family: var(--font-serif); font-size: var(--fs-xl); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin: 0 0 1.25rem; }
+  .est-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .est-back { margin-top: 3rem; }
+  .est-back a { color: var(--accent); text-decoration: none; }
+</style>

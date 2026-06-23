@@ -1,7 +1,46 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_head.html?raw';
-import main from './_main.html?raw';
-import pageScript from './_page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articulos = (await getCollection('articulos', ({ data }) => !data.draft)).sort(
+  (a, b) => (b.data.publishDate?.getTime() ?? 0) - (a.data.publishDate?.getTime() ?? 0)
+);
 ---
-<BaseLayout headExtra={head} mainHtml={main} bodyClass="blog" showMasthead={true} pageScript={pageScript} />
+<PageLayout
+  title="Blog · cultura y oficio barbero"
+  description="Guías, técnicas y cultura de la barbería en México. Contenido editorial independiente de Barberia.mx."
+  canonicalPath="/blog/"
+>
+  <section class="blog">
+    <header class="blog-head">
+      <p class="blog-kicker">Editorial</p>
+      <h1 class="blog-title">Cultura y oficio barbero</h1>
+      <p class="blog-dek">Guías, técnicas y reportajes sobre la barbería mexicana. Sin patrocinios disfrazados.</p>
+    </header>
+    <div class="blog-grid">
+      {articulos.map((a) => (
+        <article class="blog-card">
+          <p class="blog-cat">{a.data.category}</p>
+          <h2 class="blog-card-title"><a href={`/articulos/${a.id}/`}>{a.data.title}</a></h2>
+          <p class="blog-card-dek">{a.data.description}</p>
+          <p class="blog-card-meta">{a.data.author}{a.data.readingMinutes && ` · ${a.data.readingMinutes} min`}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</PageLayout>
+<style>
+  .blog { max-width: var(--container); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .blog-head { max-width: var(--container-narrow); margin-bottom: 2.5rem; }
+  .blog-kicker { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .blog-title { font-family: var(--font-serif); font-size: var(--fs-3xl); line-height: 1.1; margin: 0.4rem 0 0.6rem; }
+  .blog-dek { font-size: var(--fs-lg); color: var(--text-soft); }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .blog-card { border-top: 2px solid var(--text); padding-top: 1rem; }
+  .blog-cat { text-transform: uppercase; letter-spacing: 0.08em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0 0 0.4rem; }
+  .blog-card-title { font-family: var(--font-serif); font-size: var(--fs-xl); margin: 0 0 0.5rem; line-height: 1.15; }
+  .blog-card-title a { color: var(--text); text-decoration: none; }
+  .blog-card-title a:hover { color: var(--accent); }
+  .blog-card-dek { color: var(--text-soft); margin: 0 0 0.6rem; }
+  .blog-card-meta { font-size: var(--fs-sm); color: var(--text-soft); margin: 0; }
+</style>

@@ -1,0 +1,90 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import { barberias } from '@data/barberias';
+import { barberShop, jsonLd } from '@lib/seo';
+import site from '@config/site';
+
+export async function getStaticPaths() {
+  return barberias.map((b) => ({ params: { estado: b.estadoSlug, slug: b.slug }, props: { b } }));
+}
+const { b } = Astro.props;
+const path = `/${b.estadoSlug}/${b.slug}/`;
+const ld = jsonLd(
+  barberShop({
+    name: b.nombre,
+    url: `${site.url}${path}`,
+    city: b.alcaldiaMunicipio,
+    area: b.zona,
+    address: b.direccion,
+    rating: b.rating,
+    reviews: b.resenas,
+  })
+);
+const mapsQuery = encodeURIComponent(`${b.nombre} ${b.direccion ?? b.zona} ${b.alcaldiaMunicipio}`);
+---
+<PageLayout
+  title={b.nombre}
+  description={`${b.nombre}: barbería en ${b.zona}, ${b.alcaldiaMunicipio} (${b.estado}). Servicios, zona y contacto en el directorio Barberia.mx.`}
+  canonicalPath={path}
+>
+  <article class="shop">
+    <Fragment set:html={ld} />
+    <p class="shop-back"><a href={`/${b.estadoSlug}/`}>← Barberías en {b.estado}</a></p>
+    <p class="shop-zone">{b.zona} · {b.alcaldiaMunicipio}</p>
+    <h1 class="shop-name">{b.nombre}</h1>
+    {b.direccion && <p class="shop-addr">📍 {b.direccion}</p>}
+
+    <h2 class="shop-h2">Servicios</h2>
+    <ul class="shop-services">
+      {b.servicios.map((s) => <li>{s}</li>)}
+    </ul>
+
+    <h2 class="shop-h2">Contacto y ubicación</h2>
+    <p class="shop-links">
+      {b.web && <a class="shop-link" href={b.web} target="_blank" rel="noopener">Sitio web →</a>}
+      {b.instagram && <a class="shop-link" href={b.instagram} target="_blank" rel="noopener">Instagram →</a>}
+      {b.telefono && <a class="shop-link" href={`tel:${b.telefono.replace(/\s/g, '')}`}>{b.telefono}</a>}
+      <a class="shop-link" href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`} target="_blank" rel="noopener">Ver en Google Maps →</a>
+    </p>
+
+    {b.sinWeb && (
+      <aside class="shop-apoyo">
+        <p class="shop-apoyo-title">Esta barbería aún no tiene sitio web propio.</p>
+        <p>
+          En <strong>Barberia.mx</strong> la apoyamos dándole presencia en línea sin costo.
+          ¿Eres el dueño y quieres tu propia página? Te ayudamos a crearla.
+        </p>
+        <a
+          class="shop-apoyo-cta"
+          href={`mailto:${site.contacto.email}?subject=Quiero el sitio web de ${encodeURIComponent(b.nombre)}`}
+        >Quiero mi sitio web →</a>
+      </aside>
+    )}
+
+    <p class="shop-note">
+      {b.verificacion === 'confirmada'
+        ? 'Barbería verificada por Barberia.mx.'
+        : 'Listada a partir de información pública. Verificación directa pendiente — confirma horarios y servicios con la barbería.'}
+      <br /><span class="shop-src">Fuente: {b.fuente}</span>
+    </p>
+  </article>
+</PageLayout>
+<style>
+  .shop { max-width: var(--container-narrow); margin: 0 auto; padding: 3rem var(--gutter) 5rem; }
+  .shop-back { margin: 0 0 1.5rem; }
+  .shop-back a { color: var(--accent); text-decoration: none; }
+  .shop-zone { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0; }
+  .shop-name { font-family: var(--font-serif); font-size: var(--fs-3xl); line-height: 1.1; margin: 0.4rem 0 0.4rem; }
+  .shop-addr { font-size: var(--fs-base); color: var(--text-soft); margin: 0 0 1rem; }
+  .shop-h2 { font-family: var(--font-serif); font-size: var(--fs-xl); margin: 2rem 0 0.6rem; }
+  .shop-services { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0; }
+  .shop-services li { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.3rem 0.8rem; font-size: var(--fs-sm); color: var(--text-soft); }
+  .shop-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .shop-link { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .shop-apoyo { margin-top: 2rem; padding: 1.5rem; border: 2px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); }
+  .shop-apoyo-title { font-family: var(--font-serif); font-size: var(--fs-lg); margin: 0 0 0.4rem; color: var(--text); }
+  .shop-apoyo p { margin: 0 0 0.8rem; color: var(--text); }
+  .shop-apoyo-cta { display: inline-block; background: var(--bg-ink); color: var(--text-invert); padding: 0.6rem 1.1rem; border-radius: var(--radius); font-weight: 600; text-decoration: none; }
+  .shop-note { margin-top: 2.5rem; padding: 1.25rem; background: var(--surface); border-radius: var(--radius); font-size: var(--fs-sm); color: var(--text-soft); line-height: var(--leading); }
+  .shop-src { font-size: var(--fs-xs); }
+</style>
