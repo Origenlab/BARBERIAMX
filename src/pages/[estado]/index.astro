@@ -1,10 +1,15 @@
 ---
 import PageLayout from '@layouts/PageLayout.astro';
 import BarberiaCard from '@components/BarberiaCard.astro';
-import { barberias } from '@data/barberias';
+import { barberias, type Barberia } from '@data/barberias';
+
+interface Props {
+  estado: string;
+  list: Barberia[];
+}
 
 export async function getStaticPaths() {
-  const byEstado = {};
+  const byEstado: Record<string, { estado: string; list: Barberia[] }> = {};
   for (const b of barberias) {
     (byEstado[b.estadoSlug] ||= { estado: b.estado, list: [] });
     byEstado[b.estadoSlug].list.push(b);
@@ -18,7 +23,7 @@ const { estado, list } = Astro.props;
 const porZona = list.reduce((acc, b) => {
   (acc[b.zona] ||= []).push(b);
   return acc;
-}, {} as Record<string, typeof list>);
+}, {} as Record<string, Barberia[]>);
 const zonas = Object.keys(porZona).sort();
 const slugEstado = list[0].estadoSlug;
 ---

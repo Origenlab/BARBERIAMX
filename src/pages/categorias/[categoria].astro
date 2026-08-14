@@ -3,7 +3,7 @@ import PageLayout from '@layouts/PageLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const slugify = (s) =>
+  const slugify = (s: string) =>
     s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, '-');
   const CATS = ['Guías', 'Técnicas', 'Negocios', 'Tendencias', 'Estilo de vida'];
   const arts = await getCollection('articulos', ({ data }) => !data.draft);
