@@ -200,7 +200,7 @@
     '.ed-job',
     '.ed-blog-card',
     '.ed-manifesto-inner',
-    '.ed-state-card',
+    '.dp-card',
     '.ed-feat-story',
     '.ed-dept',
     '.ed-article-row',
@@ -239,6 +239,82 @@
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
     targets.forEach((el) => { if (!el.classList.contains('is-visible')) io.observe(el); });
+  }
+
+  // ----------------------------------------------
+  // Directorio: sort / filter / grid-list toggle
+  // (solo corre si existe #states-grid en la página)
+  // ----------------------------------------------
+  function hookDirectoryGrid() {
+    const grid = document.getElementById('states-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.dp-card'));
+    const sortGroup = document.querySelector('[data-directory-sort]');
+    const filterGroup = document.querySelector('[data-directory-filter]');
+    const viewGroup = document.querySelector('[data-directory-view]');
+    const countEl = document.querySelector('[data-directory-count]');
+    let activeFilter = 'all';
+
+    function updateCount() {
+      if (!countEl) return;
+      const visible = cards.filter((c) => !c.hidden).length;
+      const strongs = countEl.querySelectorAll('b');
+      if (strongs[0]) strongs[0].textContent = visible;
+    }
+
+    function applySort(mode) {
+      const sorted = cards.slice().sort((a, b) => {
+        if (mode === 'alpha') return a.dataset.name.localeCompare(b.dataset.name, 'es');
+        if (mode === 'region') {
+          const r = a.dataset.region.localeCompare(b.dataset.region, 'es');
+          return r !== 0 ? r : Number(a.dataset.rank) - Number(b.dataset.rank);
+        }
+        return Number(b.dataset.count) - Number(a.dataset.count);
+      });
+      sorted.forEach((c) => grid.appendChild(c));
+    }
+
+    function applyFilter(mode) {
+      activeFilter = mode;
+      cards.forEach((c) => {
+        let show = true;
+        if (mode === 'top10') show = Number(c.dataset.rank) <= 10;
+        else if (mode === 'premium') show = c.dataset.premium === 'true';
+        else if (mode === 'new') show = c.dataset.new === 'true';
+        c.hidden = !show;
+      });
+      updateCount();
+    }
+
+    if (sortGroup) {
+      sortGroup.querySelectorAll('[data-sort]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          sortGroup.querySelectorAll('[data-sort]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+          btn.setAttribute('aria-pressed', 'true');
+          applySort(btn.dataset.sort);
+        });
+      });
+    }
+
+    if (filterGroup) {
+      filterGroup.querySelectorAll('[data-filter]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          filterGroup.querySelectorAll('[data-filter]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+          btn.setAttribute('aria-pressed', 'true');
+          applyFilter(btn.dataset.filter);
+        });
+      });
+    }
+
+    if (viewGroup) {
+      viewGroup.querySelectorAll('[data-view]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          viewGroup.querySelectorAll('[data-view]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+          btn.setAttribute('aria-pressed', 'true');
+          grid.classList.toggle('is-list', btn.dataset.view === 'list');
+        });
+      });
+    }
   }
 
   // ----------------------------------------------
@@ -284,6 +360,7 @@
     hookDropdowns();
     hookAutoReveal();
     hookReveal();
+    hookDirectoryGrid();
 
     document.dispatchEvent(new CustomEvent('components:loaded'));
   }

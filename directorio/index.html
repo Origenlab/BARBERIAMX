@@ -202,500 +202,751 @@
         </dl>
 
         <!-- ===== Controles de orden + filtro ===== -->
-        <div class="ed-sort-bar" role="toolbar" aria-label="Ordenar y filtrar estados">
-          <div class="ed-sort-bar-l">
-            <span class="ed-sort-label">Ordenar:</span>
-            <button class="ed-sort-tab" type="button" aria-pressed="true">Densidad <span aria-hidden="true">↓</span></button>
-            <button class="ed-sort-tab" type="button" aria-pressed="false">Alfabético</button>
-            <button class="ed-sort-tab" type="button" aria-pressed="false">Por región</button>
+        <div class="dp-toolbar dp-toolbar--sticky" role="toolbar" aria-label="Ordenar y filtrar estados" id="directorio-toolbar" data-directory-toolbar>
+          <div class="dp-toolbar-group" data-directory-sort>
+            <span class="dp-toolbar-label">Ordenar:</span>
+            <button class="dp-tab" type="button" data-sort="density" aria-pressed="true">Densidad <span aria-hidden="true">↓</span></button>
+            <button class="dp-tab" type="button" data-sort="alpha" aria-pressed="false">Alfabético</button>
+            <button class="dp-tab" type="button" data-sort="region" aria-pressed="false">Por región</button>
           </div>
-          <div class="ed-sort-bar-r">
-            <span class="ed-sort-label">Filtrar:</span>
-            <button class="ed-sort-chip" type="button" aria-pressed="true">Todos<span class="ed-sort-chip-count">32</span></button>
-            <button class="ed-sort-chip" type="button" aria-pressed="false">Top 10<span class="ed-sort-chip-count">10</span></button>
-            <button class="ed-sort-chip" type="button" aria-pressed="false">Premium<span class="ed-sort-chip-count">12</span></button>
-            <button class="ed-sort-chip" type="button" aria-pressed="false">Nuevos<span class="ed-sort-chip-count">4</span></button>
+          <div class="dp-toolbar-side">
+            <div class="dp-toolbar-group" data-directory-filter>
+              <span class="dp-toolbar-label">Filtrar:</span>
+              <button class="dp-chip" type="button" data-filter="all" aria-pressed="true">Todos<span class="dp-chip-count">32</span></button>
+              <button class="dp-chip" type="button" data-filter="top10" aria-pressed="false">Top 10<span class="dp-chip-count">10</span></button>
+              <button class="dp-chip" type="button" data-filter="premium" aria-pressed="false">Premium<span class="dp-chip-count">12</span></button>
+              <button class="dp-chip" type="button" data-filter="new" aria-pressed="false">Nuevos<span class="dp-chip-count">4</span></button>
+            </div>
+            <div class="dp-viewswitch" data-directory-view role="group" aria-label="Tipo de vista">
+              <button type="button" class="dp-viewbtn" data-view="grid" aria-pressed="true" aria-label="Vista de cuadrícula">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </button>
+              <button type="button" class="dp-viewbtn" data-view="list" aria-pressed="false" aria-label="Vista de lista">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+              </button>
+            </div>
           </div>
         </div>
+        <p class="dp-resultcount" data-directory-count aria-live="polite">Mostrando <b>32</b> de <b>32</b> estados</p>
 
-<div class="ed-states-pro">
+<div class="dp-grid" id="states-grid">
 
-          <a href="/ciudad-de-mexico/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Ciudad de México">
-              <span class="ed-state-card-num">N.º 01</span>
-              <span class="ed-state-card-capital">CDMX</span>
+          <a href="/ciudad-de-mexico/" class="dp-card" data-name="Ciudad de México" data-count="187" data-region="Centro & Valle de México" data-rank="1" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Ciudad de México">
+              <span class="dp-card-index">N.º 01</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">CD</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Ciudad de México</h3>
-              <p class="ed-state-card-text">Epicentro nacional del oficio. Cinco zonas reseñadas y decenas de casas premium en Roma, Polanco, Del Valle.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>187</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Ciudad de México</h3>
+                <span class="dp-card-sub">Cap. CDMX</span>
+              </div>
+              <p class="dp-card-text">Epicentro nacional del oficio. Cinco zonas reseñadas y decenas de casas premium en Roma, Polanco, Del Valle.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>187</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Centro</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#01</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/estado-de-mexico/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Estado de México">
-              <span class="ed-state-card-num">N.º 02</span>
-              <span class="ed-state-card-capital">Toluca</span>
+          <a href="/estados/estado-de-mexico/" class="dp-card" data-name="Estado de México" data-count="156" data-region="Centro & Valle de México" data-rank="2" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Estado de México">
+              <span class="dp-card-index">N.º 02</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">TO</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Estado de México</h3>
-              <p class="ed-state-card-text">Cinturón metropolitano con alta densidad. Oferta diversa de Naucalpan a Ecatepec, Toluca y Tlalnepantla.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>156</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Estado de México</h3>
+                <span class="dp-card-sub">Cap. Toluca</span>
+              </div>
+              <p class="dp-card-text">Cinturón metropolitano con alta densidad. Oferta diversa de Naucalpan a Ecatepec, Toluca y Tlalnepantla.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>156</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Centro</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#02</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/jalisco/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1521490878406-3f6e9b5b2f93?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Jalisco">
-              <span class="ed-state-card-num">N.º 03</span>
-              <span class="ed-state-card-capital">Guadalajara</span>
+          <a href="/estados/jalisco/" class="dp-card" data-name="Jalisco" data-count="134" data-region="El Bajío" data-rank="3" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Jalisco">
+              <span class="dp-card-index">N.º 03</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">GU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Jalisco</h3>
-              <p class="ed-state-card-text">Segunda ciudad del país. Escena vibrante en Providencia, Chapalita, Lafayette y zonas de creación nueva.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>134</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Jalisco</h3>
+                <span class="dp-card-sub">Cap. Guadalajara</span>
+              </div>
+              <p class="dp-card-text">Segunda ciudad del país. Escena vibrante en Providencia, Chapalita, Lafayette y zonas de creación nueva.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>134</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Bajío</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#03</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/nuevo-leon/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Nuevo León">
-              <span class="ed-state-card-num">N.º 04</span>
-              <span class="ed-state-card-capital">Monterrey</span>
+          <a href="/estados/nuevo-leon/" class="dp-card" data-name="Nuevo León" data-count="110" data-region="Frontera Norte" data-rank="4" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Nuevo León">
+              <span class="dp-card-index">N.º 04</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">MO</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Nuevo León</h3>
-              <p class="ed-state-card-text">Tercera ciudad nacional. Barberías premium concentradas en San Pedro, Valle Oriente y Cumbres.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>110</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Nuevo León</h3>
+                <span class="dp-card-sub">Cap. Monterrey</span>
+              </div>
+              <p class="dp-card-text">Tercera ciudad nacional. Barberías premium concentradas en San Pedro, Valle Oriente y Cumbres.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>110</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#04</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/puebla/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Puebla">
-              <span class="ed-state-card-num">N.º 05</span>
-              <span class="ed-state-card-capital">Puebla</span>
+          <a href="/estados/puebla/" class="dp-card" data-name="Puebla" data-count="89" data-region="Centro & Valle de México" data-rank="5" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Puebla">
+              <span class="dp-card-index">N.º 05</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">PU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Puebla</h3>
-              <p class="ed-state-card-text">Cuarta ciudad: escena fuerte en Angelópolis y centro histórico patrimonio.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>89</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Puebla</h3>
+                <span class="dp-card-sub">Cap. Puebla</span>
+              </div>
+              <p class="dp-card-text">Cuarta ciudad: escena fuerte en Angelópolis y centro histórico patrimonio.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>89</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Centro</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#05</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/guanajuato/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b8d27d05?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Guanajuato">
-              <span class="ed-state-card-num">N.º 06</span>
-              <span class="ed-state-card-capital">Guanajuato</span>
+          <a href="/estados/guanajuato/" class="dp-card" data-name="Guanajuato" data-count="78" data-region="El Bajío" data-rank="6" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Guanajuato">
+              <span class="dp-card-index">N.º 06</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">GU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Guanajuato</h3>
-              <p class="ed-state-card-text">Industria del cuero y el corte. Barberías históricas en León y San Miguel de Allende.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>78</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Guanajuato</h3>
+                <span class="dp-card-sub">Cap. Guanajuato</span>
+              </div>
+              <p class="dp-card-text">Industria del cuero y el corte. Barberías históricas en León y San Miguel de Allende.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>78</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Bajío</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#06</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/veracruz/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Veracruz">
-              <span class="ed-state-card-num">N.º 07</span>
-              <span class="ed-state-card-capital">Xalapa</span>
+          <a href="/estados/veracruz/" class="dp-card" data-name="Veracruz" data-count="72" data-region="Sureste & Península" data-rank="7" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Veracruz">
+              <span class="dp-card-index">N.º 07</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">XA</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Veracruz</h3>
-              <p class="ed-state-card-text">Caribe y son jarocho. Escena en Xalapa, puerto de Veracruz y Boca del Río.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>72</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Veracruz</h3>
+                <span class="dp-card-sub">Cap. Xalapa</span>
+              </div>
+              <p class="dp-card-text">Caribe y son jarocho. Escena en Xalapa, puerto de Veracruz y Boca del Río.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>72</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Sureste</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#07</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/queretaro/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1581065178026-390bc4e78dae?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Querétaro">
-              <span class="ed-state-card-num">N.º 08</span>
-              <span class="ed-state-card-capital">Querétaro</span>
+          <a href="/estados/queretaro/" class="dp-card" data-name="Querétaro" data-count="65" data-region="El Bajío" data-rank="8" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Querétaro">
+              <span class="dp-card-index">N.º 08</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">QU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Querétaro</h3>
-              <p class="ed-state-card-text">Crecimiento explosivo. Barberías nuevas cada mes en Juriquilla, centro y zona industrial.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>65</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Querétaro</h3>
+                <span class="dp-card-sub">Cap. Querétaro</span>
+              </div>
+              <p class="dp-card-text">Crecimiento explosivo. Barberías nuevas cada mes en Juriquilla, centro y zona industrial.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>65</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Bajío</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#08</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/yucatan/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Yucatán">
-              <span class="ed-state-card-num">N.º 09</span>
-              <span class="ed-state-card-capital">Mérida</span>
+          <a href="/estados/yucatan/" class="dp-card" data-name="Yucatán" data-count="58" data-region="Sureste & Península" data-rank="9" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Yucatán">
+              <span class="dp-card-index">N.º 09</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">ME</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Yucatán</h3>
-              <p class="ed-state-card-text">Renacimiento del estado. Barberías premium con estilo mestizo en Mérida y Valladolid.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>58</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Yucatán</h3>
+                <span class="dp-card-sub">Cap. Mérida</span>
+              </div>
+              <p class="dp-card-text">Renacimiento del estado. Barberías premium con estilo mestizo en Mérida y Valladolid.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>58</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Sureste</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#09</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/chihuahua/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Chihuahua">
-              <span class="ed-state-card-num">N.º 10</span>
-              <span class="ed-state-card-capital">Chihuahua</span>
+          <a href="/estados/chihuahua/" class="dp-card" data-name="Chihuahua" data-count="56" data-region="Frontera Norte" data-rank="10" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Chihuahua">
+              <span class="dp-card-index">N.º 10</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">CH</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Chihuahua</h3>
-              <p class="ed-state-card-text">Norte sólido. Barberías que dominan el corte clásico americano en capital y Ciudad Juárez.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>56</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Chihuahua</h3>
+                <span class="dp-card-sub">Cap. Chihuahua</span>
+              </div>
+              <p class="dp-card-text">Norte sólido. Barberías que dominan el corte clásico americano en capital y Ciudad Juárez.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>56</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#10</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/coahuila/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1521490878406-3f6e9b5b2f93?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Coahuila">
-              <span class="ed-state-card-num">N.º 11</span>
-              <span class="ed-state-card-capital">Saltillo</span>
+          <a href="/estados/coahuila/" class="dp-card" data-name="Coahuila" data-count="54" data-region="Frontera Norte" data-rank="11" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Coahuila">
+              <span class="dp-card-index">N.º 11</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">SA</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Coahuila</h3>
-              <p class="ed-state-card-text">Bonanza industrial. Barberías corporativas modernas en Saltillo, Torreón y Monclova.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>54</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Coahuila</h3>
+                <span class="dp-card-sub">Cap. Saltillo</span>
+              </div>
+              <p class="dp-card-text">Bonanza industrial. Barberías corporativas modernas en Saltillo, Torreón y Monclova.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>54</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#11</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/baja-california/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Baja California">
-              <span class="ed-state-card-num">N.º 12</span>
-              <span class="ed-state-card-capital">Mexicali</span>
+          <a href="/estados/baja-california/" class="dp-card" data-name="Baja California" data-count="52" data-region="Frontera Norte" data-rank="12" data-premium="true" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Baja California">
+              <span class="dp-card-index">N.º 12</span>
+              <span class="dp-card-flag">Premium</span>
+              <span class="dp-card-avatar" aria-hidden="true">ME</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Baja California</h3>
-              <p class="ed-state-card-text">Frontera con LA. Fades agresivos y tatuaje, escena fuerte en Tijuana y Ensenada.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>52</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Baja California</h3>
+                <span class="dp-card-sub">Cap. Mexicali</span>
+              </div>
+              <p class="dp-card-text">Frontera con LA. Fades agresivos y tatuaje, escena fuerte en Tijuana y Ensenada.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>52</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#12</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/sonora/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Sonora">
-              <span class="ed-state-card-num">N.º 13</span>
-              <span class="ed-state-card-capital">Hermosillo</span>
+          <a href="/estados/sonora/" class="dp-card" data-name="Sonora" data-count="48" data-region="Frontera Norte" data-rank="13" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Sonora">
+              <span class="dp-card-index">N.º 13</span>
+              <span class="dp-card-avatar" aria-hidden="true">HE</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Sonora</h3>
-              <p class="ed-state-card-text">Minería y maquila. Barberías modernas en zona Pitic y nuevas casas en Ciudad Obregón.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>48</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Sonora</h3>
+                <span class="dp-card-sub">Cap. Hermosillo</span>
+              </div>
+              <p class="dp-card-text">Minería y maquila. Barberías modernas en zona Pitic y nuevas casas en Ciudad Obregón.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>48</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#13</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/michoacan/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b8d27d05?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Michoacán">
-              <span class="ed-state-card-num">N.º 14</span>
-              <span class="ed-state-card-capital">Morelia</span>
+          <a href="/estados/michoacan/" class="dp-card" data-name="Michoacán" data-count="47" data-region="El Bajío" data-rank="14" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Michoacán">
+              <span class="dp-card-index">N.º 14</span>
+              <span class="dp-card-avatar" aria-hidden="true">MO</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Michoacán</h3>
-              <p class="ed-state-card-text">Centro histórico patrimonio. Barberías de oficio puro en Morelia y Pátzcuaro.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>47</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Michoacán</h3>
+                <span class="dp-card-sub">Cap. Morelia</span>
+              </div>
+              <p class="dp-card-text">Centro histórico patrimonio. Barberías de oficio puro en Morelia y Pátzcuaro.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>47</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Bajío</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#14</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/tamaulipas/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tamaulipas">
-              <span class="ed-state-card-num">N.º 15</span>
-              <span class="ed-state-card-capital">Cd. Victoria</span>
+          <a href="/estados/tamaulipas/" class="dp-card" data-name="Tamaulipas" data-count="44" data-region="Frontera Norte" data-rank="15" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tamaulipas">
+              <span class="dp-card-index">N.º 15</span>
+              <span class="dp-card-avatar" aria-hidden="true">VI</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Tamaulipas</h3>
-              <p class="ed-state-card-text">Costa norte con influencia texana. Escena activa en Tampico, Reynosa y Nuevo Laredo.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>44</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Tamaulipas</h3>
+                <span class="dp-card-sub">Cap. Cd. Victoria</span>
+              </div>
+              <p class="dp-card-text">Costa norte con influencia texana. Escena activa en Tampico, Reynosa y Nuevo Laredo.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>44</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#15</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/san-luis-potosi/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1581065178026-390bc4e78dae?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en SLP">
-              <span class="ed-state-card-num">N.º 16</span>
-              <span class="ed-state-card-capital">SLP</span>
+          <a href="/estados/san-luis-potosi/" class="dp-card" data-name="San Luis Potosí" data-count="41" data-region="El Bajío" data-rank="16" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en SLP">
+              <span class="dp-card-index">N.º 16</span>
+              <span class="dp-card-avatar" aria-hidden="true">SL</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">San Luis Potosí</h3>
-              <p class="ed-state-card-text">Industria automotriz trae demanda. Nueva escena de barberías premium en Lomas.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>41</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">San Luis Potosí</h3>
+                <span class="dp-card-sub">Cap. SLP</span>
+              </div>
+              <p class="dp-card-text">Industria automotriz trae demanda. Nueva escena de barberías premium en Lomas.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>41</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Bajío</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#16</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/sinaloa/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Sinaloa">
-              <span class="ed-state-card-num">N.º 17</span>
-              <span class="ed-state-card-capital">Culiacán</span>
+          <a href="/estados/sinaloa/" class="dp-card" data-name="Sinaloa" data-count="39" data-region="Pacífico Norte" data-rank="17" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Sinaloa">
+              <span class="dp-card-index">N.º 17</span>
+              <span class="dp-card-avatar" aria-hidden="true">CU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Sinaloa</h3>
-              <p class="ed-state-card-text">Norte vibrante con estilo costero y norteño. Escena en Culiacán y Mazatlán.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>39</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Sinaloa</h3>
+                <span class="dp-card-sub">Cap. Culiacán</span>
+              </div>
+              <p class="dp-card-text">Norte vibrante con estilo costero y norteño. Escena en Culiacán y Mazatlán.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>39</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#17</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/hidalgo/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Hidalgo">
-              <span class="ed-state-card-num">N.º 18</span>
-              <span class="ed-state-card-capital">Pachuca</span>
+          <a href="/estados/hidalgo/" class="dp-card" data-name="Hidalgo" data-count="36" data-region="Centro & Valle de México" data-rank="18" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Hidalgo">
+              <span class="dp-card-index">N.º 18</span>
+              <span class="dp-card-avatar" aria-hidden="true">PA</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Hidalgo</h3>
-              <p class="ed-state-card-text">Centro minero con tradición. Oferta nueva en zona universitaria de Pachuca.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>36</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Hidalgo</h3>
+                <span class="dp-card-sub">Cap. Pachuca</span>
+              </div>
+              <p class="dp-card-text">Centro minero con tradición. Oferta nueva en zona universitaria de Pachuca.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>36</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Centro</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#18</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/morelos/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1521490878406-3f6e9b5b2f93?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Morelos">
-              <span class="ed-state-card-num">N.º 19</span>
-              <span class="ed-state-card-capital">Cuernavaca</span>
+          <a href="/estados/morelos/" class="dp-card" data-name="Morelos" data-count="34" data-region="Centro & Valle de México" data-rank="19" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Morelos">
+              <span class="dp-card-index">N.º 19</span>
+              <span class="dp-card-avatar" aria-hidden="true">CU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Morelos</h3>
-              <p class="ed-state-card-text">Refugio capitalino. Barberías premium para weekenders en Cuernavaca y Tepoztlán.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>34</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Morelos</h3>
+                <span class="dp-card-sub">Cap. Cuernavaca</span>
+              </div>
+              <p class="dp-card-text">Refugio capitalino. Barberías premium para weekenders en Cuernavaca y Tepoztlán.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>34</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Centro</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#19</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/oaxaca/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Oaxaca">
-              <span class="ed-state-card-num">N.º 20</span>
-              <span class="ed-state-card-capital">Oaxaca</span>
+          <a href="/estados/oaxaca/" class="dp-card" data-name="Oaxaca" data-count="32" data-region="Pacífico Sur" data-rank="20" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Oaxaca">
+              <span class="dp-card-index">N.º 20</span>
+              <span class="dp-card-avatar" aria-hidden="true">OA</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Oaxaca</h3>
-              <p class="ed-state-card-text">Tradición artesanal traducida a barberías de autor en el centro histórico.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>32</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Oaxaca</h3>
+                <span class="dp-card-sub">Cap. Oaxaca</span>
+              </div>
+              <p class="dp-card-text">Tradición artesanal traducida a barberías de autor en el centro histórico.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>32</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Sur</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#20</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/tabasco/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tabasco">
-              <span class="ed-state-card-num">N.º 21</span>
-              <span class="ed-state-card-capital">Villahermosa</span>
+          <a href="/estados/tabasco/" class="dp-card" data-name="Tabasco" data-count="31" data-region="Sureste & Península" data-rank="21" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tabasco">
+              <span class="dp-card-index">N.º 21</span>
+              <span class="dp-card-avatar" aria-hidden="true">VI</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Tabasco</h3>
-              <p class="ed-state-card-text">Petróleo y calor. Barberías rápidas con AC y servicio eficiente en Villahermosa.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>31</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Tabasco</h3>
+                <span class="dp-card-sub">Cap. Villahermosa</span>
+              </div>
+              <p class="dp-card-text">Petróleo y calor. Barberías rápidas con AC y servicio eficiente en Villahermosa.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>31</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Sureste</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#21</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/chiapas/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b8d27d05?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Chiapas">
-              <span class="ed-state-card-num">N.º 22</span>
-              <span class="ed-state-card-capital">Tuxtla</span>
+          <a href="/estados/chiapas/" class="dp-card" data-name="Chiapas" data-count="29" data-region="Pacífico Sur" data-rank="22" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Chiapas">
+              <span class="dp-card-index">N.º 22</span>
+              <span class="dp-card-avatar" aria-hidden="true">TU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Chiapas</h3>
-              <p class="ed-state-card-text">Diversidad cultural. Cortes tradicionales en San Cristóbal de las Casas y Tuxtla.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>29</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Chiapas</h3>
+                <span class="dp-card-sub">Cap. Tuxtla</span>
+              </div>
+              <p class="dp-card-text">Diversidad cultural. Cortes tradicionales en San Cristóbal de las Casas y Tuxtla.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>29</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Sur</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#22</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/quintana-roo/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Quintana Roo">
-              <span class="ed-state-card-num">N.º 23</span>
-              <span class="ed-state-card-capital">Chetumal</span>
+          <a href="/estados/quintana-roo/" class="dp-card" data-name="Quintana Roo" data-count="28" data-region="Sureste & Península" data-rank="23" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Quintana Roo">
+              <span class="dp-card-index">N.º 23</span>
+              <span class="dp-card-avatar" aria-hidden="true">CH</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Quintana Roo</h3>
-              <p class="ed-state-card-text">Riviera Maya: barberías de hotel y resort en Cancún, Playa del Carmen y Tulum.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>28</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Quintana Roo</h3>
+                <span class="dp-card-sub">Cap. Chetumal</span>
+              </div>
+              <p class="dp-card-text">Riviera Maya: barberías de hotel y resort en Cancún, Playa del Carmen y Tulum.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>28</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Sureste</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#23</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/guerrero/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1581065178026-390bc4e78dae?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Guerrero">
-              <span class="ed-state-card-num">N.º 24</span>
-              <span class="ed-state-card-capital">Chilpancingo</span>
+          <a href="/estados/guerrero/" class="dp-card" data-name="Guerrero" data-count="26" data-region="Pacífico Sur" data-rank="24" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Guerrero">
+              <span class="dp-card-index">N.º 24</span>
+              <span class="dp-card-avatar" aria-hidden="true">CH</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Guerrero</h3>
-              <p class="ed-state-card-text">Costa con barberías de hotel y estilo playero en Acapulco, Ixtapa y Zihuatanejo.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>26</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Guerrero</h3>
+                <span class="dp-card-sub">Cap. Chilpancingo</span>
+              </div>
+              <p class="dp-card-text">Costa con barberías de hotel y estilo playero en Acapulco, Ixtapa y Zihuatanejo.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>26</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Sur</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#24</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/aguascalientes/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Aguascalientes">
-              <span class="ed-state-card-num">N.º 25</span>
-              <span class="ed-state-card-capital">Aguascalientes</span>
+          <a href="/estados/aguascalientes/" class="dp-card" data-name="Aguascalientes" data-count="23" data-region="El Bajío" data-rank="25" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Aguascalientes">
+              <span class="dp-card-index">N.º 25</span>
+              <span class="dp-card-avatar" aria-hidden="true">AG</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Aguascalientes</h3>
-              <p class="ed-state-card-text">Ritmo industrial. Barberías de pueblo en el centro y boutique en Lomas de Aguascalientes.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>23</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Aguascalientes</h3>
+                <span class="dp-card-sub">Cap. Aguascalientes</span>
+              </div>
+              <p class="dp-card-text">Ritmo industrial. Barberías de pueblo en el centro y boutique en Lomas de Aguascalientes.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>23</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Bajío</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#25</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/durango/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Durango">
-              <span class="ed-state-card-num">N.º 26</span>
-              <span class="ed-state-card-capital">Durango</span>
+          <a href="/estados/durango/" class="dp-card" data-name="Durango" data-count="21" data-region="Pacífico Norte" data-rank="26" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Durango">
+              <span class="dp-card-index">N.º 26</span>
+              <span class="dp-card-avatar" aria-hidden="true">DU</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Durango</h3>
-              <p class="ed-state-card-text">Tradición norteña. Barberías rurales con técnica heredada por generaciones.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>21</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Durango</h3>
+                <span class="dp-card-sub">Cap. Durango</span>
+              </div>
+              <p class="dp-card-text">Tradición norteña. Barberías rurales con técnica heredada por generaciones.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>21</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#26</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/zacatecas/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1521490878406-3f6e9b5b2f93?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Zacatecas">
-              <span class="ed-state-card-num">N.º 27</span>
-              <span class="ed-state-card-capital">Zacatecas</span>
+          <a href="/estados/zacatecas/" class="dp-card" data-name="Zacatecas" data-count="19" data-region="Pacífico Norte" data-rank="27" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Zacatecas">
+              <span class="dp-card-index">N.º 27</span>
+              <span class="dp-card-avatar" aria-hidden="true">ZA</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Zacatecas</h3>
-              <p class="ed-state-card-text">Centro minero patrimonio. Barberías históricas en cantera rosa del centro.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>19</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Zacatecas</h3>
+                <span class="dp-card-sub">Cap. Zacatecas</span>
+              </div>
+              <p class="dp-card-text">Centro minero patrimonio. Barberías históricas en cantera rosa del centro.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>19</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#27</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/nayarit/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Nayarit">
-              <span class="ed-state-card-num">N.º 28</span>
-              <span class="ed-state-card-capital">Tepic</span>
+          <a href="/estados/nayarit/" class="dp-card" data-name="Nayarit" data-count="17" data-region="Pacífico Norte" data-rank="28" data-premium="false" data-new="false">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Nayarit">
+              <span class="dp-card-index">N.º 28</span>
+              <span class="dp-card-avatar" aria-hidden="true">TE</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Nayarit</h3>
-              <p class="ed-state-card-text">Costa surfista con cortes desenfadados. Auge en Nuevo Vallarta y Sayulita.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>17</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Nayarit</h3>
+                <span class="dp-card-sub">Cap. Tepic</span>
+              </div>
+              <p class="dp-card-text">Costa surfista con cortes desenfadados. Auge en Nuevo Vallarta y Sayulita.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>17</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#28</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/tlaxcala/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tlaxcala">
-              <span class="ed-state-card-num">N.º 29</span>
-              <span class="ed-state-card-capital">Tlaxcala</span>
+          <a href="/estados/tlaxcala/" class="dp-card" data-name="Tlaxcala" data-count="14" data-region="Centro & Valle de México" data-rank="29" data-premium="false" data-new="true">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tlaxcala">
+              <span class="dp-card-index">N.º 29</span>
+              <span class="dp-card-flag dp-card-flag--alt">Nuevo</span>
+              <span class="dp-card-avatar" aria-hidden="true">TL</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Tlaxcala</h3>
-              <p class="ed-state-card-text">Estado pequeño con historia. Barberías de barrio con tradición y nueva oferta urbana.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>14</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Tlaxcala</h3>
+                <span class="dp-card-sub">Cap. Tlaxcala</span>
+              </div>
+              <p class="dp-card-text">Estado pequeño con historia. Barberías de barrio con tradición y nueva oferta urbana.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>14</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Centro</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#29</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/campeche/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b8d27d05?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Campeche">
-              <span class="ed-state-card-num">N.º 30</span>
-              <span class="ed-state-card-capital">Campeche</span>
+          <a href="/estados/campeche/" class="dp-card" data-name="Campeche" data-count="13" data-region="Sureste & Península" data-rank="30" data-premium="false" data-new="true">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Campeche">
+              <span class="dp-card-index">N.º 30</span>
+              <span class="dp-card-flag dp-card-flag--alt">Nuevo</span>
+              <span class="dp-card-avatar" aria-hidden="true">CA</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Campeche</h3>
-              <p class="ed-state-card-text">Tradición caribeña. Barberías históricas en el centro amurallado patrimonio UNESCO.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>13</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Campeche</h3>
+                <span class="dp-card-sub">Cap. Campeche</span>
+              </div>
+              <p class="dp-card-text">Tradición caribeña. Barberías históricas en el centro amurallado patrimonio UNESCO.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>13</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Sureste</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#30</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/colima/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Colima">
-              <span class="ed-state-card-num">N.º 31</span>
-              <span class="ed-state-card-capital">Colima</span>
+          <a href="/estados/colima/" class="dp-card" data-name="Colima" data-count="12" data-region="Pacífico Sur" data-rank="31" data-premium="false" data-new="true">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Colima">
+              <span class="dp-card-index">N.º 31</span>
+              <span class="dp-card-flag dp-card-flag--alt">Nuevo</span>
+              <span class="dp-card-avatar" aria-hidden="true">CO</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Colima</h3>
-              <p class="ed-state-card-text">Pequeña pero curada. Cortes con identidad regional en capital y Manzanillo.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>12</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Colima</h3>
+                <span class="dp-card-sub">Cap. Colima</span>
+              </div>
+              <p class="dp-card-text">Pequeña pero curada. Cortes con identidad regional en capital y Manzanillo.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>12</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Sur</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#31</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
 
-          <a href="/estados/baja-california-sur/" class="ed-state-card">
-            <div class="ed-state-card-img" style="background-image:url('https://images.unsplash.com/photo-1581065178026-390bc4e78dae?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Baja California Sur">
-              <span class="ed-state-card-num">N.º 32</span>
-              <span class="ed-state-card-capital">La Paz</span>
+          <a href="/estados/baja-california-sur/" class="dp-card" data-name="Baja California Sur" data-count="11" data-region="Pacífico Norte" data-rank="32" data-premium="false" data-new="true">
+            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Baja California Sur">
+              <span class="dp-card-index">N.º 32</span>
+              <span class="dp-card-flag dp-card-flag--alt">Nuevo</span>
+              <span class="dp-card-avatar" aria-hidden="true">PA</span>
             </div>
-            <div class="ed-state-card-body">
-              <h3 class="ed-state-card-title">Baja California Sur</h3>
-              <p class="ed-state-card-text">Surf, descanso, cortes relajados. Auge de barberías premium en Cabo San Lucas.</p>
-              <div class="ed-state-card-foot">
-                <span class="ed-state-card-count"><b>11</b> barberías</span>
-                <span class="ed-state-card-btn">Ver estado <span class="arrow">→</span></span>
+            <div class="dp-card-body">
+              <div class="dp-card-head">
+                <h3 class="dp-card-title">Baja California Sur</h3>
+                <span class="dp-card-sub">Cap. La Paz</span>
+              </div>
+              <p class="dp-card-text">Surf, descanso, cortes relajados. Auge de barberías premium en Cabo San Lucas.</p>
+              <dl class="dp-card-stats">
+                <div class="dp-card-stat"><dt>Barberías</dt><dd>11</dd></div>
+                <div class="dp-card-stat"><dt>Región</dt><dd>Pac. Norte</dd></div>
+                <div class="dp-card-stat"><dt>Ranking</dt><dd>#32</dd></div>
+              </dl>
+              <div class="dp-card-foot">
+                <span class="dp-card-cta">Ver estado <span class="arrow">→</span></span>
               </div>
             </div>
           </a>
@@ -935,7 +1186,7 @@
           </a>
 
           <a href="/estados/yucatan/barberia-merida/" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b8d27d05?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Casa Mestiza">
+            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Casa Mestiza">
               <span class="ed-feature-num">N.º 04</span>
             </div>
             <div class="ed-feature-meta">
@@ -947,7 +1198,7 @@
           </a>
 
           <a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1521490878406-3f6e9b5b2f93?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="The Gentleman's Barbershop">
+            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="The Gentleman's Barbershop">
               <span class="ed-feature-num">N.º 05</span>
             </div>
             <div class="ed-feature-meta">
@@ -984,7 +1235,7 @@
           </a>
 
           <a href="/estados/queretaro/barberia-juriquilla/" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1581065178026-390bc4e78dae?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Juriquilla Barber">
+            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Juriquilla Barber">
               <span class="ed-feature-num">N.º 08</span>
             </div>
             <div class="ed-feature-meta">

@@ -35,16 +35,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TouristAttraction",
+    "@type": "CollectionPage",
     "@id": "https://barberia.mx/ciudad-de-mexico/#cdmx",
     "name": "Guía de Barberías · Ciudad de México",
     "url": "https://barberia.mx/ciudad-de-mexico/",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ciudad de México",
-      "addressCountry": "MX"
+    "isPartOf": { "@type": "WebSite", "url": "https://barberia.mx/" },
+    "about": {
+      "@type": "Place",
+      "name": "Ciudad de México",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad de México",
+        "addressCountry": "MX"
+      }
     },
     "description": "Guía editorial de las mejores barberías de la Ciudad de México."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://barberia.mx/" },
+      { "@type": "ListItem", "position": 2, "name": "Directorio Nacional", "item": "https://barberia.mx/directorio/" },
+      { "@type": "ListItem", "position": 3, "name": "Ciudad de México", "item": "https://barberia.mx/ciudad-de-mexico/" }
+    ]
   }
   </script>
 </head>
@@ -143,7 +159,7 @@
           </a>
 
           <a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1521490878406-3f6e9b5b2f93?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="The Gentleman's Barbershop">
+            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="The Gentleman's Barbershop">
               <span class="ed-feature-num">N.º 02</span>
             </div>
             <div class="ed-feature-meta">
@@ -167,7 +183,7 @@
           </a>
 
           <a href="/ciudad-de-mexico/barberia-juarez-cuauhtemoc/" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b8d27d05?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Scalper Studio">
+            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Scalper Studio">
               <span class="ed-feature-num">N.º 04</span>
               <span class="ed-feature-badge">Premium</span>
             </div>
@@ -208,49 +224,49 @@
         </header>
 
         <div class="ed-states" role="list">
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">01</span>
             <span class="ed-state-name">Cuauhtémoc</span>
             <span class="ed-state-count">12 barberías</span>
             <svg class="ed-state-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">02</span>
             <span class="ed-state-name">Miguel Hidalgo</span>
             <span class="ed-state-count">8 barberías</span>
             <svg class="ed-state-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">03</span>
             <span class="ed-state-name">Benito Juárez</span>
             <span class="ed-state-count">6 barberías</span>
             <svg class="ed-state-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">04</span>
             <span class="ed-state-name">Coyoacán</span>
             <span class="ed-state-count">5 barberías</span>
             <svg class="ed-state-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">05</span>
             <span class="ed-state-name">Álvaro Obregón</span>
             <span class="ed-state-count">4 barberías</span>
             <svg class="ed-state-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">06</span>
             <span class="ed-state-name">Cuajimalpa</span>
             <span class="ed-state-count">3 barberías</span>
             <svg class="ed-state-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">07</span>
             <span class="ed-state-name">Tlalpan</span>
             <span class="ed-state-count">3 barberías</span>
             <svg class="ed-state-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
-          <a href="#" class="ed-state" role="listitem">
+          <a href="/zona/" class="ed-state" role="listitem">
             <span class="ed-state-num">08</span>
             <span class="ed-state-name">Iztapalapa</span>
             <span class="ed-state-count">2 barberías</span>
@@ -338,11 +354,6 @@
   <div data-component="footer"></div>
 
   <script src="/js/components.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('.ed-section-head, .ed-feature, .ed-state').forEach((el) => el.setAttribute('data-reveal', ''));
-    });
-  </script>
 </body>
 
 </html>

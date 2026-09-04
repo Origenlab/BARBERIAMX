@@ -5,13 +5,13 @@
   <!-- ════════════════════════════════════════════════════════════
        Barberia.mx · Sitemap principal
        Directorio editorial nacional de barberías en México · Desde 2005
-       Actualizado: 2026-05-29
+       Actualizado: 2026-09-04
        ════════════════════════════════════════════════════════════ -->
 
   <!-- ============ HOME ============ -->
   <url>
     <loc>https://barberia.mx/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -19,31 +19,31 @@
   <!-- ============ HUBS PRINCIPALES ============ -->
   <url>
     <loc>https://barberia.mx/directorio/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://barberia.mx/ciudad-de-mexico/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://barberia.mx/blog/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://barberia.mx/zona/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://barberia.mx/categorias/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -51,31 +51,31 @@
   <!-- ============ DIRECTORIO · 5 BARBERÍAS CDMX ============ -->
   <url>
     <loc>https://barberia.mx/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://barberia.mx/ciudad-de-mexico/barberia-condesa-cuauhtemoc/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://barberia.mx/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://barberia.mx/ciudad-de-mexico/barberia-juarez-cuauhtemoc/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://barberia.mx/ciudad-de-mexico/barberia-del-valle-centro-benito-juarez/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -83,31 +83,31 @@
   <!-- ============ CATEGORÍAS EDITORIALES ============ -->
   <url>
     <loc>https://barberia.mx/categorias/tendencias/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://barberia.mx/categorias/tecnicas/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://barberia.mx/categorias/productos/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://barberia.mx/categorias/negocios/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://barberia.mx/categorias/estilo-de-vida/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -115,19 +115,19 @@
   <!-- ============ ARTÍCULOS EDITORIALES ============ -->
   <url>
     <loc>https://barberia.mx/articulos/mejores-barberias-ciudad-de-mexico-cdmx/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://barberia.mx/articulos/como-encontrar-barberia-cerca-de-ti/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://barberia.mx/articulos/rutina-grooming-hombre-moderno-guia-completa/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
