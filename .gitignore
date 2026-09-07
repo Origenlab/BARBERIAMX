@@ -49,3 +49,6 @@ dist
 # worktrees: copias de trabajo, nunca se versionan
 .worktrees/
 .claude/worktrees/
+
+# staging de limpieza (no versionar)
+_to_delete/
