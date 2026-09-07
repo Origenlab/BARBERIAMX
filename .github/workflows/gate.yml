@@ -1,0 +1,52 @@
+# BARBERIA = sitio estatico root-HTML. GitHub Pages esta en build_type
+# "legacy" (publica la rama main tal cual), y ademas corre pages.yml que
+# sube la raiz como artefacto: DOS publishers sobre el mismo dominio.
+# Por eso el sello NO puede vivir solo en el artefacto de un workflow —
+# el otro publisher lo pisaria. Se usa marker-gate: el bot committea
+# build-id.txt a la rama, que es lo que ambos publishers sirven.
+# paths-ignore evita el loop con el propio marker.
+# Regla OrigenLab: el gate es el DOMINIO, no el color de la Action.
+name: Gate de deploy (marker + verificacion de dominio)
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['build-id.txt']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gate-barberia
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Sellar y pushear build-id (marker)
+        run: |
+          echo "${{ github.sha }}" > build-id.txt
+          git config user.name "gate-bot"
+          git config user.email "gate-bot@users.noreply.github.com"
+          git add build-id.txt
+          git commit -m "gate: build-id ${GITHUB_SHA:0:8}"
+          git push origin main
+      - name: Verificar que el dominio sirve este push
+        run: |
+          DOMINIO="barberia.mx"
+          for i in $(seq 1 32); do
+            sleep 15
+            LIVE=$(curl -fsSL --max-time 15 "https://$DOMINIO/build-id.txt?cb=${{ github.run_id }}$i" 2>/dev/null | tr -d '[:space:]' || echo "")
+            if [ "$LIVE" = "${{ github.sha }}" ]; then
+              echo "OK - $DOMINIO sirve ${GITHUB_SHA:0:12}"
+              exit 0
+            fi
+            echo "intento $i/32 - dominio devuelve '${LIVE:0:12}', esperado '${GITHUB_SHA:0:12}'"
+          done
+          echo "::error::$DOMINIO NO sirve este push tras 8 min. Ojo: hay dos publishers (Pages legacy + pages.yml); revisar cual gano."
+          exit 1
