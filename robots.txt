@@ -1,6 +1,6 @@
 # ════════════════════════════════════════════════════════════════════
 # Barberia.mx · robots.txt
-# Directorio editorial nacional de barberías en México · Desde 2005
+# Directorio editorial nacional de barberías en México
 # https://www.robotstxt.org/
 # ════════════════════════════════════════════════════════════════════
 
@@ -9,7 +9,6 @@ User-agent: *
 Allow: /
 Disallow: /.audit/
 Disallow: /.git/
-Crawl-delay: 0
 
 # ===== Crawlers de Google · permitidos explícitamente =====
 User-agent: Googlebot
@@ -90,10 +89,8 @@ Allow: /
 
 # ===== Bloqueo explícito de bots agresivos / spam =====
 User-agent: AhrefsBot
-Crawl-delay: 10
 
 User-agent: SemrushBot
-Crawl-delay: 10
 
 User-agent: MJ12bot
 Disallow: /
