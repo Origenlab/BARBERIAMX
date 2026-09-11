@@ -7,6 +7,7 @@
   <title>The Barber's Spa en Roma Norte: precios y horario</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/editorial.css">
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <meta name="description" content="The Barber's Spa, barbería en Roma Norte, Cuauhtémoc: corte desde $250 y corte con barba $380. Consulta servicios, horario, dirección y contacto.">
   <meta name="keywords" content="barberia roma norte, the barbers spa, barberia cuauhtemoc, corte cabello roma, spa hombres cdmx">
   <meta name="author" content="Barberia.mx">
@@ -38,10 +39,6 @@
 
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -183,8 +180,108 @@
 
 
   <!-- Header Component -->
-  <div data-component="masthead"></div>
-  <div data-component="header"></div>
+  <div data-component="masthead">
+    <!-- component:masthead -->
+    <!-- ============================================
+         MASTHEAD · barra editorial superior
+         ============================================ -->
+    <div class="ed-masthead" id="top" aria-label="Edición">
+      <div class="ed-masthead-inner">
+        <div class="ed-masthead-l">
+          <span data-masthead-issue data-masthead-issue-override="true">Directorio de barberías · México</span>
+        </div>
+        <div class="ed-masthead-c">
+          <span class="ed-mh-dot" aria-hidden="true"></span>
+          <span>En vivo · Directorio en actualización</span>
+        </div>
+        <div class="ed-masthead-r">
+          <span>Edición Nacional</span>
+          <span aria-hidden="true">·</span>
+          <time data-masthead-date datetime="">—</time>
+        </div>
+      </div>
+    </div>
+    <!-- /component:masthead -->
+  </div>
+  <div data-component="header">
+    <!-- component:header -->
+    <!-- ============================================
+         SITE HEADER · navegación editorial
+         ============================================ -->
+    <nav class="nav" id="navbar" aria-label="Navegación principal">
+      <div class="nav-container">
+
+        <a href="/" class="nav-logo" aria-label="Barberia.mx — Inicio">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="4" fill="currentColor"/>
+            <path d="M10 8v16M14 8v16M10 16h4M20 8l4 8-4 8M20 16h4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="nav-logo-text">barberia<span class="nav-logo-accent">.mx</span></span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li class="nav-item"><a href="/directorio/" class="nav-link" data-match="directorio"><span class="nav-link-text">Directorio</span></a></li>
+          <li class="nav-item"><a href="/zona/" class="nav-link" data-match="zona"><span class="nav-link-text">Zonas</span></a></li>
+          <li class="nav-item"><a href="/#marketplace" class="nav-link" data-match="marketplace"><span class="nav-link-text">Marketplace</span></a></li>
+          <li class="nav-item"><a href="/#empleo" class="nav-link" data-match="empleo"><span class="nav-link-text">Empleo</span></a></li>
+          <li class="nav-item nav-item-dropdown">
+            <a href="/blog/" class="nav-link" data-match="blog|categorias|articulos" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-text">Editorial</span>
+              <svg class="nav-dropdown-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="/blog/" class="nav-dropdown-link" role="menuitem">Todos los artículos</a>
+              <a href="/categorias/" class="nav-dropdown-link" role="menuitem">Ver categorías</a>
+              <div class="nav-dropdown-divider" role="separator"></div>
+              <a href="/categorias/tendencias/" class="nav-dropdown-link" role="menuitem">Tendencias</a>
+              <a href="/categorias/tecnicas/" class="nav-dropdown-link" role="menuitem">Técnicas</a>
+              <a href="/categorias/productos/" class="nav-dropdown-link" role="menuitem">Productos</a>
+              <a href="/categorias/negocios/" class="nav-dropdown-link" role="menuitem">Negocios</a>
+              <a href="/categorias/estilo-de-vida/" class="nav-dropdown-link" role="menuitem">Estilo de vida</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <!--email_off--><a href="mailto:hola@barberia.mx" class="nav-btn nav-btn-outline">Contacto</a><!--/email_off-->
+          <a href="/#registro" class="nav-btn nav-btn-primary">Registrar barbería</a>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile" type="button">
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+        <div class="nav-mobile-content">
+          <ul class="nav-mobile-menu" role="list">
+            <li><a href="/directorio/" class="nav-mobile-link" data-match="directorio">Directorio</a></li>
+            <li><a href="/zona/" class="nav-mobile-link" data-match="zona">Zonas</a></li>
+            <li><a href="/#marketplace" class="nav-mobile-link" data-match="marketplace">Marketplace</a></li>
+            <li><a href="/#empleo" class="nav-mobile-link" data-match="empleo">Empleo</a></li>
+            <li><a href="/blog/" class="nav-mobile-link" data-match="blog">Editorial</a></li>
+            <li class="nav-mobile-submenu">
+              <span class="nav-mobile-submenu-title">Categorías</span>
+              <ul class="nav-mobile-submenu-list" role="list">
+                <li><a href="/categorias/tendencias/" class="nav-mobile-link nav-mobile-sublink">Tendencias</a></li>
+                <li><a href="/categorias/tecnicas/" class="nav-mobile-link nav-mobile-sublink">Técnicas</a></li>
+                <li><a href="/categorias/productos/" class="nav-mobile-link nav-mobile-sublink">Productos</a></li>
+                <li><a href="/categorias/negocios/" class="nav-mobile-link nav-mobile-sublink">Negocios</a></li>
+                <li><a href="/categorias/estilo-de-vida/" class="nav-mobile-link nav-mobile-sublink">Estilo de vida</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-mobile-actions">
+            <!--email_off--><a href="mailto:hola@barberia.mx" class="nav-btn nav-btn-outline nav-btn-full">Contacto</a><!--/email_off-->
+            <a href="/#registro" class="nav-btn nav-btn-primary nav-btn-full">Registrar barbería</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- /component:header -->
+  </div>
 
   <!-- ========== BREADCRUMB BAR ========== -->
   <nav class="breadcrumb-bar">
@@ -468,7 +565,135 @@
   </main>
 
   <!-- Footer Component -->
-  <div data-component="footer"></div>
+  <div data-component="footer">
+    <!-- component:footer -->
+    <!-- ============================================
+         SITE FOOTER · pie editorial (3 pisos)
+         Piso 1 · Marca + CTA + redes
+         Piso 2 · Mapa del sitio (5 columnas, enlaces reales)
+         Piso 3 · Legal
+         ============================================ -->
+    <footer class="footer" role="contentinfo">
+
+      <!-- ============================================
+           PISO 1 · Marca — masthead de 3 columnas
+           ============================================ -->
+      <div class="footer-brand-band">
+        <div class="footer-container footer-brand-grid">
+
+          <div class="footer-brand-content">
+            <p class="footer-kicker">Directorio editorial · México</p>
+            <a href="/" class="footer-logo" aria-label="Barberia.mx — Inicio">
+              <span class="footer-logo-text">barberia<span class="footer-logo-accent">.mx</span></span>
+            </a>
+            <p class="footer-tagline">
+              Directorio editorial de la barbería mexicana. Explora servicios, horarios y contacto en las fichas disponibles.
+            </p>
+          </div>
+
+          <div class="footer-brand-contact">
+            <p class="footer-kicker">Contacto</p>
+            <!--email_off--><a href="mailto:hola@barberia.mx" class="footer-contact-email">hola@barberia.mx</a><!--/email_off-->
+            <div class="footer-social" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/barberiamx" rel="noopener" target="_blank">Instagram</a>
+              <a href="https://www.facebook.com/barberiamx" rel="noopener" target="_blank">Facebook</a>
+              <a href="https://twitter.com/barberiamx" rel="noopener" target="_blank">Twitter</a>
+            </div>
+          </div>
+
+          <div class="footer-brand-action">
+            <p class="footer-kicker">Para barberías</p>
+            <!--email_off--><a href="mailto:hola@barberia.mx?subject=Registrar%20mi%20barber%C3%ADa&amp;body=Nombre%3A%0AColonia%20y%20ciudad%3A%0ATel%C3%A9fono%20o%20WhatsApp%3A%0AServicios%20y%20precios%3A" class="footer-cta-btn">Registrar mi barbería <span class="arrow">→</span></a><!--/email_off-->
+            <a href="#top" class="footer-totop">Volver arriba <span aria-hidden="true">↑</span></a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================
+           PISO 2 · Mapa del sitio
+           ============================================ -->
+      <div class="footer-main">
+        <div class="footer-container">
+          <div class="footer-grid">
+
+            <nav class="footer-col" aria-labelledby="footer-col-1">
+              <h2 id="footer-col-1" class="footer-col-title">Directorio</h2>
+              <ul role="list">
+                <li><a href="/directorio/">Directorio Nacional</a></li>
+                <li><a href="/directorio/#por-estado">Por estado · 32</a></li>
+                <li><a href="/directorio/#por-region">Por región · 6</a></li>
+                <li><a href="/ciudad-de-mexico/">Guía CDMX</a></li>
+                <li><a href="/zona/">Atlas de zonas</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-2">
+              <h2 id="footer-col-2" class="footer-col-title">Barberías CDMX</h2>
+              <ul role="list">
+                <li><a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/">The Barber's Spa · Roma Norte</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/">The Gentleman's · Condesa</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-juarez-cuauhtemoc/">Scalper Studio · Juárez</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/">Barberia Deluxe · Polanco</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-del-valle-centro-benito-juarez/">Mr. Venez · Del Valle</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-3">
+              <h2 id="footer-col-3" class="footer-col-title">Categorías</h2>
+              <ul role="list">
+                <li><a href="/categorias/">Todas las categorías</a></li>
+                <li><a href="/categorias/tendencias/">Tendencias</a></li>
+                <li><a href="/categorias/tecnicas/">Técnicas</a></li>
+                <li><a href="/categorias/negocios/">Negocios</a></li>
+                <li><a href="/categorias/productos/">Productos</a></li>
+                <li><a href="/categorias/estilo-de-vida/">Estilo de vida</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-4">
+              <h2 id="footer-col-4" class="footer-col-title">Blog &amp; Artículos</h2>
+              <ul role="list">
+                <li><a href="/blog/">Todos los artículos</a></li>
+                <li><a href="/articulos/como-encontrar-barberia-cerca-de-ti/">Cómo encontrar barbería cerca de ti</a></li>
+                <li><a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/">Mejores barberías CDMX</a></li>
+                <li><a href="/articulos/rutina-grooming-hombre-moderno-guia-completa/">Rutina de grooming moderno</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-5">
+              <h2 id="footer-col-5" class="footer-col-title">Comunidad</h2>
+              <ul role="list">
+                <li><a href="/#marketplace">Marketplace</a></li>
+                <li><a href="/#empleo">Bolsa de trabajo</a></li>
+                <li><a href="/#registro">Para barberos</a></li>
+                <li><!--email_off--><a href="mailto:hola@barberia.mx">Contacto</a><!--/email_off--></li>
+                <li><a href="/privacidad/">Aviso de privacidad</a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================
+           PISO 3 · Legal
+           ============================================ -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <div class="footer-legal">
+            <span>© <span data-current-year>2026</span> Barberia.mx</span>
+            <span aria-hidden="true">·</span>
+            <span>Todos los derechos reservados</span>
+          </div>
+          <p class="footer-colophon">
+            Edición independiente · Hecho en CDMX · Tipografía Inter
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- /component:footer -->
+  </div>
 
   <!-- Scripts -->
   <script src="/js/components.js"></script>

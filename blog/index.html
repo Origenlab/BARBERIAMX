@@ -22,17 +22,13 @@
 
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/editorial.css">
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a0a0a">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -72,8 +68,108 @@
 
   <a href="#main" class="ed-skip">Saltar al contenido</a>
 
-  <div data-component="masthead"></div>
-  <div data-component="header"></div>
+  <div data-component="masthead">
+    <!-- component:masthead -->
+    <!-- ============================================
+         MASTHEAD · barra editorial superior
+         ============================================ -->
+    <div class="ed-masthead" id="top" aria-label="Edición">
+      <div class="ed-masthead-inner">
+        <div class="ed-masthead-l">
+          <span data-masthead-issue data-masthead-issue-override="true">Directorio de barberías · México</span>
+        </div>
+        <div class="ed-masthead-c">
+          <span class="ed-mh-dot" aria-hidden="true"></span>
+          <span>En vivo · Directorio en actualización</span>
+        </div>
+        <div class="ed-masthead-r">
+          <span>Edición Nacional</span>
+          <span aria-hidden="true">·</span>
+          <time data-masthead-date datetime="">—</time>
+        </div>
+      </div>
+    </div>
+    <!-- /component:masthead -->
+  </div>
+  <div data-component="header">
+    <!-- component:header -->
+    <!-- ============================================
+         SITE HEADER · navegación editorial
+         ============================================ -->
+    <nav class="nav" id="navbar" aria-label="Navegación principal">
+      <div class="nav-container">
+
+        <a href="/" class="nav-logo" aria-label="Barberia.mx — Inicio">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="4" fill="currentColor"/>
+            <path d="M10 8v16M14 8v16M10 16h4M20 8l4 8-4 8M20 16h4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="nav-logo-text">barberia<span class="nav-logo-accent">.mx</span></span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li class="nav-item"><a href="/directorio/" class="nav-link" data-match="directorio"><span class="nav-link-text">Directorio</span></a></li>
+          <li class="nav-item"><a href="/zona/" class="nav-link" data-match="zona"><span class="nav-link-text">Zonas</span></a></li>
+          <li class="nav-item"><a href="/#marketplace" class="nav-link" data-match="marketplace"><span class="nav-link-text">Marketplace</span></a></li>
+          <li class="nav-item"><a href="/#empleo" class="nav-link" data-match="empleo"><span class="nav-link-text">Empleo</span></a></li>
+          <li class="nav-item nav-item-dropdown">
+            <a href="/blog/" class="nav-link" data-match="blog|categorias|articulos" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-text">Editorial</span>
+              <svg class="nav-dropdown-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="/blog/" class="nav-dropdown-link" role="menuitem">Todos los artículos</a>
+              <a href="/categorias/" class="nav-dropdown-link" role="menuitem">Ver categorías</a>
+              <div class="nav-dropdown-divider" role="separator"></div>
+              <a href="/categorias/tendencias/" class="nav-dropdown-link" role="menuitem">Tendencias</a>
+              <a href="/categorias/tecnicas/" class="nav-dropdown-link" role="menuitem">Técnicas</a>
+              <a href="/categorias/productos/" class="nav-dropdown-link" role="menuitem">Productos</a>
+              <a href="/categorias/negocios/" class="nav-dropdown-link" role="menuitem">Negocios</a>
+              <a href="/categorias/estilo-de-vida/" class="nav-dropdown-link" role="menuitem">Estilo de vida</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <!--email_off--><a href="mailto:hola@barberia.mx" class="nav-btn nav-btn-outline">Contacto</a><!--/email_off-->
+          <a href="/#registro" class="nav-btn nav-btn-primary">Registrar barbería</a>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile" type="button">
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+        <div class="nav-mobile-content">
+          <ul class="nav-mobile-menu" role="list">
+            <li><a href="/directorio/" class="nav-mobile-link" data-match="directorio">Directorio</a></li>
+            <li><a href="/zona/" class="nav-mobile-link" data-match="zona">Zonas</a></li>
+            <li><a href="/#marketplace" class="nav-mobile-link" data-match="marketplace">Marketplace</a></li>
+            <li><a href="/#empleo" class="nav-mobile-link" data-match="empleo">Empleo</a></li>
+            <li><a href="/blog/" class="nav-mobile-link" data-match="blog">Editorial</a></li>
+            <li class="nav-mobile-submenu">
+              <span class="nav-mobile-submenu-title">Categorías</span>
+              <ul class="nav-mobile-submenu-list" role="list">
+                <li><a href="/categorias/tendencias/" class="nav-mobile-link nav-mobile-sublink">Tendencias</a></li>
+                <li><a href="/categorias/tecnicas/" class="nav-mobile-link nav-mobile-sublink">Técnicas</a></li>
+                <li><a href="/categorias/productos/" class="nav-mobile-link nav-mobile-sublink">Productos</a></li>
+                <li><a href="/categorias/negocios/" class="nav-mobile-link nav-mobile-sublink">Negocios</a></li>
+                <li><a href="/categorias/estilo-de-vida/" class="nav-mobile-link nav-mobile-sublink">Estilo de vida</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-mobile-actions">
+            <!--email_off--><a href="mailto:hola@barberia.mx" class="nav-btn nav-btn-outline nav-btn-full">Contacto</a><!--/email_off-->
+            <a href="/#registro" class="nav-btn nav-btn-primary nav-btn-full">Registrar barbería</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- /component:header -->
+  </div>
 
   <main id="main">
 
@@ -140,7 +236,7 @@
         </header>
 
         <article class="ed-feat-story">
-          <a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="ed-feat-story-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1400&q=85&auto=format&fit=crop');" aria-label="Las mejores barberías de CDMX"></a>
+          <a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="ed-feat-story-img" style="background-image:url('/img/fotos/barberia-1503951914875-1400.webp');" aria-label="Las mejores barberías de CDMX"></a>
           <div class="ed-feat-story-body">
             <div class="ed-feat-story-kicker">Reportaje · <a href="/ciudad-de-mexico/">Ciudad de México</a></div>
             <h3 class="ed-feat-story-title">
@@ -191,7 +287,7 @@
                   <p class="ed-article-dek">Recorrimos las cuatro alcaldías que están definiendo la nueva escena barbera. Un atlas con servicios, precios y firmas en las nueve zonas mapeadas por el <a href="/zona/">atlas Barberia.mx</a>.</p>
                   <p class="ed-article-byline">Por <strong>S. García</strong> · 14 min · Mayo 2026</p>
                 </div>
-                <a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700&q=80&auto=format&fit=crop');" aria-label="Las mejores barberías de CDMX"></a>
+                <a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1503951914875-700.webp');" aria-label="Las mejores barberías de CDMX"></a>
               </article>
 
               <article class="ed-article-row">
@@ -202,7 +298,7 @@
                   <p class="ed-article-dek">Lavado, hidratación, barba y rituales. Una guía editorial paso a paso para construir una rutina que funcione — complementa con los <a href="/categorias/productos/">productos verificados por la redacción</a>.</p>
                   <p class="ed-article-byline">Por <strong>R. Mendoza</strong> · 18 min · Abril 2026</p>
                 </div>
-                <a href="/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700&q=80&auto=format&fit=crop');" aria-label="Rutina de grooming"></a>
+                <a href="/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');" aria-label="Rutina de grooming"></a>
               </article>
 
               <article class="ed-article-row">
@@ -213,7 +309,7 @@
                   <p class="ed-article-dek">Qué evaluar antes de elegir: portafolio, estilo de la casa, precios reales y señales de que vale la pena la primera cita. Empieza buscando en el <a href="/directorio/">directorio nacional</a>.</p>
                   <p class="ed-article-byline">Por <strong>A. Torres</strong> · 9 min · Abril 2026</p>
                 </div>
-                <a href="/articulos/como-encontrar-barberia-cerca-de-ti/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=700&q=80&auto=format&fit=crop');" aria-label="Encontrar barbería"></a>
+                <a href="/articulos/como-encontrar-barberia-cerca-de-ti/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');" aria-label="Encontrar barbería"></a>
               </article>
 
               <article class="ed-article-row">
@@ -224,7 +320,7 @@
                   <p class="ed-article-dek">Manual ilustrado del corte que define a la generación. Ángulos, guarniciones y los errores que todos cometen al principio.</p>
                   <p class="ed-article-byline">Por <strong>R. Mendoza</strong> · 8 min · Marzo 2026</p>
                 </div>
-                <a href="/categorias/tecnicas/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=700&q=80&auto=format&fit=crop');" aria-label="Fade técnica"></a>
+                <a href="/categorias/tecnicas/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1493256338651-700.webp');" aria-label="Fade técnica"></a>
               </article>
 
               <article class="ed-article-row">
@@ -235,7 +331,7 @@
                   <p class="ed-article-dek">Costos reales, permisos, mobiliario y el plan financiero que separa una idea de un negocio rentable. Con cifras de operación verificadas en barberías de los 32 estados.</p>
                   <p class="ed-article-byline">Por <strong>A. Torres</strong> · 12 min · Marzo 2026</p>
                 </div>
-                <a href="/categorias/negocios/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=700&q=80&auto=format&fit=crop');" aria-label="Abrir barbería"></a>
+                <a href="/categorias/negocios/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1517832606299-700.webp');" aria-label="Abrir barbería"></a>
               </article>
 
               <article class="ed-article-row">
@@ -246,7 +342,7 @@
                   <p class="ed-article-dek">De Roma Norte a San Pedro, de Lafayette a Mérida: las casas que están redefiniendo el ritual de la barba en todo el país. Encuéntralas en el <a href="/directorio/">directorio</a>.</p>
                   <p class="ed-article-byline">Por <strong>S. García</strong> · 11 min · Marzo 2026</p>
                 </div>
-                <a href="/categorias/tendencias/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700&q=80&auto=format&fit=crop');" aria-label="Barba clásica"></a>
+                <a href="/categorias/tendencias/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');" aria-label="Barba clásica"></a>
               </article>
 
               <article class="ed-article-row">
@@ -257,7 +353,7 @@
                   <p class="ed-article-dek">Tres generaciones en una sola navaja. Visita guiada al taller que ha cortado a presidentes, atletas y escritores. Más perfiles en la <a href="/ciudad-de-mexico/">guía CDMX</a>.</p>
                   <p class="ed-article-byline">Por <strong>S. García</strong> · 10 min · Febrero 2026</p>
                 </div>
-                <a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700&q=80&auto=format&fit=crop');" aria-label="Barbería Polanco"></a>
+                <a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1599351431202-700.webp');" aria-label="Barbería Polanco"></a>
               </article>
 
               <article class="ed-article-row">
@@ -268,7 +364,7 @@
                   <p class="ed-article-dek">Probadas por la redacción durante tres meses: matte, glossy, water-based y heavy hold. Las marcas mexicanas que están elevando el oficio.</p>
                   <p class="ed-article-byline">Por <strong>R. Mendoza</strong> · 14 min · Febrero 2026</p>
                 </div>
-                <a href="/categorias/productos/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=700&q=80&auto=format&fit=crop');" aria-label="Pomadas mexicanas"></a>
+                <a href="/categorias/productos/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1587909209111-700.webp');" aria-label="Pomadas mexicanas"></a>
               </article>
 
               <article class="ed-article-row">
@@ -279,7 +375,7 @@
                   <p class="ed-article-dek">La etiqueta del cliente, la propina justa, la conversación necesaria y la silla como espacio sagrado. Una crónica del oficio en la era post-pandemia.</p>
                   <p class="ed-article-byline">Por <strong>A. Torres</strong> · 7 min · Enero 2026</p>
                 </div>
-                <a href="/categorias/estilo-de-vida/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=700&q=80&auto=format&fit=crop');" aria-label="Ritual barbería"></a>
+                <a href="/categorias/estilo-de-vida/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');" aria-label="Ritual barbería"></a>
               </article>
 
               <article class="ed-article-row">
@@ -290,7 +386,7 @@
                   <p class="ed-article-dek">Crónica de viaje por las casas que están exportando estilo desde el norte. Fade agresivo, barba corta y atención de relojería suiza. Más en el <a href="/directorio/">directorio nacional</a>.</p>
                   <p class="ed-article-byline">Por <strong>S. García</strong> · 16 min · Enero 2026</p>
                 </div>
-                <a href="/categorias/tendencias/" class="ed-article-thumb" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=80&auto=format&fit=crop');" aria-label="Barbería norte"></a>
+                <a href="/categorias/tendencias/" class="ed-article-thumb" style="background-image:url('/img/fotos/barberia-1605497788044-700.webp');" aria-label="Barbería norte"></a>
               </article>
 
             </div>
@@ -310,7 +406,7 @@
               <p class="ed-widget-eyebrow">§ Editor's Pick</p>
               <h3 class="ed-widget-title">Lectura <em>imprescindible</em></h3>
               <a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="ed-widget-pick">
-                <div class="ed-widget-pick-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80&auto=format&fit=crop');"></div>
+                <div class="ed-widget-pick-img" style="background-image:url('/img/fotos/barberia-1503951914875-700.webp');"></div>
                 <p class="ed-widget-pick-kicker">Reportaje · CDMX · 14 min</p>
                 <h4 class="ed-widget-pick-title">Las mejores barberías de la <em>Ciudad de México,</em> una por una</h4>
                 <p class="ed-widget-pick-meta">Por S. García · Mayo 2026</p>
@@ -355,28 +451,28 @@
               <h3 class="ed-widget-title">5 barberías <em>destacadas</em> en CDMX</h3>
 
               <a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/" class="ed-widget-mini">
-                <div class="ed-widget-mini-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=300&q=70&auto=format&fit=crop');"></div>
+                <div class="ed-widget-mini-img" style="background-image:url('/img/fotos/barberia-1503951914875-700.webp');"></div>
                 <div>
                   <span class="ed-widget-mini-kicker">Roma Norte · Cuauhtémoc</span>
                   <h4 class="ed-widget-mini-title">The Barber's Spa</h4>
                 </div>
               </a>
               <a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/" class="ed-widget-mini">
-                <div class="ed-widget-mini-img" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=300&q=70&auto=format&fit=crop');"></div>
+                <div class="ed-widget-mini-img" style="background-image:url('/img/fotos/barberia-1517832606299-700.webp');"></div>
                 <div>
                   <span class="ed-widget-mini-kicker">Condesa · Cuauhtémoc</span>
                   <h4 class="ed-widget-mini-title">The Gentleman's Barbershop</h4>
                 </div>
               </a>
               <a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/" class="ed-widget-mini">
-                <div class="ed-widget-mini-img" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=300&q=70&auto=format&fit=crop');"></div>
+                <div class="ed-widget-mini-img" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');"></div>
                 <div>
                   <span class="ed-widget-mini-kicker">Polanco · Cuauhtémoc</span>
                   <h4 class="ed-widget-mini-title">Barbería Deluxe</h4>
                 </div>
               </a>
               <a href="/ciudad-de-mexico/barberia-del-valle-centro-benito-juarez/" class="ed-widget-mini">
-                <div class="ed-widget-mini-img" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=300&q=70&auto=format&fit=crop');"></div>
+                <div class="ed-widget-mini-img" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');"></div>
                 <div>
                   <span class="ed-widget-mini-kicker">Del Valle · Cuauhtémoc</span>
                   <h4 class="ed-widget-mini-title">Mr. Venez Barbería &amp; Spa</h4>
@@ -411,7 +507,7 @@
               <p class="ed-widget-cta-dek">
                 Herramientas, mobiliario, navajas y productos de grooming. El marketplace abrirá próximamente.
               </p>
-              <a href="mailto:hola@barberia.mx?subject=Av%C3%ADsenme%20cuando%20abra%20el%20marketplace" class="ed-widget-cta-btn">Avísame cuando abra <span class="arrow">→</span></a>
+              <!--email_off--><a href="mailto:hola@barberia.mx?subject=Av%C3%ADsenme%20cuando%20abra%20el%20marketplace" class="ed-widget-cta-btn">Avísame cuando abra <span class="arrow">→</span></a><!--/email_off-->
             </div>
 
             <!-- W7 · Bolsa de Empleo -->
@@ -436,7 +532,7 @@
               </a>
 
               <div class="ed-widget-foot">
-                <a href="mailto:hola@barberia.mx?subject=Quiero%20recibir%20vacantes%20para%20barberos">Recibir vacantes <span class="arrow">→</span></a>
+                <!--email_off--><a href="mailto:hola@barberia.mx?subject=Quiero%20recibir%20vacantes%20para%20barberos">Recibir vacantes <span class="arrow">→</span></a><!--/email_off-->
               </div>
             </div>
 
@@ -465,11 +561,12 @@
               <p style="font-size:.9rem; color:var(--muted); margin:0 0 1rem; line-height:1.5;">
                 Recibe novedades editoriales y avisos de nuevas fichas. Sin SPAM.
               </p>
-              <form class="ed-widget-news-form" action="mailto:hola@barberia.mx" method="post" enctype="text/plain" novalidate>
+              <form class="ed-widget-news-form" novalidate>
                 <label for="sidebar-newsletter" class="visually-hidden">Correo electrónico</label>
                 <input type="email" id="sidebar-newsletter" placeholder="tu@email.com" required autocomplete="email">
                 <button type="submit">Suscribir →</button>
               </form>
+            <noscript><p class="ed-news-fine">Suscríbete escribiendo a <!--email_off--><a href="mailto:hola@barberia.mx?subject=Suscripci%C3%B3n%20al%20bolet%C3%ADn">hola@barberia.mx</a><!--/email_off-->.</p></noscript>
             </div>
 
             <!-- W10 · Registra tu barbería -->
@@ -480,7 +577,7 @@
                 Regístrala gratis en el directorio editorial de <strong>Barberia.mx</strong>. Sin comisión, sin patrocinios, sin letra chica.
               </p>
               <div class="ed-widget-foot" style="border-top:0; padding-top:0;">
-                <a href="mailto:hola@barberia.mx?subject=Registrar%20mi%20barber%C3%ADa&amp;body=Nombre%3A%0AColonia%20y%20ciudad%3A%0ATel%C3%A9fono%20o%20WhatsApp%3A%0AServicios%20y%20precios%3A">Registrar mi barbería <span class="arrow">→</span></a>
+                <!--email_off--><a href="mailto:hola@barberia.mx?subject=Registrar%20mi%20barber%C3%ADa&amp;body=Nombre%3A%0AColonia%20y%20ciudad%3A%0ATel%C3%A9fono%20o%20WhatsApp%3A%0AServicios%20y%20precios%3A">Registrar mi barbería <span class="arrow">→</span></a><!--/email_off-->
               </div>
             </div>
 
@@ -567,7 +664,7 @@
             <p class="ed-news-dek">Cada lunes: el mejor artículo de la semana, nuevas barberías en los 32 estados y curaduría del marketplace. Editado por la redacción de <strong>Barberia.mx</strong>. Sin SPAM.</p>
           </div>
           <div class="ed-news-r">
-            <form class="ed-news-form" action="mailto:hola@barberia.mx" method="post" enctype="text/plain" novalidate>
+            <form class="ed-news-form" novalidate>
               <label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
               <input type="email" id="newsletter-email" placeholder="tu@email.com" required autocomplete="email">
               <button type="submit">Suscribir →</button>
@@ -580,7 +677,135 @@
 
   </main>
 
-  <div data-component="footer"></div>
+  <div data-component="footer">
+    <!-- component:footer -->
+    <!-- ============================================
+         SITE FOOTER · pie editorial (3 pisos)
+         Piso 1 · Marca + CTA + redes
+         Piso 2 · Mapa del sitio (5 columnas, enlaces reales)
+         Piso 3 · Legal
+         ============================================ -->
+    <footer class="footer" role="contentinfo">
+
+      <!-- ============================================
+           PISO 1 · Marca — masthead de 3 columnas
+           ============================================ -->
+      <div class="footer-brand-band">
+        <div class="footer-container footer-brand-grid">
+
+          <div class="footer-brand-content">
+            <p class="footer-kicker">Directorio editorial · México</p>
+            <a href="/" class="footer-logo" aria-label="Barberia.mx — Inicio">
+              <span class="footer-logo-text">barberia<span class="footer-logo-accent">.mx</span></span>
+            </a>
+            <p class="footer-tagline">
+              Directorio editorial de la barbería mexicana. Explora servicios, horarios y contacto en las fichas disponibles.
+            </p>
+          </div>
+
+          <div class="footer-brand-contact">
+            <p class="footer-kicker">Contacto</p>
+            <!--email_off--><a href="mailto:hola@barberia.mx" class="footer-contact-email">hola@barberia.mx</a><!--/email_off-->
+            <div class="footer-social" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/barberiamx" rel="noopener" target="_blank">Instagram</a>
+              <a href="https://www.facebook.com/barberiamx" rel="noopener" target="_blank">Facebook</a>
+              <a href="https://twitter.com/barberiamx" rel="noopener" target="_blank">Twitter</a>
+            </div>
+          </div>
+
+          <div class="footer-brand-action">
+            <p class="footer-kicker">Para barberías</p>
+            <!--email_off--><a href="mailto:hola@barberia.mx?subject=Registrar%20mi%20barber%C3%ADa&amp;body=Nombre%3A%0AColonia%20y%20ciudad%3A%0ATel%C3%A9fono%20o%20WhatsApp%3A%0AServicios%20y%20precios%3A" class="footer-cta-btn">Registrar mi barbería <span class="arrow">→</span></a><!--/email_off-->
+            <a href="#top" class="footer-totop">Volver arriba <span aria-hidden="true">↑</span></a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================
+           PISO 2 · Mapa del sitio
+           ============================================ -->
+      <div class="footer-main">
+        <div class="footer-container">
+          <div class="footer-grid">
+
+            <nav class="footer-col" aria-labelledby="footer-col-1">
+              <h2 id="footer-col-1" class="footer-col-title">Directorio</h2>
+              <ul role="list">
+                <li><a href="/directorio/">Directorio Nacional</a></li>
+                <li><a href="/directorio/#por-estado">Por estado · 32</a></li>
+                <li><a href="/directorio/#por-region">Por región · 6</a></li>
+                <li><a href="/ciudad-de-mexico/">Guía CDMX</a></li>
+                <li><a href="/zona/">Atlas de zonas</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-2">
+              <h2 id="footer-col-2" class="footer-col-title">Barberías CDMX</h2>
+              <ul role="list">
+                <li><a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/">The Barber's Spa · Roma Norte</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/">The Gentleman's · Condesa</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-juarez-cuauhtemoc/">Scalper Studio · Juárez</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/">Barberia Deluxe · Polanco</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-del-valle-centro-benito-juarez/">Mr. Venez · Del Valle</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-3">
+              <h2 id="footer-col-3" class="footer-col-title">Categorías</h2>
+              <ul role="list">
+                <li><a href="/categorias/">Todas las categorías</a></li>
+                <li><a href="/categorias/tendencias/">Tendencias</a></li>
+                <li><a href="/categorias/tecnicas/">Técnicas</a></li>
+                <li><a href="/categorias/negocios/">Negocios</a></li>
+                <li><a href="/categorias/productos/">Productos</a></li>
+                <li><a href="/categorias/estilo-de-vida/">Estilo de vida</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-4">
+              <h2 id="footer-col-4" class="footer-col-title">Blog &amp; Artículos</h2>
+              <ul role="list">
+                <li><a href="/blog/">Todos los artículos</a></li>
+                <li><a href="/articulos/como-encontrar-barberia-cerca-de-ti/">Cómo encontrar barbería cerca de ti</a></li>
+                <li><a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/">Mejores barberías CDMX</a></li>
+                <li><a href="/articulos/rutina-grooming-hombre-moderno-guia-completa/">Rutina de grooming moderno</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-5">
+              <h2 id="footer-col-5" class="footer-col-title">Comunidad</h2>
+              <ul role="list">
+                <li><a href="/#marketplace">Marketplace</a></li>
+                <li><a href="/#empleo">Bolsa de trabajo</a></li>
+                <li><a href="/#registro">Para barberos</a></li>
+                <li><!--email_off--><a href="mailto:hola@barberia.mx">Contacto</a><!--/email_off--></li>
+                <li><a href="/privacidad/">Aviso de privacidad</a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================
+           PISO 3 · Legal
+           ============================================ -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <div class="footer-legal">
+            <span>© <span data-current-year>2026</span> Barberia.mx</span>
+            <span aria-hidden="true">·</span>
+            <span>Todos los derechos reservados</span>
+          </div>
+          <p class="footer-colophon">
+            Edición independiente · Hecho en CDMX · Tipografía Inter
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- /component:footer -->
+  </div>
 
   <script src="/js/components.js" defer></script>
 </body>

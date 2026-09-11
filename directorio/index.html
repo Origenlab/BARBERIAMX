@@ -29,17 +29,13 @@
 
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/editorial.css">
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a0a0a">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -108,8 +104,108 @@
 
   <a href="#main" class="ed-skip">Saltar al contenido</a>
 
-  <div data-component="masthead"></div>
-  <div data-component="header"></div>
+  <div data-component="masthead">
+    <!-- component:masthead -->
+    <!-- ============================================
+         MASTHEAD · barra editorial superior
+         ============================================ -->
+    <div class="ed-masthead" id="top" aria-label="Edición">
+      <div class="ed-masthead-inner">
+        <div class="ed-masthead-l">
+          <span data-masthead-issue data-masthead-issue-override="true">Directorio de barberías · México</span>
+        </div>
+        <div class="ed-masthead-c">
+          <span class="ed-mh-dot" aria-hidden="true"></span>
+          <span>En vivo · Directorio en actualización</span>
+        </div>
+        <div class="ed-masthead-r">
+          <span>Edición Nacional</span>
+          <span aria-hidden="true">·</span>
+          <time data-masthead-date datetime="">—</time>
+        </div>
+      </div>
+    </div>
+    <!-- /component:masthead -->
+  </div>
+  <div data-component="header">
+    <!-- component:header -->
+    <!-- ============================================
+         SITE HEADER · navegación editorial
+         ============================================ -->
+    <nav class="nav" id="navbar" aria-label="Navegación principal">
+      <div class="nav-container">
+
+        <a href="/" class="nav-logo" aria-label="Barberia.mx — Inicio">
+          <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="4" fill="currentColor"/>
+            <path d="M10 8v16M14 8v16M10 16h4M20 8l4 8-4 8M20 16h4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="nav-logo-text">barberia<span class="nav-logo-accent">.mx</span></span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li class="nav-item"><a href="/directorio/" class="nav-link" data-match="directorio"><span class="nav-link-text">Directorio</span></a></li>
+          <li class="nav-item"><a href="/zona/" class="nav-link" data-match="zona"><span class="nav-link-text">Zonas</span></a></li>
+          <li class="nav-item"><a href="/#marketplace" class="nav-link" data-match="marketplace"><span class="nav-link-text">Marketplace</span></a></li>
+          <li class="nav-item"><a href="/#empleo" class="nav-link" data-match="empleo"><span class="nav-link-text">Empleo</span></a></li>
+          <li class="nav-item nav-item-dropdown">
+            <a href="/blog/" class="nav-link" data-match="blog|categorias|articulos" aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-text">Editorial</span>
+              <svg class="nav-dropdown-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="/blog/" class="nav-dropdown-link" role="menuitem">Todos los artículos</a>
+              <a href="/categorias/" class="nav-dropdown-link" role="menuitem">Ver categorías</a>
+              <div class="nav-dropdown-divider" role="separator"></div>
+              <a href="/categorias/tendencias/" class="nav-dropdown-link" role="menuitem">Tendencias</a>
+              <a href="/categorias/tecnicas/" class="nav-dropdown-link" role="menuitem">Técnicas</a>
+              <a href="/categorias/productos/" class="nav-dropdown-link" role="menuitem">Productos</a>
+              <a href="/categorias/negocios/" class="nav-dropdown-link" role="menuitem">Negocios</a>
+              <a href="/categorias/estilo-de-vida/" class="nav-dropdown-link" role="menuitem">Estilo de vida</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <!--email_off--><a href="mailto:hola@barberia.mx" class="nav-btn nav-btn-outline">Contacto</a><!--/email_off-->
+          <a href="/#registro" class="nav-btn nav-btn-primary">Registrar barbería</a>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile" type="button">
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+          <span class="nav-toggle-line" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+        <div class="nav-mobile-content">
+          <ul class="nav-mobile-menu" role="list">
+            <li><a href="/directorio/" class="nav-mobile-link" data-match="directorio">Directorio</a></li>
+            <li><a href="/zona/" class="nav-mobile-link" data-match="zona">Zonas</a></li>
+            <li><a href="/#marketplace" class="nav-mobile-link" data-match="marketplace">Marketplace</a></li>
+            <li><a href="/#empleo" class="nav-mobile-link" data-match="empleo">Empleo</a></li>
+            <li><a href="/blog/" class="nav-mobile-link" data-match="blog">Editorial</a></li>
+            <li class="nav-mobile-submenu">
+              <span class="nav-mobile-submenu-title">Categorías</span>
+              <ul class="nav-mobile-submenu-list" role="list">
+                <li><a href="/categorias/tendencias/" class="nav-mobile-link nav-mobile-sublink">Tendencias</a></li>
+                <li><a href="/categorias/tecnicas/" class="nav-mobile-link nav-mobile-sublink">Técnicas</a></li>
+                <li><a href="/categorias/productos/" class="nav-mobile-link nav-mobile-sublink">Productos</a></li>
+                <li><a href="/categorias/negocios/" class="nav-mobile-link nav-mobile-sublink">Negocios</a></li>
+                <li><a href="/categorias/estilo-de-vida/" class="nav-mobile-link nav-mobile-sublink">Estilo de vida</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-mobile-actions">
+            <!--email_off--><a href="mailto:hola@barberia.mx" class="nav-btn nav-btn-outline nav-btn-full">Contacto</a><!--/email_off-->
+            <a href="/#registro" class="nav-btn nav-btn-primary nav-btn-full">Registrar barbería</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- /component:header -->
+  </div>
 
   <main id="main">
 
@@ -213,7 +309,7 @@
 <div class="dp-grid" id="states-grid">
 
           <a id="estado-ciudad-de-mexico" href="/ciudad-de-mexico/" class="dp-card" data-name="Ciudad de México" data-count="187" data-region="Centro & Valle de México" data-rank="1" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Ciudad de México">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1503951914875-700.webp');" role="img" aria-label="Barbería en Ciudad de México">
               <span class="dp-card-avatar" aria-hidden="true">CD</span>
             </div>
             <div class="dp-card-body">
@@ -230,7 +326,7 @@
           </a>
 
           <a id="estado-estado-de-mexico" href="/directorio/#estado-estado-de-mexico" class="dp-card" data-name="Estado de México" data-count="156" data-region="Centro & Valle de México" data-rank="2" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Estado de México">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1599351431202-700.webp');" role="img" aria-label="Barbería en Estado de México">
               <span class="dp-card-avatar" aria-hidden="true">TO</span>
             </div>
             <div class="dp-card-body">
@@ -247,7 +343,7 @@
           </a>
 
           <a id="estado-jalisco" href="/directorio/#estado-jalisco" class="dp-card" data-name="Jalisco" data-count="134" data-region="El Bajío" data-rank="3" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Jalisco">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1517832606299-700.webp');" role="img" aria-label="Barbería en Jalisco">
               <span class="dp-card-avatar" aria-hidden="true">GU</span>
             </div>
             <div class="dp-card-body">
@@ -264,7 +360,7 @@
           </a>
 
           <a id="estado-nuevo-leon" href="/directorio/#estado-nuevo-leon" class="dp-card" data-name="Nuevo León" data-count="110" data-region="Frontera Norte" data-rank="4" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Nuevo León">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');" role="img" aria-label="Barbería en Nuevo León">
               <span class="dp-card-avatar" aria-hidden="true">MO</span>
             </div>
             <div class="dp-card-body">
@@ -281,7 +377,7 @@
           </a>
 
           <a id="estado-puebla" href="/directorio/#estado-puebla" class="dp-card" data-name="Puebla" data-count="89" data-region="Centro & Valle de México" data-rank="5" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Puebla">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');" role="img" aria-label="Barbería en Puebla">
               <span class="dp-card-avatar" aria-hidden="true">PU</span>
             </div>
             <div class="dp-card-body">
@@ -298,7 +394,7 @@
           </a>
 
           <a id="estado-guanajuato" href="/directorio/#estado-guanajuato" class="dp-card" data-name="Guanajuato" data-count="78" data-region="El Bajío" data-rank="6" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Guanajuato">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1493256338651-700.webp');" role="img" aria-label="Barbería en Guanajuato">
               <span class="dp-card-avatar" aria-hidden="true">GU</span>
             </div>
             <div class="dp-card-body">
@@ -315,7 +411,7 @@
           </a>
 
           <a id="estado-veracruz" href="/directorio/#estado-veracruz" class="dp-card" data-name="Veracruz" data-count="72" data-region="Sureste & Península" data-rank="7" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Veracruz">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1605497788044-700.webp');" role="img" aria-label="Barbería en Veracruz">
               <span class="dp-card-avatar" aria-hidden="true">XA</span>
             </div>
             <div class="dp-card-body">
@@ -332,7 +428,7 @@
           </a>
 
           <a id="estado-queretaro" href="/directorio/#estado-queretaro" class="dp-card" data-name="Querétaro" data-count="65" data-region="El Bajío" data-rank="8" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Querétaro">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1587909209111-700.webp');" role="img" aria-label="Barbería en Querétaro">
               <span class="dp-card-avatar" aria-hidden="true">QU</span>
             </div>
             <div class="dp-card-body">
@@ -349,7 +445,7 @@
           </a>
 
           <a id="estado-yucatan" href="/directorio/#estado-yucatan" class="dp-card" data-name="Yucatán" data-count="58" data-region="Sureste & Península" data-rank="9" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Yucatán">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1503951914875-700.webp');" role="img" aria-label="Barbería en Yucatán">
               <span class="dp-card-avatar" aria-hidden="true">ME</span>
             </div>
             <div class="dp-card-body">
@@ -366,7 +462,7 @@
           </a>
 
           <a id="estado-chihuahua" href="/directorio/#estado-chihuahua" class="dp-card" data-name="Chihuahua" data-count="56" data-region="Frontera Norte" data-rank="10" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Chihuahua">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1599351431202-700.webp');" role="img" aria-label="Barbería en Chihuahua">
               <span class="dp-card-avatar" aria-hidden="true">CH</span>
             </div>
             <div class="dp-card-body">
@@ -383,7 +479,7 @@
           </a>
 
           <a id="estado-coahuila" href="/directorio/#estado-coahuila" class="dp-card" data-name="Coahuila" data-count="54" data-region="Frontera Norte" data-rank="11" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Coahuila">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1517832606299-700.webp');" role="img" aria-label="Barbería en Coahuila">
               <span class="dp-card-avatar" aria-hidden="true">SA</span>
             </div>
             <div class="dp-card-body">
@@ -400,7 +496,7 @@
           </a>
 
           <a id="estado-baja-california" href="/directorio/#estado-baja-california" class="dp-card" data-name="Baja California" data-count="52" data-region="Frontera Norte" data-rank="12" data-premium="true" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Baja California">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');" role="img" aria-label="Barbería en Baja California">
               <span class="dp-card-avatar" aria-hidden="true">ME</span>
             </div>
             <div class="dp-card-body">
@@ -417,7 +513,7 @@
           </a>
 
           <a id="estado-sonora" href="/directorio/#estado-sonora" class="dp-card" data-name="Sonora" data-count="48" data-region="Frontera Norte" data-rank="13" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Sonora">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');" role="img" aria-label="Barbería en Sonora">
               <span class="dp-card-avatar" aria-hidden="true">HE</span>
             </div>
             <div class="dp-card-body">
@@ -434,7 +530,7 @@
           </a>
 
           <a id="estado-michoacan" href="/directorio/#estado-michoacan" class="dp-card" data-name="Michoacán" data-count="47" data-region="El Bajío" data-rank="14" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Michoacán">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1493256338651-700.webp');" role="img" aria-label="Barbería en Michoacán">
               <span class="dp-card-avatar" aria-hidden="true">MO</span>
             </div>
             <div class="dp-card-body">
@@ -451,7 +547,7 @@
           </a>
 
           <a id="estado-tamaulipas" href="/directorio/#estado-tamaulipas" class="dp-card" data-name="Tamaulipas" data-count="44" data-region="Frontera Norte" data-rank="15" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tamaulipas">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1605497788044-700.webp');" role="img" aria-label="Barbería en Tamaulipas">
               <span class="dp-card-avatar" aria-hidden="true">VI</span>
             </div>
             <div class="dp-card-body">
@@ -468,7 +564,7 @@
           </a>
 
           <a id="estado-san-luis-potosi" href="/directorio/#estado-san-luis-potosi" class="dp-card" data-name="San Luis Potosí" data-count="41" data-region="El Bajío" data-rank="16" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en SLP">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1587909209111-700.webp');" role="img" aria-label="Barbería en SLP">
               <span class="dp-card-avatar" aria-hidden="true">SL</span>
             </div>
             <div class="dp-card-body">
@@ -485,7 +581,7 @@
           </a>
 
           <a id="estado-sinaloa" href="/directorio/#estado-sinaloa" class="dp-card" data-name="Sinaloa" data-count="39" data-region="Pacífico Norte" data-rank="17" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Sinaloa">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1503951914875-700.webp');" role="img" aria-label="Barbería en Sinaloa">
               <span class="dp-card-avatar" aria-hidden="true">CU</span>
             </div>
             <div class="dp-card-body">
@@ -502,7 +598,7 @@
           </a>
 
           <a id="estado-hidalgo" href="/directorio/#estado-hidalgo" class="dp-card" data-name="Hidalgo" data-count="36" data-region="Centro & Valle de México" data-rank="18" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Hidalgo">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1599351431202-700.webp');" role="img" aria-label="Barbería en Hidalgo">
               <span class="dp-card-avatar" aria-hidden="true">PA</span>
             </div>
             <div class="dp-card-body">
@@ -519,7 +615,7 @@
           </a>
 
           <a id="estado-morelos" href="/directorio/#estado-morelos" class="dp-card" data-name="Morelos" data-count="34" data-region="Centro & Valle de México" data-rank="19" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Morelos">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1517832606299-700.webp');" role="img" aria-label="Barbería en Morelos">
               <span class="dp-card-avatar" aria-hidden="true">CU</span>
             </div>
             <div class="dp-card-body">
@@ -536,7 +632,7 @@
           </a>
 
           <a id="estado-oaxaca" href="/directorio/#estado-oaxaca" class="dp-card" data-name="Oaxaca" data-count="32" data-region="Pacífico Sur" data-rank="20" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Oaxaca">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');" role="img" aria-label="Barbería en Oaxaca">
               <span class="dp-card-avatar" aria-hidden="true">OA</span>
             </div>
             <div class="dp-card-body">
@@ -553,7 +649,7 @@
           </a>
 
           <a id="estado-tabasco" href="/directorio/#estado-tabasco" class="dp-card" data-name="Tabasco" data-count="31" data-region="Sureste & Península" data-rank="21" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tabasco">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');" role="img" aria-label="Barbería en Tabasco">
               <span class="dp-card-avatar" aria-hidden="true">VI</span>
             </div>
             <div class="dp-card-body">
@@ -570,7 +666,7 @@
           </a>
 
           <a id="estado-chiapas" href="/directorio/#estado-chiapas" class="dp-card" data-name="Chiapas" data-count="29" data-region="Pacífico Sur" data-rank="22" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Chiapas">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1493256338651-700.webp');" role="img" aria-label="Barbería en Chiapas">
               <span class="dp-card-avatar" aria-hidden="true">TU</span>
             </div>
             <div class="dp-card-body">
@@ -587,7 +683,7 @@
           </a>
 
           <a id="estado-quintana-roo" href="/directorio/#estado-quintana-roo" class="dp-card" data-name="Quintana Roo" data-count="28" data-region="Sureste & Península" data-rank="23" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Quintana Roo">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1605497788044-700.webp');" role="img" aria-label="Barbería en Quintana Roo">
               <span class="dp-card-avatar" aria-hidden="true">CH</span>
             </div>
             <div class="dp-card-body">
@@ -604,7 +700,7 @@
           </a>
 
           <a id="estado-guerrero" href="/directorio/#estado-guerrero" class="dp-card" data-name="Guerrero" data-count="26" data-region="Pacífico Sur" data-rank="24" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Guerrero">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1587909209111-700.webp');" role="img" aria-label="Barbería en Guerrero">
               <span class="dp-card-avatar" aria-hidden="true">CH</span>
             </div>
             <div class="dp-card-body">
@@ -621,7 +717,7 @@
           </a>
 
           <a id="estado-aguascalientes" href="/directorio/#estado-aguascalientes" class="dp-card" data-name="Aguascalientes" data-count="23" data-region="El Bajío" data-rank="25" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Aguascalientes">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1503951914875-700.webp');" role="img" aria-label="Barbería en Aguascalientes">
               <span class="dp-card-avatar" aria-hidden="true">AG</span>
             </div>
             <div class="dp-card-body">
@@ -638,7 +734,7 @@
           </a>
 
           <a id="estado-durango" href="/directorio/#estado-durango" class="dp-card" data-name="Durango" data-count="21" data-region="Pacífico Norte" data-rank="26" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Durango">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1599351431202-700.webp');" role="img" aria-label="Barbería en Durango">
               <span class="dp-card-avatar" aria-hidden="true">DU</span>
             </div>
             <div class="dp-card-body">
@@ -655,7 +751,7 @@
           </a>
 
           <a id="estado-zacatecas" href="/directorio/#estado-zacatecas" class="dp-card" data-name="Zacatecas" data-count="19" data-region="Pacífico Norte" data-rank="27" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Zacatecas">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1517832606299-700.webp');" role="img" aria-label="Barbería en Zacatecas">
               <span class="dp-card-avatar" aria-hidden="true">ZA</span>
             </div>
             <div class="dp-card-body">
@@ -672,7 +768,7 @@
           </a>
 
           <a id="estado-nayarit" href="/directorio/#estado-nayarit" class="dp-card" data-name="Nayarit" data-count="17" data-region="Pacífico Norte" data-rank="28" data-premium="false" data-new="false">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Nayarit">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');" role="img" aria-label="Barbería en Nayarit">
               <span class="dp-card-avatar" aria-hidden="true">TE</span>
             </div>
             <div class="dp-card-body">
@@ -689,7 +785,7 @@
           </a>
 
           <a id="estado-tlaxcala" href="/directorio/#estado-tlaxcala" class="dp-card" data-name="Tlaxcala" data-count="14" data-region="Centro & Valle de México" data-rank="29" data-premium="false" data-new="true">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Tlaxcala">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');" role="img" aria-label="Barbería en Tlaxcala">
               <span class="dp-card-avatar" aria-hidden="true">TL</span>
             </div>
             <div class="dp-card-body">
@@ -706,7 +802,7 @@
           </a>
 
           <a id="estado-campeche" href="/directorio/#estado-campeche" class="dp-card" data-name="Campeche" data-count="13" data-region="Sureste & Península" data-rank="30" data-premium="false" data-new="true">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Campeche">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1493256338651-700.webp');" role="img" aria-label="Barbería en Campeche">
               <span class="dp-card-avatar" aria-hidden="true">CA</span>
             </div>
             <div class="dp-card-body">
@@ -723,7 +819,7 @@
           </a>
 
           <a id="estado-colima" href="/directorio/#estado-colima" class="dp-card" data-name="Colima" data-count="12" data-region="Pacífico Sur" data-rank="31" data-premium="false" data-new="true">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Colima">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1605497788044-700.webp');" role="img" aria-label="Barbería en Colima">
               <span class="dp-card-avatar" aria-hidden="true">CO</span>
             </div>
             <div class="dp-card-body">
@@ -740,7 +836,7 @@
           </a>
 
           <a id="estado-baja-california-sur" href="/directorio/#estado-baja-california-sur" class="dp-card" data-name="Baja California Sur" data-count="11" data-region="Pacífico Norte" data-rank="32" data-premium="false" data-new="true">
-            <div class="dp-card-media" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería en Baja California Sur">
+            <div class="dp-card-media" style="background-image:url('/img/fotos/barberia-1587909209111-700.webp');" role="img" aria-label="Barbería en Baja California Sur">
               <span class="dp-card-avatar" aria-hidden="true">PA</span>
             </div>
             <div class="dp-card-body">
@@ -969,7 +1065,7 @@
         <div class="ed-features">
 
           <a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/" class="ed-feature ed-feature-big">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1400&q=85&auto=format&fit=crop');" role="img" aria-label="The Barber's Spa">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1503951914875-1400.webp');" role="img" aria-label="The Barber's Spa">
               <span class="ed-feature-num">N.º 01 · Editor's Pick</span>
               <span class="ed-feature-badge">Premium</span>
             </div>
@@ -989,7 +1085,7 @@
           </a>
 
           <a href="/directorio/#estado-nuevo-leon" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Valle Cuts MTY">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1585747860715-700.webp');" role="img" aria-label="Valle Cuts MTY">
               <span class="ed-feature-num">N.º 02</span>
               <span class="ed-feature-badge">Premium</span>
             </div>
@@ -1002,7 +1098,7 @@
           </a>
 
           <a href="/directorio/#estado-jalisco" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Lafayette Cuts">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1622286342621-700.webp');" role="img" aria-label="Lafayette Cuts">
               <span class="ed-feature-num">N.º 03</span>
             </div>
             <div class="ed-feature-meta">
@@ -1014,7 +1110,7 @@
           </a>
 
           <a href="/directorio/#estado-yucatan" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Casa Mestiza">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1493256338651-700.webp');" role="img" aria-label="Casa Mestiza">
               <span class="ed-feature-num">N.º 04</span>
             </div>
             <div class="ed-feature-meta">
@@ -1026,7 +1122,7 @@
           </a>
 
           <a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="The Gentleman's Barbershop">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1517832606299-700.webp');" role="img" aria-label="The Gentleman's Barbershop">
               <span class="ed-feature-num">N.º 05</span>
             </div>
             <div class="ed-feature-meta">
@@ -1038,7 +1134,7 @@
           </a>
 
           <a href="/directorio/#estado-puebla" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Angelópolis Barbers">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1605497788044-700.webp');" role="img" aria-label="Angelópolis Barbers">
               <span class="ed-feature-num">N.º 06</span>
             </div>
             <div class="ed-feature-meta">
@@ -1050,7 +1146,7 @@
           </a>
 
           <a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Barbería Deluxe">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1599351431202-700.webp');" role="img" aria-label="Barbería Deluxe">
               <span class="ed-feature-num">N.º 07</span>
               <span class="ed-feature-badge">Premium</span>
             </div>
@@ -1063,7 +1159,7 @@
           </a>
 
           <a href="/directorio/#estado-queretaro" class="ed-feature ed-feature-sm">
-            <div class="ed-feature-img" style="background-image:url('https://images.unsplash.com/photo-1587909209111-5097ee578ec3?w=900&q=80&auto=format&fit=crop');" role="img" aria-label="Juriquilla Barber">
+            <div class="ed-feature-img" style="background-image:url('/img/fotos/barberia-1587909209111-700.webp');" role="img" aria-label="Juriquilla Barber">
               <span class="ed-feature-num">N.º 08</span>
             </div>
             <div class="ed-feature-meta">
@@ -1190,7 +1286,135 @@
 
   </main>
 
-  <div data-component="footer"></div>
+  <div data-component="footer">
+    <!-- component:footer -->
+    <!-- ============================================
+         SITE FOOTER · pie editorial (3 pisos)
+         Piso 1 · Marca + CTA + redes
+         Piso 2 · Mapa del sitio (5 columnas, enlaces reales)
+         Piso 3 · Legal
+         ============================================ -->
+    <footer class="footer" role="contentinfo">
+
+      <!-- ============================================
+           PISO 1 · Marca — masthead de 3 columnas
+           ============================================ -->
+      <div class="footer-brand-band">
+        <div class="footer-container footer-brand-grid">
+
+          <div class="footer-brand-content">
+            <p class="footer-kicker">Directorio editorial · México</p>
+            <a href="/" class="footer-logo" aria-label="Barberia.mx — Inicio">
+              <span class="footer-logo-text">barberia<span class="footer-logo-accent">.mx</span></span>
+            </a>
+            <p class="footer-tagline">
+              Directorio editorial de la barbería mexicana. Explora servicios, horarios y contacto en las fichas disponibles.
+            </p>
+          </div>
+
+          <div class="footer-brand-contact">
+            <p class="footer-kicker">Contacto</p>
+            <!--email_off--><a href="mailto:hola@barberia.mx" class="footer-contact-email">hola@barberia.mx</a><!--/email_off-->
+            <div class="footer-social" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/barberiamx" rel="noopener" target="_blank">Instagram</a>
+              <a href="https://www.facebook.com/barberiamx" rel="noopener" target="_blank">Facebook</a>
+              <a href="https://twitter.com/barberiamx" rel="noopener" target="_blank">Twitter</a>
+            </div>
+          </div>
+
+          <div class="footer-brand-action">
+            <p class="footer-kicker">Para barberías</p>
+            <!--email_off--><a href="mailto:hola@barberia.mx?subject=Registrar%20mi%20barber%C3%ADa&amp;body=Nombre%3A%0AColonia%20y%20ciudad%3A%0ATel%C3%A9fono%20o%20WhatsApp%3A%0AServicios%20y%20precios%3A" class="footer-cta-btn">Registrar mi barbería <span class="arrow">→</span></a><!--/email_off-->
+            <a href="#top" class="footer-totop">Volver arriba <span aria-hidden="true">↑</span></a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================
+           PISO 2 · Mapa del sitio
+           ============================================ -->
+      <div class="footer-main">
+        <div class="footer-container">
+          <div class="footer-grid">
+
+            <nav class="footer-col" aria-labelledby="footer-col-1">
+              <h2 id="footer-col-1" class="footer-col-title">Directorio</h2>
+              <ul role="list">
+                <li><a href="/directorio/">Directorio Nacional</a></li>
+                <li><a href="/directorio/#por-estado">Por estado · 32</a></li>
+                <li><a href="/directorio/#por-region">Por región · 6</a></li>
+                <li><a href="/ciudad-de-mexico/">Guía CDMX</a></li>
+                <li><a href="/zona/">Atlas de zonas</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-2">
+              <h2 id="footer-col-2" class="footer-col-title">Barberías CDMX</h2>
+              <ul role="list">
+                <li><a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/">The Barber's Spa · Roma Norte</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/">The Gentleman's · Condesa</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-juarez-cuauhtemoc/">Scalper Studio · Juárez</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/">Barberia Deluxe · Polanco</a></li>
+                <li><a href="/ciudad-de-mexico/barberia-del-valle-centro-benito-juarez/">Mr. Venez · Del Valle</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-3">
+              <h2 id="footer-col-3" class="footer-col-title">Categorías</h2>
+              <ul role="list">
+                <li><a href="/categorias/">Todas las categorías</a></li>
+                <li><a href="/categorias/tendencias/">Tendencias</a></li>
+                <li><a href="/categorias/tecnicas/">Técnicas</a></li>
+                <li><a href="/categorias/negocios/">Negocios</a></li>
+                <li><a href="/categorias/productos/">Productos</a></li>
+                <li><a href="/categorias/estilo-de-vida/">Estilo de vida</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-4">
+              <h2 id="footer-col-4" class="footer-col-title">Blog &amp; Artículos</h2>
+              <ul role="list">
+                <li><a href="/blog/">Todos los artículos</a></li>
+                <li><a href="/articulos/como-encontrar-barberia-cerca-de-ti/">Cómo encontrar barbería cerca de ti</a></li>
+                <li><a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/">Mejores barberías CDMX</a></li>
+                <li><a href="/articulos/rutina-grooming-hombre-moderno-guia-completa/">Rutina de grooming moderno</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer-col" aria-labelledby="footer-col-5">
+              <h2 id="footer-col-5" class="footer-col-title">Comunidad</h2>
+              <ul role="list">
+                <li><a href="/#marketplace">Marketplace</a></li>
+                <li><a href="/#empleo">Bolsa de trabajo</a></li>
+                <li><a href="/#registro">Para barberos</a></li>
+                <li><!--email_off--><a href="mailto:hola@barberia.mx">Contacto</a><!--/email_off--></li>
+                <li><a href="/privacidad/">Aviso de privacidad</a></li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================
+           PISO 3 · Legal
+           ============================================ -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <div class="footer-legal">
+            <span>© <span data-current-year>2026</span> Barberia.mx</span>
+            <span aria-hidden="true">·</span>
+            <span>Todos los derechos reservados</span>
+          </div>
+          <p class="footer-colophon">
+            Edición independiente · Hecho en CDMX · Tipografía Inter
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- /component:footer -->
+  </div>
 
   <script src="/js/components.js" defer></script>
 </body>

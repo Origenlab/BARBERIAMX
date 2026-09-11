@@ -342,6 +342,7 @@
     await Promise.all(slots.map(async (slot) => {
       const name = slot.dataset.component;
       if (!CONFIG.allow.includes(name)) return;
+      if (slot.children.length || slot.textContent.trim()) return;
       const html = await fetchComponent(name);
       if (html) inflate(slot, html);
     }));
