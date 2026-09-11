@@ -44,42 +44,6 @@
   }
 
   // ============================================
-  // Navbar Scroll Effect
-  // ============================================
-  let lastScroll = 0;
-  const scrollThreshold = 100;
-
-  function handleNavbarScroll() {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll <= 0) {
-      navbar.classList.remove('nav-scrolled');
-      navbar.classList.remove('nav-hidden');
-      return;
-    }
-
-    if (currentScroll > scrollThreshold) {
-      navbar.classList.add('nav-scrolled');
-    } else {
-      navbar.classList.remove('nav-scrolled');
-    }
-
-    // Optional: Hide navbar on scroll down, show on scroll up
-    // Uncomment if desired
-    /*
-    if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
-      navbar.classList.add('nav-hidden');
-    } else {
-      navbar.classList.remove('nav-hidden');
-    }
-    */
-
-    lastScroll = currentScroll;
-  }
-
-  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
-
-  // ============================================
   // Smooth Scroll for Anchor Links
   // ============================================
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
@@ -105,85 +69,34 @@
   });
 
   // ============================================
-  // Search Box Interaction
-  // ============================================
-  const searchInput = document.querySelector('.search-input');
-  const searchBtn = document.querySelector('.search-btn');
-
-  if (searchInput && searchBtn) {
-    searchBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const query = searchInput.value.trim();
-
-      if (query) {
-        // For now, just log the search query
-        // In production, this would redirect to search results
-        console.log('Buscando:', query);
-
-        // Visual feedback
-        searchBtn.textContent = 'Buscando...';
-        setTimeout(function() {
-          searchBtn.textContent = 'Buscar';
-        }, 1000);
-      }
-    });
-
-    // Search on Enter key
-    searchInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        searchBtn.click();
-      }
-    });
-  }
-
-  // ============================================
   // Newsletter Form
   // ============================================
-  const newsletterForm = document.querySelector('.newsletter-form');
-
-  if (newsletterForm) {
+  document.querySelectorAll('.ed-news-form, .ed-widget-news-form').forEach(function(newsletterForm) {
     newsletterForm.addEventListener('submit', function(e) {
       e.preventDefault();
-
-      const emailInput = this.querySelector('.newsletter-input');
-      const submitBtn = this.querySelector('.btn');
-      const email = emailInput.value.trim();
-
-      if (email && isValidEmail(email)) {
-        submitBtn.textContent = 'Enviando...';
-
-        // Simulate API call
-        setTimeout(function() {
-          submitBtn.textContent = '�Suscrito!';
-          emailInput.value = '';
-
-          setTimeout(function() {
-            submitBtn.textContent = 'Suscribirse';
-          }, 2000);
-        }, 1000);
+      const emailInput = this.querySelector('input[type="email"]');
+      const email = emailInput ? emailInput.value.trim() : '';
+      if (!email || !isValidEmail(email)) {
+        if (emailInput) emailInput.setCustomValidity('Escribe un correo válido.');
+        if (emailInput) emailInput.reportValidity();
+        return;
       }
+      if (emailInput) emailInput.setCustomValidity('');
+      const subject = encodeURIComponent('Suscripción al boletín');
+      const body = encodeURIComponent(`Quiero recibir el boletín en: ${email}`);
+      window.location.href = `mailto:hola@barberia.mx?subject=${subject}&body=${body}`;
+      let confirmation = this.nextElementSibling;
+      if (!confirmation || !confirmation.classList.contains('newsletter-confirmation')) {
+        confirmation = document.createElement('p');
+        confirmation.className = 'newsletter-confirmation';
+        this.insertAdjacentElement('afterend', confirmation);
+      }
+      confirmation.textContent = 'Listo: se abrió tu correo para confirmar la suscripción.';
     });
-  }
+  });
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
-
-  // ============================================
-  // Add CSS for Nav States (No animations)
-  // ============================================
-  const style = document.createElement('style');
-  style.textContent = `
-    .nav-scrolled {
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    }
-  `;
-  document.head.appendChild(style);
-
-  // ============================================
-  // Console Welcome Message
-  // ============================================
-  console.log('%c>� Barberia.mx', 'font-size: 24px; font-weight: bold; color: #0071e3;');
-  console.log('%cEl directorio de barber�as m�s completo de M�xico', 'font-size: 12px; color: #86868b;');
 
 })();

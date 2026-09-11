@@ -253,8 +253,6 @@
     const filterGroup = document.querySelector('[data-directory-filter]');
     const viewGroup = document.querySelector('[data-directory-view]');
     const countEl = document.querySelector('[data-directory-count]');
-    let activeFilter = 'all';
-
     function updateCount() {
       if (!countEl) return;
       const visible = cards.filter((c) => !c.hidden).length;
@@ -269,18 +267,14 @@
           const r = a.dataset.region.localeCompare(b.dataset.region, 'es');
           return r !== 0 ? r : Number(a.dataset.rank) - Number(b.dataset.rank);
         }
-        return Number(b.dataset.count) - Number(a.dataset.count);
+        return 0;
       });
       sorted.forEach((c) => grid.appendChild(c));
     }
 
     function applyFilter(mode) {
-      activeFilter = mode;
       cards.forEach((c) => {
         let show = true;
-        if (mode === 'top10') show = Number(c.dataset.rank) <= 10;
-        else if (mode === 'premium') show = c.dataset.premium === 'true';
-        else if (mode === 'new') show = c.dataset.new === 'true';
         c.hidden = !show;
       });
       updateCount();
@@ -306,6 +300,8 @@
       });
     }
 
+    applySort('alpha');
+
     if (viewGroup) {
       viewGroup.querySelectorAll('[data-view]').forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -318,8 +314,8 @@
   }
 
   // ----------------------------------------------
-  // Issue editorial calculado (Vol. I, No. NN)
-  // basado en meses desde foundingDate 2005-01
+  // Issue editorial: desactivado (derivaba de una fecha de fundación no verificable).
+  // El masthead lleva data-masthead-issue-override="true".
   // ----------------------------------------------
   function hookMastheadIssue() {
     const el = document.querySelector('[data-masthead-issue]');
@@ -355,11 +351,8 @@
     hookMastheadIssue();
     hookActiveNav();
     hookMobileNav();
-    hookNavbarScroll();
     hookSmoothScroll();
     hookDropdowns();
-    hookAutoReveal();
-    hookReveal();
     hookDirectoryGrid();
 
     document.dispatchEvent(new CustomEvent('components:loaded'));

@@ -52,3 +52,6 @@ dist
 
 # staging de limpieza (no versionar)
 _to_delete/
+
+# auditorias locales (viven en vault OBSIDIAN)
+/.audit/
