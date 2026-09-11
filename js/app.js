@@ -71,31 +71,29 @@
   // ============================================
   // Newsletter Form
   // ============================================
-  const newsletterForm = document.querySelector('.newsletter-form');
-
-  if (newsletterForm) {
+  document.querySelectorAll('.ed-news-form, .ed-widget-news-form').forEach(function(newsletterForm) {
     newsletterForm.addEventListener('submit', function(e) {
       e.preventDefault();
-
-      const emailInput = this.querySelector('.newsletter-input');
-      const submitBtn = this.querySelector('.btn');
-      const email = emailInput.value.trim();
-
-      if (email && isValidEmail(email)) {
-        submitBtn.textContent = 'Enviando...';
-
-        // Simulate API call
-        setTimeout(function() {
-          submitBtn.textContent = '�Suscrito!';
-          emailInput.value = '';
-
-          setTimeout(function() {
-            submitBtn.textContent = 'Suscribirse';
-          }, 2000);
-        }, 1000);
+      const emailInput = this.querySelector('input[type="email"]');
+      const email = emailInput ? emailInput.value.trim() : '';
+      if (!email || !isValidEmail(email)) {
+        if (emailInput) emailInput.setCustomValidity('Escribe un correo válido.');
+        if (emailInput) emailInput.reportValidity();
+        return;
       }
+      if (emailInput) emailInput.setCustomValidity('');
+      const subject = encodeURIComponent('Suscripción al boletín');
+      const body = encodeURIComponent(`Quiero recibir el boletín en: ${email}`);
+      window.location.href = `mailto:hola@barberia.mx?subject=${subject}&body=${body}`;
+      let confirmation = this.nextElementSibling;
+      if (!confirmation || !confirmation.classList.contains('newsletter-confirmation')) {
+        confirmation = document.createElement('p');
+        confirmation.className = 'newsletter-confirmation';
+        this.insertAdjacentElement('afterend', confirmation);
+      }
+      confirmation.textContent = 'Listo: se abrió tu correo para confirmar la suscripción.';
     });
-  }
+  });
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

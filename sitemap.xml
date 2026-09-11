@@ -47,6 +47,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://barberia.mx/privacidad/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
 
   <!-- ============ DIRECTORIO · 5 BARBERÍAS CDMX ============ -->
   <url>
