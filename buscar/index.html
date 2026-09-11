@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buscar · Barberia.mx</title>
+    <meta name="description" content="Busca barberías, zonas, artículos y categorías en Barberia.mx.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://barberia.mx/buscar/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/editorial.css">
+  </head>
+  <body>
+    <a class="ed-skip" href="#main">Saltar al contenido</a>
+    <div data-component="masthead"></div>
+    <div data-component="header"></div>
+    <main id="main" class="search-page">
+      <header class="ed-cover">
+        <div class="ed-wrap">
+          <p class="ed-kicker">Búsqueda</p>
+          <h1>Encuentra información</h1>
+          <form action="/buscar/" class="ed-search" method="get" role="search">
+            <label class="visually-hidden" for="search-page-input">Buscar en Barberia.mx</label>
+            <input id="search-page-input" name="q" placeholder="Nombre, zona, servicio o artículo" type="search">
+            <button class="ed-btn ed-btn-primary" type="submit">Buscar</button>
+          </form>
+        </div>
+      </header>
+      <section class="ed-section">
+        <div class="ed-wrap">
+          <p id="search-summary" aria-live="polite"></p>
+          <div id="search-results"></div>
+        </div>
+      </section>
+    </main>
+    <div data-component="footer"></div>
+    <script defer src="/js/components.js"></script>
+    <script defer src="/js/search.js"></script>
+  </body>
+</html>

@@ -355,11 +355,8 @@
     hookMastheadIssue();
     hookActiveNav();
     hookMobileNav();
-    hookNavbarScroll();
     hookSmoothScroll();
     hookDropdowns();
-    hookAutoReveal();
-    hookReveal();
     hookDirectoryGrid();
 
     document.dispatchEvent(new CustomEvent('components:loaded'));
