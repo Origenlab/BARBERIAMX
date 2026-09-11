@@ -3814,6 +3814,7 @@ ul.feature-list { list-style: none; margin: 0; padding: 0; display: flex; flex-d
 .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap); }
 .related-card { display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink); }
 .related-image { aspect-ratio: 4/3; background: var(--ink-soft); color: var(--paper-deep); display: flex; align-items: center; justify-content: center; filter: grayscale(.3); transition: filter var(--t-slow) var(--ease); }
+.related-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .related-image svg { width: 32px; height: 32px; }
 .related-card:hover .related-image { filter: grayscale(0); }
 .related-card:hover .related-card-title { color: var(--copper-deep); }
@@ -5143,3 +5144,7 @@ input, select, textarea { border-color: var(--g-300) !important; border-radius: 
 .ed-widget.ed-widget-cta .ed-widget-cta-dek { color: #d4d4d8; }
 /* Enlaces dentro de texto corrido: distinguibles sin depender del color */
 main p a:not([class]) { text-decoration: none; border-bottom: 1px solid currentColor; }
+/* Remate a11y Lighthouse (director) */
+.ed-widget.ed-widget-cta .ed-widget-eyebrow { color: #d4d4d8 !important; }
+.breadcrumb-link, .breadcrumb a { display: inline-block; min-height: 24px; padding-block: 4px; }
+dd.ed-stat-trend { margin: 2px 0 0; }
