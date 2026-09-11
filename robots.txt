@@ -89,8 +89,10 @@ Allow: /
 
 # ===== Bloqueo explícito de bots agresivos / spam =====
 User-agent: AhrefsBot
+Allow: /
 
 User-agent: SemrushBot
+Allow: /
 
 User-agent: MJ12bot
 Disallow: /
