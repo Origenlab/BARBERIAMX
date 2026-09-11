@@ -5110,3 +5110,10 @@ input, select, textarea { border-color: var(--g-300) !important; border-radius: 
 .contact-card .contact-info-text a[href*="wa.me"],
 .contact-card .contact-info-text a[href^="tel:"] { background: none !important; border: 0 !important; border-bottom: 1px solid var(--g-300) !important; color: var(--ink) !important; padding: 0 !important; }
 .seo-price-table caption.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* === SEO: secciones nuevas === */
+@media (max-width: 640px) {
+  .article-body .seo-table-wrap { max-width: 100%; overflow-x: hidden; }
+  .article-body .seo-price-table--wide tbody td { min-width: 0; overflow-wrap: anywhere; }
+  .article-body .seo-price-table--wide tbody th { overflow-wrap: anywhere; }
+}
