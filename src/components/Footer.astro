@@ -1,0 +1,21 @@
+---
+import site, { whatsappRegistrationUrl } from '@config/site';
+---
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">BARBERIA<span>.MX</span></a>
+      <p>{site.description}</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces del pie">
+      <a href="/directorio/">Directorio</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacidad/">Privacidad</a>
+      <a href={whatsappRegistrationUrl} target="_blank" rel="noopener noreferrer">Registrar por WhatsApp</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© {new Date().getFullYear()} BARBERIA.MX</span>
+    <span>Los datos pueden cambiar; confirma directamente con cada barbería.</span>
+  </div>
+</footer>

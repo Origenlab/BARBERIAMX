@@ -1,0 +1,439 @@
+---
+title: "Barberías de CDMX: 5 opciones por colonia"
+description: "Cinco barberías de CDMX con ficha en Barberia.mx: The Barber's Spa, Scalper Studio, Mr. Venez, TGBS y Barbería Deluxe. Servicios, precios y ubicación."
+category: "Negocios"
+author: "Barberia.mx"
+updatedDate: "2026-09-11"
+image: "https://barberia.mx/img/og-barberia.jpg"
+draft: false
+---
+
+<main id="main" class="article-page">
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="/" class="breadcrumb-link">Inicio</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/blog/" class="breadcrumb-link">Blog</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/categorias/negocios/" class="breadcrumb-link">Negocios</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <span class="breadcrumb-current">Cinco barberías en CDMX</span>
+        </li>
+      </ol>
+    </nav>
+    <!-- Two Column Layout -->
+    <div class="article-layout">
+      <!-- Main Content Column -->
+      <div class="article-main">
+        <!-- Hero inside main column -->
+        <header class="article-hero-inline">
+          <a href="/categorias/negocios/" class="article-category">Negocios</a>
+          <h1 class="article-title">Cinco barberías de CDMX, colonia por colonia</h1>
+          <p class="article-excerpt">
+            Estas son cinco barberías de CDMX con ficha en Barberia.mx, elegidas por su propuesta y ubicación: Roma Norte, Juárez, Del Valle, Condesa y Polanco. Compara servicios, precios publicados y especialidad de cada una.
+          </p>
+          <div class="article-meta">
+            <div class="article-author">
+              <div class="author-avatar">CM</div>
+              <div class="author-info">
+                <span class="author-name">Redacción Barberia.mx</span>
+                <span class="article-date">Actualizado recientemente</span>
+              </div>
+            </div>
+            <div class="article-stats">
+              <span class="article-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                5 min lectura
+              </span>
+            </div>
+          </div>
+        </header>
+        <article class="article-content">
+          <div class="article-body ed-prose">
+            <p>
+              <strong>Estas son cinco barberías de CDMX con ficha en Barberia.mx, elegidas por su propuesta y ubicación: Roma Norte, Juárez, Del Valle, Condesa y Polanco.</strong> Compara servicios, precios publicados y especialidad de cada una.
+            </p>
+            <h2>5 barberías de CDMX para conocer</h2>
+            <div class="barbershop-ranking">
+              <!-- #1 The Barber's Spa -->
+              <div class="ranking-card">
+                <div class="ranking-number gold">1</div>
+                <div class="ranking-content">
+                  <div class="ranking-header">
+                    <h3 class="ranking-name"><a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/">The Barber's Spa</a></h3>
+                  </div>
+                  <p class="ranking-location">Roma Norte, Cuauhtemoc</p>
+                  <p class="ranking-description">Consulta la ficha para revisar servicios, precios publicados, horario y contacto.</p>
+                  <div class="ranking-tags">
+                    <span class="ranking-tag">Premium</span>
+                    <span class="ranking-tag">Spa</span>
+                  </div>
+                  <p class="ranking-price">Corte desde <strong>$150 MXN</strong></p>
+                </div>
+              </div>
+              <!-- #2 Scalper Studio -->
+              <div class="ranking-card">
+                <div class="ranking-number silver">2</div>
+                <div class="ranking-content">
+                  <div class="ranking-header">
+                    <h3 class="ranking-name"><a href="/ciudad-de-mexico/barberia-juarez-cuauhtemoc/">Scalper Studio</a></h3>
+                  </div>
+                  <p class="ranking-location">Juarez, Cuauhtemoc</p>
+                  <p class="ranking-description">Consulta la ficha para revisar servicios, precios publicados, horario y contacto.</p>
+                  <div class="ranking-tags">
+                    <span class="ranking-tag">Grooming</span>
+                    <span class="ranking-tag">Premium</span>
+                  </div>
+                  <p class="ranking-price">Corte desde <strong>$200 MXN</strong></p>
+                </div>
+              </div>
+              <!-- #3 Mr. Venez Barbería & Spa -->
+              <div class="ranking-card">
+                <div class="ranking-number bronze">3</div>
+                <div class="ranking-content">
+                  <div class="ranking-header">
+                    <h3 class="ranking-name"><a href="/ciudad-de-mexico/barberia-del-valle-centro-benito-juarez/">Mr. Venez Barbería & Spa</a></h3>
+                  </div>
+                  <p class="ranking-location">Del Valle, Benito Juarez</p>
+                  <p class="ranking-description">Consulta la ficha para revisar servicios, precios publicados, horario y contacto.</p>
+                  <div class="ranking-tags">
+                    <span class="ranking-tag">Spa</span>
+                    <span class="ranking-tag">Tratamientos</span>
+                  </div>
+                  <p class="ranking-price">Corte desde <strong>$200 MXN</strong></p>
+                </div>
+              </div>
+              <!-- #4 The Gentleman's Barbershop -->
+              <div class="ranking-card">
+                <div class="ranking-number">4</div>
+                <div class="ranking-content">
+                  <div class="ranking-header">
+                    <h3 class="ranking-name"><a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/">The Gentleman's Barbershop</a></h3>
+                  </div>
+                  <p class="ranking-location">Condesa, Cuauhtemoc</p>
+                  <p class="ranking-description">Consulta la ficha para revisar servicios, precios publicados, horario y contacto.</p>
+                  <div class="ranking-tags">
+                    <span class="ranking-tag">Clásico</span>
+                    <span class="ranking-tag">Accesible</span>
+                  </div>
+                  <p class="ranking-price">Corte desde <strong>$100 MXN</strong></p>
+                </div>
+              </div>
+              <!-- #5 Barbería Deluxe -->
+              <div class="ranking-card">
+                <div class="ranking-number">5</div>
+                <div class="ranking-content">
+                  <div class="ranking-header">
+                    <h3 class="ranking-name"><a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/">Barbería Deluxe</a></h3>
+                  </div>
+                  <p class="ranking-location">Polanco, Miguel Hidalgo</p>
+                  <p class="ranking-description">Consulta la ficha para revisar servicios, precios publicados, horario y contacto.</p>
+                  <div class="ranking-tags">
+                    <span class="ranking-tag">Moderno</span>
+                    <span class="ranking-tag">Fade</span>
+                  </div>
+                  <p class="ranking-price">Corte desde <strong>$200 MXN</strong></p>
+                </div>
+              </div>
+            </div>
+            <h2>Comparativa de precios y especialidades</h2>
+            <div class="seo-table-wrap">
+              <table class="seo-price-table seo-price-table--wide">
+                <caption>Comparativa de precios y especialidades</caption>
+                <thead><tr><th scope="col">Barbería</th><th scope="col">Colonia</th><th scope="col">Corte</th><th scope="col">Corte + barba</th><th scope="col">Especialidad</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">The Barber's Spa</th><td data-label="Colonia">Roma Norte</td><td data-label="Corte">$250</td><td data-label="Corte + barba">$380</td><td data-label="Especialidad">Spa y grooming</td></tr>
+                  <tr><th scope="row">Scalper Studio</th><td data-label="Colonia">Juárez</td><td data-label="Corte">$340</td><td data-label="Corte + barba">$530</td><td data-label="Especialidad">Grooming integral</td></tr>
+                  <tr><th scope="row">Mr. Venez</th><td data-label="Colonia">Del Valle</td><td data-label="Corte">$250</td><td data-label="Corte + barba">$449</td><td data-label="Especialidad">Barbería y spa</td></tr>
+                  <tr><th scope="row">The Gentleman's Barbershop</th><td data-label="Colonia">Condesa</td><td data-label="Corte">$280</td><td data-label="Corte + barba">$420</td><td data-label="Especialidad">Corte clásico</td></tr>
+                  <tr><th scope="row">Barbería Deluxe</th><td data-label="Colonia">Polanco</td><td data-label="Corte">$350</td><td data-label="Corte + barba">$450</td><td data-label="Especialidad">Cortes modernos y fade</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h2>Cómo elegir la barbería ideal</h2>
+            <ul>
+              <li><strong>Tu estilo:</strong> Cortes clasicos en The Gentleman's, looks modernos en Scalper Studio o Barbería Deluxe.</li>
+              <li><strong>Tu presupuesto:</strong> Desde $100 hasta $200 en establecimientos premium.</li>
+              <li><strong>Servicios extras:</strong> Para spa y tratamientos, The Barber's Spa o Mr. Venez.</li>
+            </ul>
+            <!-- CTA Box -->
+            <div class="cta-box">
+              <h3 class="cta-title">Explora el directorio completo</h3>
+              <p class="cta-text">Descubre más barberías en Ciudad de México.</p>
+              <div class="cta-buttons">
+                <a href="/ciudad-de-mexico/" class="cta-btn cta-btn-primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                  </svg>
+                  Ver directorio CDMX
+                </a>
+                <a href="https://wa.me/5215547868402?text=Hola%2C%20quiero%20registrar%20una%20barber%C3%ADa%20en%20BARBERIA.MX.%0A%0ANombre%3A%0AColonia%20y%20ciudad%3A%0ATel%C3%A9fono%20o%20WhatsApp%3A%0AServicios%20y%20precios%3A%0ASitio%20o%20redes%20sociales%3A" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-secondary">Registrar barbería</a>
+              </div>
+            </div>
+            <!-- FAQ Section -->
+            <h2 class="faq-title">Preguntas frecuentes</h2>
+            <div class="faq-section seo-faq-list">
+              <div class="faq-item seo-faq-item">
+                <h3 class="faq-question">¿Cuál es la mejor barbería de CDMX?</h3>
+                <p class="faq-answer">Depende de lo que busques: spa y grooming, corte clásico o fade; la tabla compara especialidad y precio de cada una.</p>
+              </div>
+              <div class="faq-item seo-faq-item">
+                <h3 class="faq-question">¿Cuánto cuesta un corte en las barberías de CDMX?</h3>
+                <p class="faq-answer">Entre $250 y $350 el corte, y entre $380 y $530 el corte con barba, según las fichas publicadas.</p>
+              </div>
+              <div class="faq-item seo-faq-item">
+                <h3 class="faq-question">¿Dónde hay barberías de calidad en CDMX?</h3>
+                <p class="faq-answer">Roma Norte, Condesa, Juárez, Polanco y Del Valle concentran las barberías de esta guía.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Article Footer -->
+          <footer class="article-footer">
+            <!-- Tags -->
+            <div class="article-tags">
+              <a href="/buscar/?q=CDMX" class="article-tag" rel="nofollow">CDMX</a>
+              <a href="/buscar/?q=Barber%C3%ADas" class="article-tag" rel="nofollow">Barberías</a>
+              <a href="/buscar/?q=Roma%20Norte" class="article-tag" rel="nofollow">Roma Norte</a>
+              <a href="/buscar/?q=Polanco" class="article-tag" rel="nofollow">Polanco</a>
+            </div>
+            <!-- Share -->
+            <div class="article-share">
+              <span class="share-label">Compartir:</span>
+              <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://barberia.mx/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="share-btn" aria-label="Compartir en Facebook" target="_blank" rel="noopener nofollow">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://barberia.mx/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="share-btn" aria-label="Compartir en Twitter" target="_blank" rel="noopener nofollow">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                  </svg>
+                </a>
+                <a href="https://wa.me/?text=https://barberia.mx/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="share-btn" aria-label="Compartir en WhatsApp" target="_blank" rel="noopener nofollow">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- Author Box -->
+            <div class="author-box">
+              <div class="author-box-avatar">CM</div>
+              <div class="author-box-info">
+                <h4>Redacción Barberia.mx</h4>
+                <span class="author-box-role">Editor en Barberia.mx</span>
+                <p class="author-box-bio">Contenido editorial de Barberia.mx para comparar servicios, precios y ubicación.</p>
+              </div>
+            </div>
+          </footer>
+        </article>
+      </div>
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <!-- Sidebar CTA Principal -->
+        <div class="sidebar-cta-main">
+          <div class="sidebar-cta-badge">Directorio Barberia.mx</div>
+          <h3 class="sidebar-cta-main-title">Encuentra tu barbería ideal</h3>
+          <p class="sidebar-cta-main-text">Consulta barberías con información publicada en México</p>
+          <a href="/ciudad-de-mexico/" class="sidebar-cta-main-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            Explorar directorio
+          </a>
+        </div>
+        <!-- Barberías Recomendadas -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-header">
+            <h4 class="sidebar-section-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Barberías destacadas
+            </h4>
+            <a href="/ciudad-de-mexico/" class="sidebar-section-link">Ver todas</a>
+          </div>
+          <div class="sidebar-barbershops">
+            <a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/" class="sidebar-barbershop-card">
+              <div class="sidebar-barbershop-avatar">TB</div>
+              <div class="sidebar-barbershop-info">
+                <span class="sidebar-barbershop-name">The Barber's Spa</span>
+                <span class="sidebar-barbershop-location">Roma Norte, CDMX</span>
+                <div class="sidebar-barbershop-rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Información en ficha
+                </div>
+              </div>
+            </a>
+            <a href="/ciudad-de-mexico/barberia-juarez-cuauhtemoc/" class="sidebar-barbershop-card">
+              <div class="sidebar-barbershop-avatar">SS</div>
+              <div class="sidebar-barbershop-info">
+                <span class="sidebar-barbershop-name">Scalper Studio</span>
+                <span class="sidebar-barbershop-location">Juarez, CDMX</span>
+                <div class="sidebar-barbershop-rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Información en ficha
+                </div>
+              </div>
+            </a>
+            <a href="/ciudad-de-mexico/barberia-del-valle-centro-benito-juarez/" class="sidebar-barbershop-card">
+              <div class="sidebar-barbershop-avatar">MV</div>
+              <div class="sidebar-barbershop-info">
+                <span class="sidebar-barbershop-name">Mr. Venez Barbería & Spa</span>
+                <span class="sidebar-barbershop-location">Del Valle, CDMX</span>
+                <div class="sidebar-barbershop-rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Información en ficha
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Articulos de Interes -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-header">
+            <h4 class="sidebar-section-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              Artículos de interes
+            </h4>
+            <a href="/blog/" class="sidebar-section-link">Ver blog</a>
+          </div>
+          <div class="sidebar-articles">
+            <a href="/articulos/como-encontrar-barberia-cerca-de-ti/" class="sidebar-article-card">
+              <div class="sidebar-article-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+              <div class="sidebar-article-info">
+                <span class="sidebar-article-title">Cómo encontrar la mejor barbería cerca de ti</span>
+                <span class="sidebar-article-meta">
+                  <span class="sidebar-article-category negocios">Negocios</span>
+                  <span>8 min</span>
+                </span>
+              </div>
+            </a>
+            <a href="/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="sidebar-article-card">
+              <div class="sidebar-article-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                </svg>
+              </div>
+              <div class="sidebar-article-info">
+                <span class="sidebar-article-title">La Rutina de Grooming del Hombre Moderno</span>
+                <span class="sidebar-article-meta">
+                  <span class="sidebar-article-category estilo">Estilo de vida</span>
+                  <span>12 min</span>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Cómo Funciona Mini -->
+        <div class="sidebar-section sidebar-how-it-works">
+          <h4 class="sidebar-section-title-solo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Cómo usar Barberia.mx
+          </h4>
+          <div class="sidebar-steps-mini">
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">1</span>
+              <span class="sidebar-step-text-mini">Busca por tu ubicación</span>
+            </div>
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">2</span>
+              <span class="sidebar-step-text-mini">Filtra por servicios y precios</span>
+            </div>
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">3</span>
+              <span class="sidebar-step-text-mini">Revisa la información publicada</span>
+            </div>
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">4</span>
+              <span class="sidebar-step-text-mini">Contacta y agenda tu cita</span>
+            </div>
+          </div>
+        </div>
+        <!-- Categorías -->
+        <div class="sidebar-section">
+          <h4 class="sidebar-section-title-solo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="8" y1="6" x2="21" y2="6"/>
+              <line x1="8" y1="12" x2="21" y2="12"/>
+              <line x1="8" y1="18" x2="21" y2="18"/>
+              <line x1="3" y1="6" x2="3.01" y2="6"/>
+              <line x1="3" y1="12" x2="3.01" y2="12"/>
+              <line x1="3" y1="18" x2="3.01" y2="18"/>
+            </svg>
+            Explora por categoria
+          </h4>
+          <div class="sidebar-categories">
+            <a href="/categorias/tendencias/" class="sidebar-category-tag tendencias">Tendencias</a>
+            <a href="/categorias/tecnicas/" class="sidebar-category-tag tecnicas">Técnicas</a>
+            <a href="/categorias/productos/" class="sidebar-category-tag productos">Productos</a>
+            <a href="/categorias/negocios/" class="sidebar-category-tag negocios">Negocios</a>
+            <a href="/categorias/estilo-de-vida/" class="sidebar-category-tag estilo">Estilo de vida</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- Related Articles -->
+    <section class="related-articles">
+      <h2 class="related-title">Artículos relacionados</h2>
+      <div class="related-grid">
+        <a href="/articulos/como-encontrar-barberia-cerca-de-ti/" class="related-card">
+          <div class="related-image"><img src="/img/fotos/barberia-1585747860715-700.webp" alt="Cómo encontrar la barbería ideal cerca de ti" width="700" height="525" loading="lazy"></div>
+          <div class="related-content">
+            <h3 class="related-card-title">Cómo encontrar la mejor barbería cerca de ti</h3>
+            <span class="related-meta">Negocios · 8 min</span>
+          </div>
+        </a>
+        <a href="/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="related-card">
+          <div class="related-image"><img src="/img/fotos/barberia-1622286342621-700.webp" alt="La rutina de grooming del hombre moderno: guía completa" width="700" height="525" loading="lazy"></div>
+          <div class="related-content">
+            <h3 class="related-card-title">La Rutina de Grooming del Hombre Moderno</h3>
+            <span class="related-meta">Estilo de vida · 12 min</span>
+          </div>
+        </a>
+        <a href="/ciudad-de-mexico/" class="related-card">
+          <div class="related-image"><img src="/img/fotos/barberia-1503951914875-700.webp" alt="Barberías en CDMX: guía por alcaldía y colonia" width="700" height="525" loading="lazy"></div>
+          <div class="related-content">
+            <h3 class="related-card-title">Directorio de barberías en CDMX</h3>
+            <span class="related-meta">Directorio · CDMX</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>

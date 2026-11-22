@@ -1,0 +1,31 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { webPageSchema } from '@lib/seo';
+
+export const getStaticPaths = (async () => {
+  const pages = await getCollection('pages');
+  return pages
+    .filter(({ id }) => !['home', '404'].includes(id))
+    .map((page) => ({
+      params: { path: page.data.path.replace(/^\//, '').replace(/\/$/, '') },
+      props: { page },
+    }));
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const { data } = page;
+---
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  canonicalPath={data.canonicalPath}
+  robots={data.robots}
+  image={data.image}
+  bodyClass={data.bodyClass}
+  scripts={data.scripts}
+  schema={[webPageSchema(data.title, data.description, data.path)]}
+>
+  <Fragment set:html={data.mainHtml} />
+</BaseLayout>

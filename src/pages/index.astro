@@ -1,0 +1,21 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { organizationSchema, webPageSchema, websiteSchema } from '@lib/seo';
+
+const page = await getEntry('pages', 'home');
+if (!page) throw new Error('Falta la página home en la colección pages');
+const { data } = page;
+---
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  canonicalPath={data.canonicalPath}
+  robots={data.robots}
+  image={data.image}
+  bodyClass={data.bodyClass}
+  scripts={data.scripts}
+  schema={[organizationSchema(), websiteSchema(), webPageSchema(data.title, data.description, data.path)]}
+>
+  <Fragment set:html={data.mainHtml} />
+</BaseLayout>
