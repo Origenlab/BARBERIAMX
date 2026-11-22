@@ -2,8 +2,9 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
 export const GET: APIRoute = async () => {
-  const [barberias, articulos, pages] = await Promise.all([
+  const [barberias, barberiasCdmx, articulos, pages] = await Promise.all([
     getCollection('barberias'),
+    getCollection('barberiasCdmx'),
     getCollection('articulos', ({ data }) => !data.draft),
     getCollection('pages'),
   ]);
@@ -15,6 +16,20 @@ export const GET: APIRoute = async () => {
       type: 'Barberías',
       description: [data.address, data.locality, data.region].filter(Boolean).join(' · '),
       terms: [data.name, data.locality, data.region, data.telephone].filter(Boolean),
+    })),
+    {
+      title: 'Barberías en CDMX: 45 fichas revisadas',
+      url: '/ciudad-de-mexico/',
+      type: 'Directorio CDMX',
+      description: 'Directorio de barberías en las 16 alcaldías de Ciudad de México.',
+      terms: ['barberías CDMX', 'Ciudad de México', '16 alcaldías'],
+    },
+    ...barberiasCdmx.map(({ data }) => ({
+      title: data.name,
+      url: `/ciudad-de-mexico/${data.slug}/`,
+      type: 'Barberías CDMX',
+      description: [data.neighborhood, data.borough, data.address].join(' · '),
+      terms: [data.name, data.neighborhood, data.borough, data.telephone, ...data.services],
     })),
     ...articulos.map(({ id, data }) => ({
       title: data.title,

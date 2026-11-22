@@ -33,6 +33,51 @@ const barberias = defineCollection({
   }).strict(),
 });
 
+const barberiasCdmx = defineCollection({
+  loader: file('src/data/barberias-cdmx.json'),
+  schema: z.object({
+    id: z.string().regex(/^cdmx-[a-z0-9-]+$/),
+    slug: z.string().regex(/^[a-z0-9-]+$/),
+    name: z.string().min(1),
+    borough: z.enum([
+      'Álvaro Obregón',
+      'Azcapotzalco',
+      'Benito Juárez',
+      'Coyoacán',
+      'Cuajimalpa de Morelos',
+      'Cuauhtémoc',
+      'Gustavo A. Madero',
+      'Iztacalco',
+      'Iztapalapa',
+      'La Magdalena Contreras',
+      'Miguel Hidalgo',
+      'Milpa Alta',
+      'Tláhuac',
+      'Tlalpan',
+      'Venustiano Carranza',
+      'Xochimilco',
+    ]),
+    boroughSlug: z.string().regex(/^[a-z0-9-]+$/),
+    neighborhood: z.string().min(1),
+    address: z.string().min(1),
+    postalCode: z.string().regex(/^\d{5}$/).optional(),
+    telephone: z.string().min(1),
+    services: z.array(z.string().min(1)).min(1),
+    hours: z.array(z.object({
+      day: z.enum(['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']),
+      label: z.enum(['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']),
+      value: z.string().min(1),
+    }).strict()),
+    verificationStatus: z.enum(['verified', 'reviewed', 'partial']),
+    verifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    sources: z.array(z.url()).min(1),
+    isNew: z.boolean(),
+    latitude: z.number().optional(),
+    longitude: z.number().optional(),
+    description: z.string().min(1).max(400),
+  }).strict(),
+});
+
 const articulos = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/articulos' }),
   schema: z.object({
@@ -47,4 +92,4 @@ const articulos = defineCollection({
   }).strict(),
 });
 
-export const collections = { pages, barberias, articulos };
+export const collections = { pages, barberias, barberiasCdmx, articulos };
