@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  barbershop: CollectionEntry<'barberiasCdmx'>['data'];
+  related?: boolean;
+}
+
+const { barbershop, related = false } = Astro.props;
+const Heading = related ? 'h3' : 'h2';
+const status = {
+  verified: { label: 'Fuentes contrastadas', className: '' },
+  reviewed: { label: 'Datos revisados', className: 'cdmx-status--reviewed' },
+  partial: { label: 'Datos parciales', className: 'cdmx-status--partial' },
+}[barbershop.verificationStatus];
+const date = new Intl.DateTimeFormat('es-MX', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(`${barbershop.verifiedAt}T12:00:00Z`));
+---
+<a
+  class:list={['cdmx-card', { 'cdmx-card--related': related }]}
+  href={`/ciudad-de-mexico/${barbershop.slug}/`}
+  data-cdmx-card
+  data-borough={barbershop.boroughSlug}
+  data-search={`${barbershop.name} ${barbershop.neighborhood} ${barbershop.borough} ${barbershop.address} ${barbershop.services.join(' ')}`.toLocaleLowerCase('es-MX')}
+>
+  <div class="cdmx-card__topline">
+    <span>{barbershop.borough}</span>
+    <span class:list={['cdmx-status', status.className]}>{status.label}</span>
+  </div>
+
+  <div class="cdmx-card__body">
+    <p class="cdmx-card__place">{barbershop.neighborhood}</p>
+    <Heading class="cdmx-card__name">{barbershop.name}</Heading>
+    {!related && <p class="cdmx-card__address">{barbershop.address}</p>}
+
+    <dl class="cdmx-card__facts">
+      <div>
+        <dt>Teléfono</dt>
+        <dd><span>{barbershop.telephone}</span></dd>
+      </div>
+      {!related && <div>
+        <dt>Servicios publicados</dt>
+        <dd>{barbershop.services.slice(0, 3).join(' · ')}</dd>
+      </div>}
+    </dl>
+  </div>
+
+  <div class="cdmx-card__foot">
+    <span>Ver ficha completa</span>
+    <span aria-hidden="true">→</span>
+  </div>
+  {!related && <p class="cdmx-card__verified">Datos revisados: <time datetime={barbershop.verifiedAt}>{date}</time></p>}
+</a>

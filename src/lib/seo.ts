@@ -72,6 +72,67 @@ export function articleSchema(input: {
   };
 }
 
+export function localBusinessSchema(input: {
+  name: string;
+  description: string;
+  path: string;
+  address: string;
+  neighborhood: string;
+  borough: string;
+  postalCode?: string | undefined;
+  telephone: string;
+  latitude?: number | undefined;
+  longitude?: number | undefined;
+  hours: Array<{ day: string; value: string }>;
+}) {
+  const daySchema: Record<string, string> = {
+    monday: 'Monday',
+    tuesday: 'Tuesday',
+    wednesday: 'Wednesday',
+    thursday: 'Thursday',
+    friday: 'Friday',
+    saturday: 'Saturday',
+    sunday: 'Sunday',
+  };
+
+  return {
+    '@context': context,
+    '@type': 'HairSalon',
+    '@id': `${absoluteUrl(input.path)}#business`,
+    name: input.name,
+    description: input.description,
+    url: absoluteUrl(input.path),
+    telephone: input.telephone,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: input.address,
+      addressLocality: 'Ciudad de México',
+      addressRegion: 'CDMX',
+      ...(input.postalCode ? { postalCode: input.postalCode } : {}),
+      addressCountry: 'MX',
+    },
+    ...(input.latitude !== undefined && input.longitude !== undefined ? {
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: input.latitude,
+        longitude: input.longitude,
+      },
+    } : {}),
+    ...(input.hours.length > 0 ? { openingHoursSpecification: input.hours.flatMap(({ day, value }) =>
+      value.split(',').flatMap((range) => {
+        const [opens, closes] = range.trim().split('–');
+        if (!opens || !closes) return [];
+        return [{
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: `https://schema.org/${daySchema[day]}`,
+          opens,
+          closes,
+        }];
+      }),
+    ) } : {}),
+  };
+}
+
 export function serializeJsonLd(value: unknown) {
   return JSON.stringify(value).replaceAll('<', '\\u003c');
 }

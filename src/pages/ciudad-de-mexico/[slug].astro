@@ -1,0 +1,40 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import BarbershopDetail from '@components/BarbershopDetail.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { localBusinessSchema, webPageSchema } from '@lib/seo';
+
+export const getStaticPaths = (async () => {
+  const entries = await getCollection('barberiasCdmx');
+  return entries.map(({ data }) => ({ params: { slug: data.slug }, props: { barbershop: data } }));
+}) satisfies GetStaticPaths;
+
+const { barbershop } = Astro.props;
+const all = (await getCollection('barberiasCdmx')).map(({ data }) => data);
+const related = all
+  .filter((item) => item.boroughSlug === barbershop.boroughSlug && item.slug !== barbershop.slug)
+  .sort((a, b) => a.name.localeCompare(b.name, 'es-MX'))
+  .slice(0, 3);
+const title = `${barbershop.name} en CDMX: datos y horario`;
+const verifiedLabel = new Intl.DateTimeFormat('es-MX', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(`${barbershop.verifiedAt}T12:00:00Z`));
+const description = `${barbershop.name} en ${barbershop.borough}: consulta domicilio, teléfono, servicios y horario publicado. Datos revisados el ${verifiedLabel}.`;
+const canonicalPath = `/ciudad-de-mexico/${barbershop.slug}/`;
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  bodyClass="cdmx-detail-page"
+  schema={[
+    webPageSchema(title, description, canonicalPath),
+    localBusinessSchema({ ...barbershop, path: canonicalPath }),
+  ]}
+>
+  <BarbershopDetail barbershop={barbershop} related={related} />
+</BaseLayout>

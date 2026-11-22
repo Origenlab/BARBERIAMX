@@ -1,0 +1,132 @@
+---
+import { getCollection } from 'astro:content';
+import BarbershopCard from '@components/BarbershopCard.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { webPageSchema } from '@lib/seo';
+
+const entries = await getCollection('barberiasCdmx');
+const barbershops = entries
+  .map(({ data }) => data)
+  .sort((a, b) => a.borough.localeCompare(b.borough, 'es-MX') || a.name.localeCompare(b.name, 'es-MX'));
+const boroughs = [...new Map(barbershops.map((item) => [item.boroughSlug, item.borough])).entries()];
+const title = 'Barberías en CDMX: 45 fichas revisadas por alcaldía';
+const description = 'Directorio editorial de 45 barberías en Ciudad de México con domicilio, teléfono sin enlace, servicios, horarios publicados y fecha de revisión.';
+const canonicalPath = '/ciudad-de-mexico/';
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  bodyClass="cdmx-directory-page"
+  schema={[webPageSchema(title, description, canonicalPath)]}
+>
+  <main id="main" class="cdmx-directory">
+    <div class="cdmx-shell">
+      <nav class="cdmx-breadcrumbs" aria-label="Migas de pan">
+        <a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Ciudad de México</span>
+      </nav>
+
+      <header class="cdmx-directory__header">
+        <div>
+          <p class="cdmx-eyebrow">Directorio editorial · Ciudad de México</p>
+          <h1>Barberías en CDMX</h1>
+        </div>
+        <div class="cdmx-directory__intro">
+          <p class="cdmx-directory__count"><strong>45 fichas revisadas</strong> en las 16 alcaldías</p>
+          <p>Compara datos concretos antes de acudir: domicilio, teléfono mostrado sin enlace, servicios y horarios publicados. No usamos rankings, reseñas ni precios sin respaldo.</p>
+        </div>
+      </header>
+
+      <section class="cdmx-controls" aria-label="Buscar y filtrar barberías">
+        <div class="cdmx-search">
+          <label for="cdmx-search">Buscar por nombre, colonia o servicio</label>
+          <div class="cdmx-search__field">
+            <input id="cdmx-search" type="search" placeholder="Ej. Roma Norte, Coyoacán o barba" autocomplete="off" data-cdmx-search />
+            <button type="button" data-cdmx-clear>Limpiar</button>
+          </div>
+        </div>
+        <div class="cdmx-filter" role="group" aria-label="Filtrar por alcaldía">
+          <button type="button" class="is-active" data-cdmx-filter="all" aria-pressed="true">Todas <span>45</span></button>
+          {boroughs.map(([slug, name]) => {
+            const count = barbershops.filter((item) => item.boroughSlug === slug).length;
+            return <button type="button" data-cdmx-filter={slug} aria-pressed="false">{name} <span>{count}</span></button>;
+          })}
+        </div>
+      </section>
+
+      <div class="cdmx-results-line" aria-live="polite">
+        <p data-cdmx-count>Mostrando 45 de 45 fichas</p>
+        <p>Última revisión general: 22 de noviembre de 2026</p>
+      </div>
+
+      <section class="cdmx-grid" aria-label="Fichas de barberías en Ciudad de México" data-cdmx-grid>
+        {barbershops.map((barbershop) => <BarbershopCard barbershop={barbershop} />)}
+      </section>
+
+      <div class="cdmx-empty" data-cdmx-empty hidden>
+        <h2>No encontramos coincidencias</h2>
+        <p>Prueba con otra colonia, alcaldía, nombre o servicio.</p>
+      </div>
+
+      <aside class="cdmx-method">
+        <p class="cdmx-section-number">Criterio editorial</p>
+        <h2>Información útil, rastreable y sin adornos</h2>
+        <p>Las fichas se construyen con datos públicos consultados en fuentes del establecimiento y directorios actuales. La fecha visible indica cuándo revisamos cada registro; si un dato no coincide entre fuentes, se omite o se marca como no publicado.</p>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const input = document.querySelector('[data-cdmx-search]');
+    const clear = document.querySelector('[data-cdmx-clear]');
+    const filters = [...document.querySelectorAll('[data-cdmx-filter]')];
+    const cards = [...document.querySelectorAll('[data-cdmx-card]')];
+    const count = document.querySelector('[data-cdmx-count]');
+    const empty = document.querySelector('[data-cdmx-empty]');
+    let borough = 'all';
+
+    const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es-MX').trim();
+    const update = () => {
+      const query = normalize(input instanceof HTMLInputElement ? input.value : '');
+      let visible = 0;
+      for (const card of cards) {
+        if (!(card instanceof HTMLElement)) continue;
+        const matchesBorough = borough === 'all' || card.dataset.borough === borough;
+        const matchesQuery = !query || normalize(card.dataset.search ?? '').includes(query);
+        card.hidden = !(matchesBorough && matchesQuery);
+        if (!card.hidden) visible += 1;
+      }
+      if (count) count.textContent = `Mostrando ${visible} de 45 fichas`;
+      if (empty instanceof HTMLElement) empty.hidden = visible !== 0;
+    };
+
+    const parameters = new URLSearchParams(window.location.search);
+    const requestedBorough = parameters.get('alcaldia');
+    const requestedQuery = parameters.get('q');
+    if (requestedQuery && input instanceof HTMLInputElement) input.value = requestedQuery;
+    if (requestedBorough && filters.some((button) => button.getAttribute('data-cdmx-filter') === requestedBorough)) borough = requestedBorough;
+    for (const button of filters) {
+      const active = button.getAttribute('data-cdmx-filter') === borough;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+      button.addEventListener('click', () => {
+        borough = button.getAttribute('data-cdmx-filter') ?? 'all';
+        for (const item of filters) {
+          const selected = item === button;
+          item.classList.toggle('is-active', selected);
+          item.setAttribute('aria-pressed', String(selected));
+        }
+        update();
+      });
+    }
+    input?.addEventListener('input', update);
+    clear?.addEventListener('click', () => {
+      if (input instanceof HTMLInputElement) {
+        input.value = '';
+        input.focus();
+      }
+      update();
+    });
+    update();
+  </script>
+</BaseLayout>

@@ -1,0 +1,109 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BarbershopCard from './BarbershopCard.astro';
+
+type Barbershop = CollectionEntry<'barberiasCdmx'>['data'];
+
+interface Props {
+  barbershop: Barbershop;
+  related: Barbershop[];
+}
+
+const { barbershop, related } = Astro.props;
+const days = [
+  ['monday', 'Lunes'],
+  ['tuesday', 'Martes'],
+  ['wednesday', 'Miércoles'],
+  ['thursday', 'Jueves'],
+  ['friday', 'Viernes'],
+  ['saturday', 'Sábado'],
+  ['sunday', 'Domingo'],
+] as const;
+const hours = new Map(barbershop.hours.map((item) => [item.day, item.value]));
+const verifiedDate = new Intl.DateTimeFormat('es-MX', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(`${barbershop.verifiedAt}T12:00:00Z`));
+const status = {
+  verified: { label: 'Fuentes contrastadas', className: '' },
+  reviewed: { label: 'Datos públicos revisados', className: 'cdmx-status--reviewed' },
+  partial: { label: 'Datos parciales', className: 'cdmx-status--partial' },
+}[barbershop.verificationStatus];
+---
+<main id="main" class="cdmx-detail">
+  <div class="cdmx-shell">
+    <nav class="cdmx-breadcrumbs" aria-label="Migas de pan">
+      <a href="/">Inicio</a><span aria-hidden="true">/</span>
+      <a href="/ciudad-de-mexico/">Barberías en CDMX</a><span aria-hidden="true">/</span>
+      <span aria-current="page">{barbershop.name}</span>
+    </nav>
+
+    <header class="cdmx-detail__header">
+      <div>
+        <p class="cdmx-eyebrow">Ficha editorial · {barbershop.borough}</p>
+        <h1>{barbershop.name}</h1>
+        <p class="cdmx-detail__lead">{barbershop.description}</p>
+      </div>
+      <aside class="cdmx-detail__stamp" aria-label="Estado de verificación">
+        <span class:list={['cdmx-status', status.className]}>{status.label}</span>
+        <p>Revisión editorial</p>
+        <time datetime={barbershop.verifiedAt}>{verifiedDate}</time>
+      </aside>
+    </header>
+
+    <div class="cdmx-detail__grid">
+      <div class="cdmx-detail__main">
+        <section class="cdmx-panel" aria-labelledby="datos-contacto">
+          <p class="cdmx-section-number">01</p>
+          <h2 id="datos-contacto">Datos de la barbería</h2>
+          <dl class="cdmx-detail__facts">
+            <div><dt>Colonia</dt><dd>{barbershop.neighborhood}</dd></div>
+            <div><dt>Alcaldía</dt><dd>{barbershop.borough}</dd></div>
+            <div><dt>Domicilio</dt><dd>{barbershop.address}</dd></div>
+            <div><dt>Teléfono</dt><dd><span class="cdmx-phone">{barbershop.telephone}</span></dd></div>
+          </dl>
+          <p class="cdmx-note">El teléfono se muestra únicamente como dato informativo. Confirma disponibilidad y horario directamente con el establecimiento antes de acudir.</p>
+        </section>
+
+        <section class="cdmx-panel" aria-labelledby="servicios-publicados">
+          <p class="cdmx-section-number">02</p>
+          <h2 id="servicios-publicados">Servicios publicados</h2>
+          <ul class="cdmx-service-list">
+            {barbershop.services.map((service) => <li>{service}</li>)}
+          </ul>
+        </section>
+      </div>
+
+      <aside class="cdmx-panel cdmx-hours" aria-labelledby="horario-semanal">
+        <p class="cdmx-section-number">03</p>
+        <h2 id="horario-semanal">Horario publicado</h2>
+        <dl>
+          {days.map(([day, label]) => (
+            <div>
+              <dt>{label}</dt>
+              <dd class:list={{ 'cdmx-hours__unknown': !hours.has(day) }}>{hours.get(day) ?? 'No publicado'}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="cdmx-note">Los horarios pueden cambiar. La ausencia de horario no implica que el establecimiento esté cerrado.</p>
+      </aside>
+    </div>
+
+    {related.length > 0 && <section class="cdmx-related" aria-labelledby="fichas-cercanas">
+      <div class="cdmx-section-head">
+        <div>
+          <p class="cdmx-eyebrow">Misma alcaldía</p>
+          <h2 id="fichas-cercanas">Otras fichas para comparar</h2>
+        </div>
+        <a href={`/ciudad-de-mexico/?alcaldia=${barbershop.boroughSlug}`}>Ver {barbershop.borough} →</a>
+      </div>
+      <div class="cdmx-related__grid">
+        {related.map((item) => <BarbershopCard barbershop={item} related />)}
+      </div>
+    </section>}
+
+    <a class="cdmx-back" href="/ciudad-de-mexico/">← Volver a las 45 barberías en CDMX</a>
+  </div>
+</main>

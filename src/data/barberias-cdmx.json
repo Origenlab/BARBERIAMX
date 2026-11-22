@@ -1,0 +1,2645 @@
+[
+  {
+    "id": "cdmx-barbaros-barbershop",
+    "slug": "barbaros-barbershop",
+    "name": "Bárbaros barbershop",
+    "borough": "Álvaro Obregón",
+    "boroughSlug": "alvaro-obregon",
+    "neighborhood": "Olivar del Conde 2da Secc",
+    "address": "C. 33 no. 79, Olivar del Conde 2da Secc, Álvaro Obregón, 01408 Ciudad de México, CDMX",
+    "postalCode": "01408",
+    "telephone": "55 2497 9542",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "12:00–22:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "12:00–22:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "12:00–22:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "12:00–22:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "12:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-10",
+    "sources": [
+      "https://localmexico.net/negocio/barbaros-barbershop-alvaro-obregon",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/alvaro-obregon"
+    ],
+    "isNew": true,
+    "latitude": 19.369446999999997,
+    "longitude": -99.2211555,
+    "description": "Bárbaros barbershop es una barbería ubicada en Olivar del Conde 2da Secc, Álvaro Obregón. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-barba-mala-by-dreo-cdmx",
+    "slug": "barberia-barba-mala-by-dreo-cdmx",
+    "name": "Barbería Barba Mala by DrEO CDMX",
+    "borough": "Álvaro Obregón",
+    "boroughSlug": "alvaro-obregon",
+    "neighborhood": "Guadalupe Inn",
+    "address": "Ricardo Castro 49-Loc C, Guadalupe Inn, Álvaro Obregón, 01020 Ciudad de México, CDMX",
+    "postalCode": "01020",
+    "telephone": "55 5162 7781",
+    "services": [
+      "Corte de cabello"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:30–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:30–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:30–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:30–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:30–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–17:30"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-19",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-barba-mala-by-dreo-cdmx-alvaro-obregon",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/alvaro-obregon"
+    ],
+    "isNew": true,
+    "latitude": 19.3550313,
+    "longitude": -99.1876171,
+    "description": "Barbería Barba Mala by DrEO CDMX es una barbería ubicada en Guadalupe Inn, Álvaro Obregón. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-hg-men-s-barber-studio",
+    "slug": "hg-men-s-barber-studio",
+    "name": "HG Men’s Barber Studio",
+    "borough": "Álvaro Obregón",
+    "boroughSlug": "alvaro-obregon",
+    "neighborhood": "Guadalupe Inn",
+    "address": "Miguel Lerdo de Tejada 93, Guadalupe Inn, Álvaro Obregón, 01020 Ciudad de México, CDMX",
+    "postalCode": "01020",
+    "telephone": "55 1838 4742",
+    "services": [
+      "Corte de cabello",
+      "Coloración"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–18:30"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "12:00–17:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-17",
+    "sources": [
+      "https://localmexico.net/negocio/hg-mens-barber-studio-alvaro-obregon",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/alvaro-obregon"
+    ],
+    "isNew": true,
+    "latitude": 19.3562418,
+    "longitude": -99.186324,
+    "description": "HG Men’s Barber Studio es una barbería ubicada en Guadalupe Inn, Álvaro Obregón. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-arco-138-studio",
+    "slug": "barberia-arco-138-studio",
+    "name": "Barberia Arco 138 Studio",
+    "borough": "Azcapotzalco",
+    "boroughSlug": "azcapotzalco",
+    "neighborhood": "Clavería",
+    "address": "Av. Clavería 138, Claveria, Azcapotzalco, 02080 Ciudad de México, CDMX",
+    "postalCode": "02080",
+    "telephone": "55 3519 9949",
+    "services": [
+      "Corte de cabello"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-arco-138-studio-azcapotzalco",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/azcapotzalco"
+    ],
+    "isNew": true,
+    "latitude": 19.4654866,
+    "longitude": -99.18186589999999,
+    "description": "Barberia Arco 138 Studio es una barbería ubicada en Clavería, Azcapotzalco. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-con-hache",
+    "slug": "barberia-con-hache",
+    "name": "Barbería con Hache",
+    "borough": "Azcapotzalco",
+    "boroughSlug": "azcapotzalco",
+    "neighborhood": "Obrero Popular",
+    "address": "Pte 58 3611, Obrero Popular, Azcapotzalco, 02840 Ciudad de México, CDMX",
+    "postalCode": "02840",
+    "telephone": "55 9264 2682",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Coloración"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "11:00–16:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-28",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-con-hache-azcapotzalco",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/azcapotzalco"
+    ],
+    "isNew": true,
+    "latitude": 19.4647801,
+    "longitude": -99.1748016,
+    "description": "Barbería con Hache es una barbería ubicada en Obrero Popular, Azcapotzalco. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barber-studio-mb-spa",
+    "slug": "barber-studio-mb-spa",
+    "name": "Barber Studio MB & Spa",
+    "borough": "Benito Juárez",
+    "boroughSlug": "benito-juarez",
+    "neighborhood": "Narvarte Oriente",
+    "address": "La Morena 1556, Narvarte Oriente, Benito Juárez, 03023 Ciudad de México, CDMX",
+    "postalCode": "03023",
+    "telephone": "55 8106 6554",
+    "services": [
+      "Corte de cabello",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://localmexico.net/negocio/barber-studio-mb-y-spa-benito-juarez",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/benito-juarez"
+    ],
+    "isNew": true,
+    "latitude": 19.3984096,
+    "longitude": -99.1461992,
+    "description": "Barber Studio MB & Spa es una barbería ubicada en Narvarte Oriente, Benito Juárez. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-don-filo",
+    "slug": "barberia-don-filo",
+    "name": "Barbería Don Filo",
+    "borough": "Benito Juárez",
+    "boroughSlug": "benito-juarez",
+    "neighborhood": "Del Valle Sur",
+    "address": "José María Rico 230-Depto 201, Col del Valle Sur, Benito Juárez, 03100 Ciudad de México, CDMX",
+    "postalCode": "03100",
+    "telephone": "55 3517 5978",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Cuidado facial"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–18:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–17:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-don-filo-benito-juarez",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/benito-juarez"
+    ],
+    "isNew": true,
+    "latitude": 19.3682503,
+    "longitude": -99.1754879,
+    "description": "Barbería Don Filo es una barbería ubicada en Del Valle Sur, Benito Juárez. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-mr-venez-del-valle",
+    "slug": "barberia-del-valle-centro-benito-juarez",
+    "name": "Mr. Venez Barbería",
+    "borough": "Benito Juárez",
+    "boroughSlug": "benito-juarez",
+    "neighborhood": "Del Valle Centro",
+    "address": "Gabriel Mancera 405, local A, Del Valle Centro, Benito Juárez, 03103 Ciudad de México, CDMX",
+    "postalCode": "03103",
+    "telephone": "55 7863 2861",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado"
+    ],
+    "hours": [],
+    "verificationStatus": "partial",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://www.allbiz.mx/barber%C3%ADa-mr-venez-55-7258-0571"
+    ],
+    "isNew": false,
+    "description": "Mr. Venez Barbería se encuentra en Del Valle Centro, alcaldía Benito Juárez. Se publican domicilio, teléfono y servicios consultados; el horario se marca como no publicado porque las fuentes disponibles no coinciden."
+  },
+  {
+    "id": "cdmx-nordik-barber-shop-del-valle",
+    "slug": "nordik-barber-shop-del-valle",
+    "name": "Nordik Barber Shop Del Valle",
+    "borough": "Benito Juárez",
+    "boroughSlug": "benito-juarez",
+    "neighborhood": "Del Valle Centro",
+    "address": "Felix Cuevas, Patricio Sanz 329A, Benito Juárez, 03100 Ciudad de México, CDMX",
+    "postalCode": "03100",
+    "telephone": "56 4751 2004",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–19:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–19:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–19:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://localmexico.net/negocio/nordik-barber-shop-del-valle-benito-juarez",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/benito-juarez"
+    ],
+    "isNew": true,
+    "latitude": 19.3723684,
+    "longitude": -99.1748918,
+    "description": "Nordik Barber Shop Del Valle es una barbería ubicada en Del Valle Centro, Benito Juárez. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-rhino-barber-cuts",
+    "slug": "rhino-barber-cuts",
+    "name": "Rhino Barber Cuts",
+    "borough": "Benito Juárez",
+    "boroughSlug": "benito-juarez",
+    "neighborhood": "Tlacoquemecatl del Valle",
+    "address": "Patricio Sanz 1445, Tlacoquemecatl del Valle, Benito Juárez, 03200 Ciudad de México, CDMX",
+    "postalCode": "03200",
+    "telephone": "55 8085 9224",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "15:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–17:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–16:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-10",
+    "sources": [
+      "https://localmexico.net/negocio/rhino-barber-cuts-benito-juarez",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/benito-juarez"
+    ],
+    "isNew": true,
+    "latitude": 19.375441199999997,
+    "longitude": -99.1744131,
+    "description": "Rhino Barber Cuts es una barbería ubicada en Tlacoquemecatl del Valle, Benito Juárez. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-roz-barber-studio",
+    "slug": "roz-barber-studio",
+    "name": "RŌZ Barber Studio",
+    "borough": "Benito Juárez",
+    "boroughSlug": "benito-juarez",
+    "neighborhood": "Del Valle Centro",
+    "address": "Félix Cuevas 826, Col del Valle Centro, Benito Juárez, 03100 Ciudad de México, CDMX",
+    "postalCode": "03100",
+    "telephone": "55 7276 4663",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "12:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–17:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "09:00–17:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-16",
+    "sources": [
+      "https://localmexico.net/negocio/roz-barber-studio-benito-juarez",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/benito-juarez"
+    ],
+    "isNew": true,
+    "latitude": 19.3713282,
+    "longitude": -99.1670111,
+    "description": "RŌZ Barber Studio es una barbería ubicada en Del Valle Centro, Benito Juárez. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-salon-95",
+    "slug": "barberia-salon-95",
+    "name": "Barbería & salón 95",
+    "borough": "Coyoacán",
+    "boroughSlug": "coyoacan",
+    "neighborhood": "El Caracol",
+    "address": "Cto Estadio Azteca 5482, El Caracol, Coyoacán, 04739 Ciudad de México, CDMX",
+    "postalCode": "04739",
+    "telephone": "55 7494 9109",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–21:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-17",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-y-salon-95-coyoacan",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/coyoacan"
+    ],
+    "isNew": true,
+    "latitude": 19.3016601,
+    "longitude": -99.1623755,
+    "description": "Barbería & salón 95 es una barbería ubicada en El Caracol, Coyoacán. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-sr-figaro",
+    "slug": "barberia-sr-figaro",
+    "name": "Barbería Sr. Fígaro",
+    "borough": "Coyoacán",
+    "boroughSlug": "coyoacan",
+    "neighborhood": "Avante",
+    "address": "Del. Coyoacán, Canal de Miramontes No.2370, Coapa, Avante, Coyoacán, 04460 Ciudad de México, CDMX",
+    "postalCode": "04460",
+    "telephone": "55 7258 1275",
+    "services": [
+      "Corte de cabello",
+      "Cuidado facial",
+      "Masajes",
+      "Coloración"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–18:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "11:00–17:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-17",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-sr-figaro-coyoacan",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/coyoacan"
+    ],
+    "isNew": true,
+    "latitude": 19.3257728,
+    "longitude": -99.13624689999999,
+    "description": "Barbería Sr. Fígaro es una barbería ubicada en Avante, Coyoacán. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-eder-barber-shop",
+    "slug": "eder-barber-shop",
+    "name": "Eder Barber Shop",
+    "borough": "Coyoacán",
+    "boroughSlug": "coyoacan",
+    "neighborhood": "Pedregal de Santo Domingo",
+    "address": "Av. Anacahuita 359, Pedregal de Santo Domingo, Coyoacán, 04369 Ciudad de México, CDMX",
+    "postalCode": "04369",
+    "telephone": "55 7183 0454",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–22:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–22:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–22:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–22:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–22:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–22:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "11:00–22:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-17",
+    "sources": [
+      "https://localmexico.net/negocio/eder-barber-shop-coyoacan",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/coyoacan"
+    ],
+    "isNew": true,
+    "latitude": 19.3243702,
+    "longitude": -99.1726674,
+    "description": "Eder Barber Shop es una barbería ubicada en Pedregal de Santo Domingo, Coyoacán. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-hermanos-de-tijera",
+    "slug": "hermanos-de-tijera",
+    "name": "Hermanos de Tijera",
+    "borough": "Coyoacán",
+    "boroughSlug": "coyoacan",
+    "neighborhood": "Copilco el Bajo",
+    "address": "Eje 10 Sur 76-Loc 15, Copilco el Bajo, Coyoacán, 04340 Ciudad de México, CDMX",
+    "postalCode": "04340",
+    "telephone": "55 5074 4115",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–17:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-17",
+    "sources": [
+      "https://localmexico.net/negocio/hermanos-de-tijera-coyoacan",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/coyoacan"
+    ],
+    "isNew": true,
+    "latitude": 19.3384921,
+    "longitude": -99.1887768,
+    "description": "Hermanos de Tijera es una barbería ubicada en Copilco el Bajo, Coyoacán. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberisha-espacio-santa-fe",
+    "slug": "barberisha-espacio-santa-fe",
+    "name": "Barberisha Espacio Santa Fe",
+    "borough": "Cuajimalpa de Morelos",
+    "boroughSlug": "cuajimalpa-de-morelos",
+    "neighborhood": "El Yaqui",
+    "address": "Espacio Santa Fe, Blvd Reforma 5420-local #14, La Rosita, El Yaqui, Cuajimalpa de Morelos, 05340 Ciudad de México, CDMX",
+    "postalCode": "05340",
+    "telephone": "55 2323 2529",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–17:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-04",
+    "sources": [
+      "https://localmexico.net/negocio/barberisha-espacio-santa-fe-cuajimalpa-de-morelos",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/cuajimalpa-de-morelos"
+    ],
+    "isNew": true,
+    "latitude": 19.3627419,
+    "longitude": -99.28145219999999,
+    "description": "Barberisha Espacio Santa Fe es una barbería ubicada en El Yaqui, Cuajimalpa de Morelos. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barber-teo",
+    "slug": "barber-teo",
+    "name": "Barber Teo",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Hipódromo",
+    "address": "C. Chilpancingo 83, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX",
+    "postalCode": "06100",
+    "telephone": "55 2138 1589",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "08:30–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "08:30–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "08:30–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "08:30–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "08:30–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–19:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "09:00–15:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-16",
+    "sources": [
+      "https://localmexico.net/negocio/barber-teo-cuauhtemoc",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/cuauhtemoc"
+    ],
+    "isNew": true,
+    "latitude": 19.4056008,
+    "longitude": -99.1692837,
+    "description": "Barber Teo es una barbería ubicada en Hipódromo, Cuauhtémoc. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-bardo-s-barber-roma",
+    "slug": "bardo-s-barber-roma",
+    "name": "Bardo’s Barber Roma",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Roma Norte",
+    "address": "Monterrey 159, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX",
+    "postalCode": "06700",
+    "telephone": "55 5204 3755",
+    "services": [
+      "Corte de cabello",
+      "Servicios de spa"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-14",
+    "sources": [
+      "https://localmexico.net/negocio/bardos-barber-roma-cuauhtemoc",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/cuauhtemoc"
+    ],
+    "isNew": true,
+    "latitude": 19.4149212,
+    "longitude": -99.163629,
+    "description": "Bardo’s Barber Roma es una barbería ubicada en Roma Norte, Cuauhtémoc. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-bodega-barbers",
+    "slug": "bodega-barbers",
+    "name": "Bodega Barbers",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Juárez",
+    "address": "Hamburgo 15, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+    "postalCode": "06600",
+    "telephone": "55 5705 4512",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "09:00–19:30"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "09:00–19:30"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "09:00–19:30"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "09:00–19:30"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "09:00–19:30"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–17:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "09:00–16:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      "https://localmexico.net/negocio/bodega-barbers-cuauhtemoc",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/cuauhtemoc"
+    ],
+    "isNew": true,
+    "latitude": 19.4290953,
+    "longitude": -99.1589375,
+    "description": "Bodega Barbers es una barbería ubicada en Juárez, Cuauhtémoc. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-rebels-108-barbershop-condesa",
+    "slug": "rebels-108-barbershop-condesa",
+    "name": "Rebels 108 Barbershop Condesa",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Hipódromo Condesa",
+    "address": "Alfonso Reyes 123, Hipódromo Condesa, Cuauhtémoc, 06100 Ciudad de México, CDMX",
+    "postalCode": "06100",
+    "telephone": "55 1489 3416",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–16:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–15:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-16",
+    "sources": [
+      "https://localmexico.net/negocio/rebels-108-barbershop-condesa-cuauhtemoc",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/cuauhtemoc"
+    ],
+    "isNew": true,
+    "latitude": 19.4087127,
+    "longitude": -99.1772878,
+    "description": "Rebels 108 Barbershop Condesa es una barbería ubicada en Hipódromo Condesa, Cuauhtémoc. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-scalper-studio-juarez",
+    "slug": "barberia-juarez-cuauhtemoc",
+    "name": "Scalper Studio Juárez",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Juárez",
+    "address": "Berlín 38, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+    "postalCode": "06600",
+    "telephone": "55 5204 6824",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado",
+      "Cuidado facial",
+      "Manicura y pedicura"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–17:00"
+      }
+    ],
+    "verificationStatus": "verified",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://www.scalperstudio.com/contacto/",
+      "https://www.scalperstudio.com/juarez/",
+      "https://www.fresha.com/es/lvp/scalper-juarez-berlin-ciudad-de-mexico-0q7gw7"
+    ],
+    "isNew": false,
+    "description": "Scalper Studio Juárez es una sucursal ubicada en la colonia Juárez, alcaldía Cuauhtémoc. Su ficha reúne domicilio, teléfono, horario y categorías de servicio publicadas por el negocio."
+  },
+  {
+    "id": "cdmx-the-bar-barber-grooming",
+    "slug": "the-bar-barber-grooming",
+    "name": "The Bar - Barber & Grooming",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Roma Norte",
+    "address": "Av Chapultepec 360 Edificio Chapultepec Centera, Local A, Roma Nte., Cuauhtémoc, 06700 CDMX",
+    "postalCode": "06700",
+    "telephone": "55 5525 8794",
+    "services": [
+      "Servicios de spa"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–16:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      "https://localmexico.net/negocio/the-bar-barber-y-grooming-cuauhtemoc",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/cuauhtemoc"
+    ],
+    "isNew": true,
+    "latitude": 19.4224964,
+    "longitude": -99.1656423,
+    "description": "The Bar - Barber & Grooming es una barbería ubicada en Roma Norte, Cuauhtémoc. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-the-barbers-spa-roma-norte",
+    "slug": "barberia-roma-norte-cuauhtemoc",
+    "name": "The Barber's Spa Roma Norte",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Roma Norte",
+    "address": "Colima 220, local 202, Roma Norte, Cuauhtémoc, 06700 Ciudad de México, CDMX",
+    "postalCode": "06700",
+    "telephone": "55 9688 6590",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Servicios de spa"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–17:00"
+      }
+    ],
+    "verificationStatus": "verified",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://www.thebarbersspa.mx/tbsromanorte",
+      "https://www.thebarbersspa.mx/sucursales"
+    ],
+    "isNew": false,
+    "description": "The Barber's Spa Roma Norte es una sucursal de barbería y spa ubicada en la colonia Roma Norte. La ficha concentra el domicilio, teléfono, servicios generales y horario publicados por el negocio."
+  },
+  {
+    "id": "cdmx-the-gentlemans-barbershop-condesa",
+    "slug": "barberia-condesa-cuauhtemoc",
+    "name": "The Gentleman's Barbershop",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Hipódromo",
+    "address": "Avenida México 184, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX",
+    "postalCode": "06100",
+    "telephone": "56 1008 0724",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "11:00–17:00"
+      }
+    ],
+    "verificationStatus": "verified",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://www.fresha.com/es/lvp/the-gentlemans-barbershop-avenida-mexico-ciudad-de-mexico-Wq7rwo",
+      "https://www.waze.com/es-419/live-map/directions/mx/cdmx/mexico-d.f./the-gentlemans-barbershop?to=place.ChIJ7SzdJTT_0YURYzoaatDgIeo"
+    ],
+    "isNew": false,
+    "description": "The Gentleman's Barbershop está en la colonia Hipódromo, alcaldía Cuauhtémoc. La ficha reúne domicilio, teléfono, servicios de corte y barba, y el horario publicado."
+  },
+  {
+    "id": "cdmx-tulum-barbershop",
+    "slug": "tulum-barbershop",
+    "name": "Tulum Barbershop",
+    "borough": "Cuauhtémoc",
+    "boroughSlug": "cuauhtemoc",
+    "neighborhood": "Cuauhtémoc",
+    "address": "C. Río Tiber 48, Cuauhtémoc, 06500 Ciudad de México, CDMX",
+    "postalCode": "06500",
+    "telephone": "56 2547 5626",
+    "services": [
+      "Corte de cabello",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:30"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:30"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:30"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:30"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:30"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–20:30"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "11:00–18:30"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-15",
+    "sources": [
+      "https://localmexico.net/negocio/tulum-barbershop-barberia-cdmx-cuauhtemoc",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/cuauhtemoc"
+    ],
+    "isNew": true,
+    "latitude": 19.4316823,
+    "longitude": -99.16995759999999,
+    "description": "Tulum Barbershop es una barbería ubicada en Cuauhtémoc, Cuauhtémoc. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-737",
+    "slug": "barberia-737",
+    "name": "Barbería 737",
+    "borough": "Gustavo A. Madero",
+    "boroughSlug": "gustavo-a-madero",
+    "neighborhood": "Lindavista",
+    "address": "Buenavista 124, Lindavista, Gustavo A. Madero, 07300 Ciudad de México, CDMX",
+    "postalCode": "07300",
+    "telephone": "55 1560 7864",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–20:30"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–20:30"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–20:30"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:30"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–20:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-17",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-737-gustavo-a-madero",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/gustavo-a-madero"
+    ],
+    "isNew": true,
+    "latitude": 19.4911048,
+    "longitude": -99.1278078,
+    "description": "Barbería 737 es una barbería ubicada en Lindavista, Gustavo A. Madero. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-bunker-barberia-shop",
+    "slug": "bunker-barberia-shop",
+    "name": "Búnker Barberia Shop",
+    "borough": "Gustavo A. Madero",
+    "boroughSlug": "gustavo-a-madero",
+    "neighborhood": "Tepeyac Insurgentes",
+    "address": "Habana 145, Tepeyac Insurgentes, Gustavo A. Madero, 07020 Ciudad de México, CDMX",
+    "postalCode": "07020",
+    "telephone": "55 9207 2424",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–18:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-23",
+    "sources": [
+      "https://localmexico.net/negocio/bunker-barberia-shop-gustavo-a-madero",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/gustavo-a-madero"
+    ],
+    "isNew": true,
+    "latitude": 19.485243699999998,
+    "longitude": -99.12202049999999,
+    "description": "Búnker Barberia Shop es una barbería ubicada en Tepeyac Insurgentes, Gustavo A. Madero. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-guzz-barber-s-spa",
+    "slug": "guzz-barber-s-spa",
+    "name": "Guzz Barber's Spa",
+    "borough": "Gustavo A. Madero",
+    "boroughSlug": "gustavo-a-madero",
+    "neighborhood": "Nueva Atzacoalco",
+    "address": "Ote. 185 48 B Villa Hermosa, Nueva Atzacoalco, Gustavo A. Madero, 07410 Ciudad de México, CDMX",
+    "postalCode": "07410",
+    "telephone": "55 2011 3305",
+    "services": [
+      "Masajes",
+      "Servicios de spa"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "12:00–20:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-23",
+    "sources": [
+      "https://localmexico.net/negocio/guzz-barbers-spa-gustavo-a-madero",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/gustavo-a-madero"
+    ],
+    "isNew": true,
+    "latitude": 19.502742299999998,
+    "longitude": -99.0913027,
+    "description": "Guzz Barber's Spa es una barbería ubicada en Nueva Atzacoalco, Gustavo A. Madero. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-the-barber-club",
+    "slug": "the-barber-club",
+    "name": "The Barber Club",
+    "borough": "Iztacalco",
+    "boroughSlug": "iztacalco",
+    "neighborhood": "Militar Marte",
+    "address": "Av. Andrés Molina Enríquez 488, Militar Marte, Iztacalco, 08830 Ciudad de México, CDMX",
+    "postalCode": "08830",
+    "telephone": "55 3910 0041",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba",
+      "Afeitado",
+      "Masajes"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:30–19:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:30–19:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:30–19:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:30–19:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:30–19:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:30–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-01",
+    "sources": [
+      "https://localmexico.net/negocio/the-barber-club-iztacalco",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/iztacalco"
+    ],
+    "isNew": true,
+    "latitude": 19.384121699999998,
+    "longitude": -99.1291547,
+    "description": "The Barber Club es una barbería ubicada en Militar Marte, Iztacalco. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-dree-barber-studio",
+    "slug": "dree-barber-studio",
+    "name": "Dree Barber Studio",
+    "borough": "Iztapalapa",
+    "boroughSlug": "iztapalapa",
+    "neighborhood": "San Juan Xalpa",
+    "address": "Av. 11 59, San Juan Xalpa, Iztapalapa, 09850 Ciudad de México, CDMX",
+    "postalCode": "09850",
+    "telephone": "56 3500 3124",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "12:00–20:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "12:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-21",
+    "sources": [
+      "https://localmexico.net/negocio/dree-barber-studio-iztapalapa",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/iztapalapa"
+    ],
+    "isNew": true,
+    "latitude": 19.3352215,
+    "longitude": -99.081312,
+    "description": "Dree Barber Studio es una barbería ubicada en San Juan Xalpa, Iztapalapa. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-kazu-barbershop",
+    "slug": "kazu-barbershop",
+    "name": "Kazu Barbershop",
+    "borough": "Iztapalapa",
+    "boroughSlug": "iztapalapa",
+    "neighborhood": "Lomas de San Lorenzo",
+    "address": "Av. Reforma 65, Lomas de San Lorenzo, Iztapalapa, 09780 Ciudad de México, CDMX",
+    "postalCode": "09780",
+    "telephone": "55 4126 4183",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "12:00–19:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "12:00–19:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "12:00–19:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "12:00–19:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "12:00–19:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–15:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-21",
+    "sources": [
+      "https://localmexico.net/negocio/kazu-barbershop-iztapalapa",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/iztapalapa"
+    ],
+    "isNew": true,
+    "latitude": 19.3229546,
+    "longitude": -99.07151259999999,
+    "description": "Kazu Barbershop es una barbería ubicada en Lomas de San Lorenzo, Iztapalapa. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-la-28-barber-shop",
+    "slug": "la-28-barber-shop",
+    "name": "La 28 Barber Shop",
+    "borough": "Iztapalapa",
+    "boroughSlug": "iztapalapa",
+    "neighborhood": "La Planta",
+    "address": "Av. la Turba 276-S, La Planta, Iztapalapa, 09960 Ciudad de México, CDMX",
+    "postalCode": "09960",
+    "telephone": "55 3737 7920",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–21:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-21",
+    "sources": [
+      "https://localmexico.net/negocio/la-28-barber-shop-iztapalapa",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/iztapalapa"
+    ],
+    "isNew": true,
+    "latitude": 19.2954847,
+    "longitude": -99.0623825,
+    "description": "La 28 Barber Shop es una barbería ubicada en La Planta, Iztapalapa. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-mala-fama-barber-shop",
+    "slug": "mala-fama-barber-shop",
+    "name": "Mala Fama Barber Shop",
+    "borough": "La Magdalena Contreras",
+    "boroughSlug": "la-magdalena-contreras",
+    "neighborhood": "Barrio San Francisco",
+    "address": "Av. Oaxaca 14, Barrio San Francisco, La Magdalena Contreras, 10500 Ciudad de México, CDMX",
+    "postalCode": "10500",
+    "telephone": "55 2291 6346",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–20:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-06",
+    "sources": [
+      "https://localmexico.net/negocio/mala-fama-barber-shop-la-magdalena-contreras",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/la-magdalena-contreras"
+    ],
+    "isNew": true,
+    "latitude": 19.314671399999998,
+    "longitude": -99.2294359,
+    "description": "Mala Fama Barber Shop es una barbería ubicada en Barrio San Francisco, La Magdalena Contreras. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-alquimia",
+    "slug": "barberia-alquimia",
+    "name": "Barbería Alquimia",
+    "borough": "Miguel Hidalgo",
+    "boroughSlug": "miguel-hidalgo",
+    "neighborhood": "San Miguel Chapultepec I Sección",
+    "address": "Gobernador Agustín Vicente Eguia #4-Departamento 204, San Miguel Chapultepec I Sección, Miguel Hidalgo, 11850 Ciudad de México, CDMX",
+    "postalCode": "11850",
+    "telephone": "55 3957 5407",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–21:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "11:00–16:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-16",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-alquimia-miguel-hidalgo",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/miguel-hidalgo"
+    ],
+    "isNew": true,
+    "latitude": 19.408036499999998,
+    "longitude": -99.1846273,
+    "description": "Barbería Alquimia es una barbería ubicada en San Miguel Chapultepec I Sección, Miguel Hidalgo. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-deluxe-polanco",
+    "slug": "barberia-polanco-miguel-hidalgo",
+    "name": "Barbería Deluxe",
+    "borough": "Miguel Hidalgo",
+    "boroughSlug": "miguel-hidalgo",
+    "neighborhood": "Polanco III Sección",
+    "address": "Avenida Moliere 13, Polanco III Sección, Miguel Hidalgo, 11550 Ciudad de México, CDMX",
+    "postalCode": "11550",
+    "telephone": "55 7705 7728",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–19:30"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–17:00"
+      }
+    ],
+    "verificationStatus": "verified",
+    "verifiedAt": "2026-11-22",
+    "sources": [
+      "https://www.waze.com/live-map/directions/mx/cdmx/mexico-d.f./barberia-deluxe?to=place.ChIJ1W2JPLgB0oURhw3Z3lnq2to",
+      "https://www.allbiz.mx/barber%C3%ADa-deluxe-55-7705-7728"
+    ],
+    "isNew": false,
+    "description": "Barbería Deluxe se ubica en Polanco III Sección, alcaldía Miguel Hidalgo. La ficha presenta el domicilio, teléfono, servicios generales y horarios publicados, sin precios ni valoraciones no verificadas."
+  },
+  {
+    "id": "cdmx-barberia-luis-masterbarbershop",
+    "slug": "barberia-luis-masterbarbershop",
+    "name": "Barbería Luis Masterbarbershop",
+    "borough": "Miguel Hidalgo",
+    "boroughSlug": "miguel-hidalgo",
+    "neighborhood": "Granada",
+    "address": "Livix, C. Lago Filt 7, Polanco, Granada, Miguel Hidalgo, 11520 Ciudad de México, CDMX",
+    "postalCode": "11520",
+    "telephone": "56 5774 4514",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "09:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-10",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-luis-masterbarbershop-miguel-hidalgo",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/miguel-hidalgo"
+    ],
+    "isNew": true,
+    "latitude": 19.4417786,
+    "longitude": -99.1959792,
+    "description": "Barbería Luis Masterbarbershop es una barbería ubicada en Granada, Miguel Hidalgo. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-bardo-s-barber-polanco",
+    "slug": "bardo-s-barber-polanco",
+    "name": "Bardo's Barber Polanco",
+    "borough": "Miguel Hidalgo",
+    "boroughSlug": "miguel-hidalgo",
+    "neighborhood": "Polanco II Sección",
+    "address": "Av. Homero 1425-Loc A-2, Polanco, Polanco II Secc, Miguel Hidalgo, 11540 Ciudad de México, CDMX",
+    "postalCode": "11540",
+    "telephone": "55 8989 7207",
+    "services": [
+      "Corte de cabello",
+      "Servicios de spa"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–19:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–19:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-17",
+    "sources": [
+      "https://localmexico.net/negocio/bardos-barber-polanco-miguel-hidalgo",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/miguel-hidalgo"
+    ],
+    "isNew": true,
+    "latitude": 19.436360999999998,
+    "longitude": -99.2041844,
+    "description": "Bardo's Barber Polanco es una barbería ubicada en Polanco II Sección, Miguel Hidalgo. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-cooper-barber-shop-spa",
+    "slug": "cooper-barber-shop-spa",
+    "name": "Cooper Barber Shop Spa",
+    "borough": "Miguel Hidalgo",
+    "boroughSlug": "miguel-hidalgo",
+    "neighborhood": "Popo",
+    "address": "Pte. 115-A 206, Popo, Miguel Hidalgo, 11480 Ciudad de México, CDMX",
+    "postalCode": "11480",
+    "telephone": "55 9036 7200",
+    "services": [
+      "Corte de cabello",
+      "Afeitado",
+      "Servicios de spa"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–20:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-10",
+    "sources": [
+      "https://localmexico.net/negocio/cooper-barber-shop-spa-miguel-hidalgo",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/miguel-hidalgo"
+    ],
+    "isNew": true,
+    "latitude": 19.4444595,
+    "longitude": -99.1988789,
+    "description": "Cooper Barber Shop Spa es una barbería ubicada en Popo, Miguel Hidalgo. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barba-roja-barber-shop",
+    "slug": "barba-roja-barber-shop",
+    "name": "Barba Roja Barber Shop",
+    "borough": "Milpa Alta",
+    "boroughSlug": "milpa-alta",
+    "neighborhood": "Cruztitla",
+    "address": "Av Morelos 55, Cruztitla, Milpa Alta, 12100 Ciudad de México, CDMX",
+    "postalCode": "12100",
+    "telephone": "55 7367 0785",
+    "services": [
+      "Arreglo de barba"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–21:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-10",
+    "sources": [
+      "https://localmexico.net/negocio/barba-roja-barber-shop-milpa-alta",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/milpa-alta"
+    ],
+    "isNew": true,
+    "latitude": 19.215181299999998,
+    "longitude": -98.99407,
+    "description": "Barba Roja Barber Shop es una barbería ubicada en Cruztitla, Milpa Alta. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-tlahuac",
+    "slug": "barberia-tlahuac",
+    "name": "Barbería Tláhuac",
+    "borough": "Tláhuac",
+    "boroughSlug": "tlahuac",
+    "neighborhood": "Santa Ana",
+    "address": "Colonia, C. Severino Ceniceros, Santa Ana, Tláhuac, 13060 Ciudad de México, CDMX",
+    "postalCode": "13060",
+    "telephone": "55 7407 4176",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–21:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "09:00–21:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-08",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-tlahuac",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/tlahuac"
+    ],
+    "isNew": true,
+    "latitude": 19.2694696,
+    "longitude": -99.0071222,
+    "description": "Barbería Tláhuac es una barbería ubicada en Santa Ana, Tláhuac. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-barberia-bisson",
+    "slug": "barberia-bisson",
+    "name": "Barbería Bisson",
+    "borough": "Tlalpan",
+    "boroughSlug": "tlalpan",
+    "neighborhood": "Miguel Hidalgo Tercera Sección",
+    "address": "Narciso Mendoza 16, Miguel Hidalgo 3ra Secc, Tlalpan, 14260 Ciudad de México, CDMX",
+    "postalCode": "14260",
+    "telephone": "56 1109 5917",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "11:00–15:00, 16:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "11:00–15:00, 16:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "11:00–15:00, 16:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "11:00–15:00, 16:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "11:00–15:00, 16:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–15:00, 16:00–20:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-25",
+    "sources": [
+      "https://localmexico.net/negocio/barberia-bisson-tlalpan",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/tlalpan"
+    ],
+    "isNew": true,
+    "latitude": 19.2778544,
+    "longitude": -99.2063479,
+    "description": "Barbería Bisson es una barbería ubicada en Miguel Hidalgo Tercera Sección, Tlalpan. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-lord-of-lords-barber",
+    "slug": "lord-of-lords-barber",
+    "name": "Lord of Lords Barber",
+    "borough": "Tlalpan",
+    "boroughSlug": "tlalpan",
+    "neighborhood": "Juventud Unida",
+    "address": "Mirador 85, Juventud Unida, Tlalpan, 14647 Ciudad de México, CDMX",
+    "postalCode": "14647",
+    "telephone": "55 4135 7254",
+    "services": [
+      "Corte de cabello",
+      "Arreglo de barba"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–18:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-25",
+    "sources": [
+      "https://localmexico.net/negocio/lord-of-lords-barber-tlalpan",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/tlalpan"
+    ],
+    "isNew": true,
+    "latitude": 19.2686595,
+    "longitude": -99.1528281,
+    "description": "Lord of Lords Barber es una barbería ubicada en Juventud Unida, Tlalpan. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-aristos-peluqueria-barberia",
+    "slug": "aristos-peluqueria-barberia",
+    "name": "Aristos, Peluquería & Barbería",
+    "borough": "Venustiano Carranza",
+    "boroughSlug": "venustiano-carranza",
+    "neighborhood": "Jardín Balbuena",
+    "address": "Nicolás León 138, Jardín Balbuena, Venustiano Carranza, 15900 Ciudad de México, CDMX",
+    "postalCode": "15900",
+    "telephone": "55 8993 8925",
+    "services": [
+      "Corte de cabello"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "09:00–17:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-29",
+    "sources": [
+      "https://localmexico.net/negocio/aristos-peluqueria-y-barberia-venustiano-carranza",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/venustiano-carranza"
+    ],
+    "isNew": true,
+    "latitude": 19.4163943,
+    "longitude": -99.11075579999999,
+    "description": "Aristos, Peluquería & Barbería es una barbería ubicada en Jardín Balbuena, Venustiano Carranza. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-studio-lions-service-premium",
+    "slug": "studio-lions-service-premium",
+    "name": "Studio Lions Service Premium",
+    "borough": "Venustiano Carranza",
+    "boroughSlug": "venustiano-carranza",
+    "neighborhood": "Federal",
+    "address": "Comunicaciones y Obras Públicas 58, Federal, Venustiano Carranza, 15700 Ciudad de México, CDMX",
+    "postalCode": "15700",
+    "telephone": "55 3558 6332",
+    "services": [
+      "Servicios de barbería"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "09:00–23:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "09:00–23:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "09:00–23:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "09:00–23:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "09:00–23:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "11:00–16:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "11:00–16:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-10-29",
+    "sources": [
+      "https://localmexico.net/negocio/studio-lions-service-premium-venustiano-carranza",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/venustiano-carranza"
+    ],
+    "isNew": true,
+    "latitude": 19.4224546,
+    "longitude": -99.0867009,
+    "description": "Studio Lions Service Premium es una barbería ubicada en Federal, Venustiano Carranza. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  },
+  {
+    "id": "cdmx-neron-barbershop-1999",
+    "slug": "neron-barbershop-1999",
+    "name": "Neron Barbershop 1999",
+    "borough": "Xochimilco",
+    "boroughSlug": "xochimilco",
+    "neighborhood": "San Antonio",
+    "address": "Matamoros 39, San Antonio, Xochimilco, 16000 Ciudad de México, CDMX",
+    "postalCode": "16000",
+    "telephone": "56 4786 6357",
+    "services": [
+      "Corte de cabello",
+      "Afeitado"
+    ],
+    "hours": [
+      {
+        "day": "monday",
+        "label": "Lunes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "tuesday",
+        "label": "Martes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "wednesday",
+        "label": "Miércoles",
+        "value": "10:00–20:00"
+      },
+      {
+        "day": "thursday",
+        "label": "Jueves",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "friday",
+        "label": "Viernes",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "saturday",
+        "label": "Sábado",
+        "value": "10:00–21:00"
+      },
+      {
+        "day": "sunday",
+        "label": "Domingo",
+        "value": "10:00–21:00"
+      }
+    ],
+    "verificationStatus": "reviewed",
+    "verifiedAt": "2026-11-02",
+    "sources": [
+      "https://localmexico.net/negocio/neron-barbershop-1999-xochimilco",
+      "https://localmexico.net/categoria/barberias/ciudad-de-mexico/xochimilco"
+    ],
+    "isNew": true,
+    "latitude": 19.2633617,
+    "longitude": -99.10681249999999,
+    "description": "Neron Barbershop 1999 es una barbería ubicada en San Antonio, Xochimilco. Esta ficha reúne su domicilio, teléfono, servicios y horarios publicados para facilitar una consulta objetiva antes de acudir."
+  }
+]
