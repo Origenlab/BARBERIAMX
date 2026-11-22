@@ -25,9 +25,14 @@ test('la arquitectura canónica de Astro existe y usa configuración central', (
 
 test('el workflow publica exclusivamente el resultado de Astro', () => {
   const workflow = read('.github/workflows/pages.yml');
+  const gate = read('.github/workflows/gate.yml');
 
   assert.match(workflow, /npm run check/);
   assert.match(workflow, /npm run build/);
   assert.match(workflow, /path: dist/);
   assert.doesNotMatch(workflow, /path: ['"]?\.['"]?/);
+  assert.doesNotMatch(workflow, /actions\/(?:checkout|setup-node)@v4/);
+  assert.doesNotMatch(workflow, /actions\/upload-pages-artifact@v3/);
+  assert.doesNotMatch(workflow, /actions\/deploy-pages@v4/);
+  assert.doesNotMatch(gate, /actions\/checkout@v4/);
 });
