@@ -1,10 +1,5 @@
-# BARBERIA = sitio estatico root-HTML. GitHub Pages esta en build_type
-# "legacy" (publica la rama main tal cual), y ademas corre pages.yml que
-# sube la raiz como artefacto: DOS publishers sobre el mismo dominio.
-# Por eso el sello NO puede vivir solo en el artefacto de un workflow —
-# el otro publisher lo pisaria. Se usa marker-gate: el bot committea
-# build-id.txt a la rama, que es lo que ambos publishers sirven.
-# paths-ignore evita el loop con el propio marker.
+# El sello se versiona en main para que el build lo copie al artefacto
+# público. paths-ignore evita el loop con el commit automático del marker.
 # Regla OrigenLab: el gate es el DOMINIO, no el color de la Action.
 name: Gate de deploy (marker + verificacion de dominio)
 
