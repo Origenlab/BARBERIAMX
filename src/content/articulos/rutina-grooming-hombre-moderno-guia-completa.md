@@ -1,0 +1,698 @@
+---
+title: "Rutina de grooming para hombre: guía paso a paso"
+description: "Rutina de grooming para hombre paso a paso: limpieza e hidratación de la piel, cuidado del cabello y la barba, y cada cuánto visitar la barbería."
+category: "Estilo de vida"
+author: "Barberia.mx"
+updatedDate: "2026-09-11"
+image: "https://barberia.mx/img/og-barberia.jpg"
+draft: false
+---
+
+<main id="main" class="article-page">
+  <div class="container">
+    <!-- Breadcrumb -->
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="/" class="breadcrumb-link">Inicio</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/blog/" class="breadcrumb-link">Blog</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="/categorias/estilo-de-vida/" class="breadcrumb-link">Estilo de vida</a>
+          <span class="breadcrumb-separator">/</span>
+        </li>
+        <li class="breadcrumb-item">
+          <span class="breadcrumb-current">Rutina de grooming del hombre moderno</span>
+        </li>
+      </ol>
+    </nav>
+    <!-- Two Column Layout -->
+    <div class="article-layout">
+      <!-- Main Content Column -->
+      <div class="article-main">
+        <!-- Hero inside main column -->
+        <header class="article-hero-inline">
+          <a href="/categorias/estilo-de-vida/" class="article-category">Estilo de vida</a>
+          <h1 class="article-title">Rutina de grooming para hombre: guía paso a paso</h1>
+          <p class="article-excerpt">
+            Una rutina de grooming para hombre no necesita veinte productos: necesita constancia. Aquí tienes los pasos básicos para piel, cabello y barba, y cada cuánto conviene visitar la barbería.
+          </p>
+          <div class="article-meta">
+            <div class="article-author">
+              <div class="author-avatar">DR</div>
+              <div class="author-info">
+                <span class="author-name">Redacción Barberia.mx</span>
+                <span class="article-date">Actualizado recientemente</span>
+              </div>
+            </div>
+            <div class="article-stats">
+              <span class="article-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                12 min lectura
+              </span>
+              <span class="article-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </header>
+        <article class="article-content">
+          <div class="article-body ed-prose">
+          <p>
+            Para elegir tu siguiente estilo, consulta los <a href="/articulos/cortes-de-barberia-para-hombre/">cortes de barbería para hombre</a> que más se piden y adapta la rutina a su mantenimiento.
+          </p>
+          <p>
+          <strong>Una rutina de grooming para hombre no necesita veinte productos: necesita constancia.</strong> Aquí tienes los pasos básicos para piel, cabello y barba, y cada cuánto conviene visitar la barbería.
+        </p>
+        <p>
+          El grooming también implica dedicar tiempo al bienestar y ajustar los hábitos a tus necesidades, tu tipo de piel y tu estilo de cabello.
+        </p>
+        <p>
+          Esta guía reúne productos básicos, pasos sencillos y una frecuencia práctica para cuidar tu imagen sin complicar la rutina.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">01</span>
+            <span class="stat-label">Cuida la piel con constancia</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">02</span>
+            <span class="stat-label">Mantén cabello y barba según tu estilo</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">03</span>
+            <span class="stat-label">Agenda visitas cuando tu corte lo necesite</span>
+          </div>
+        </div>
+        <h2>Por qué el grooming importa más de lo que crees</h2>
+        <p>
+          Vivimos en una era visual. Las reuniones por video, las redes sociales y las interacciones profesionales constantes han amplificado la importancia de nuestra apariencia. Pero no se trata solo de lo superficial, el grooming tiene un impacto profundo en multiples aspectos de tu vida:
+        </p>
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Confianza y autoestima</strong>
+              Cuando te ves bien, te sientes bien. Una apariencia cuidada activa mecanismos psicologicos que aumentan tu seguridad en ti mismo.
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Exito profesional</strong>
+              Estudios demuestran que las personas con buena presentación personal son percibidas cómo más competentes, confiables y listas para liderar.
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4.93 19.07A10 10 0 1 1 19.07 4.93"/>
+                <path d="M2 12h2M12 2v2M4.93 4.93l1.41 1.41"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Bienestar mental</strong>
+              El ritual del grooming funciona cómo un momento de mindfulness. Es tiempo que te dedicas exclusivamente a ti mismo.
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Relaciones personales</strong>
+              La atención al detalle personal comunica respeto, tanto hacia ti mismo cómo hacia los demás.
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>Salud a largo plazo</strong>
+              Una rutina de cuidado personal te ayuda a detectar cambios en tu piel, cabello o cuerpo que podrian requerir atención medica.
+            </div>
+          </li>
+        </ul>
+        <h2>Los pilares de una rutina de grooming completa</h2>
+        <p>
+          Una rutina de grooming efectiva se construye sobre varios pilares fundamentales. No necesitas dominarlos todos de inmediato, pero entender cada uno te ayudara a desarrollar una aproximacion integral a tu cuidado personal.
+        </p>
+        <h3>1. Cuidado de la piel (Skincare)</h3>
+        <p>
+          La piel es el órgano más grande de tu cuerpo y el primero que los demás ven. Un skincare basico pero consistente puede transformar completamente tu apariencia. La buena noticia es que no necesitas diez productos, con tres o cuatro bien elegidos es suficiente.
+        </p>
+        <div class="routine-steps">
+          <div class="routine-step">
+            <div class="routine-step-number">1</div>
+            <div class="routine-step-content">
+              <h4>Limpieza</h4>
+              <p>Usa un limpiador facial suave por la manana y por la noche. Esto elimina el exceso de grasa, suciedad y celulas muertas. Evita el jabon de barra, que reseca demasiado.</p>
+            </div>
+          </div>
+          <div class="routine-step">
+            <div class="routine-step-number">2</div>
+            <div class="routine-step-content">
+              <h4>Hidratación</h4>
+              <p>Aplica hidratante despues de limpiar. Busca uno con SPF para la manana (minimo SPF 30). La hidratación previene arrugas prematuras y mantiene la piel saludable.</p>
+            </div>
+          </div>
+          <div class="routine-step">
+            <div class="routine-step-number">3</div>
+            <div class="routine-step-content">
+              <h4>Tratamiento (opcional)</h4>
+              <p>Si tienes preocupaciones específicas cómo acne, manchas o lineas de expresion, incorpora un serum o tratamiento especifico por las noches.</p>
+            </div>
+          </div>
+        </div>
+        <h3>2. Cuidado del cabello</h3>
+        <p>
+          Tu cabello es uno de los elementos más visibles de tu imagen. Un corte adecuado y productos de calidad hacen toda la diferencia. Lo primero es entender tu tipo de cabello y trabajar con el, no contra el.
+        </p>
+        <ul>
+          <li><strong>Lavado:</strong> No laves tu cabello todos los días. 2-3 veces por semana es suficiente para la mayoria. El lavado excesivo elimina los aceites naturales.</li>
+          <li><strong>Acondicionador:</strong> Usalo siempre despues del shampoo. Hidrata y facilita el peinado.</li>
+          <li><strong>Producto de styling:</strong> Elige segun el acabado que busques: pomada para brillo, cera para textura mate, gel para fijacion fuerte.</li>
+          <li><strong>Corte regular:</strong> Visita tu barbería cada 3-4 semanas para mantener la forma del corte.</li>
+        </ul>
+        <h3>3. Cuidado de la barba</h3>
+        <p>
+          Si llevas barba, esta requiere tanto o más cuidado que tu cabello. Una barba descuidada puede arruinar un look completo, mientras que una bien mantenida es un statement de estilo.
+        </p>
+        <div class="product-grid">
+          <div class="product-card">
+            <svg class="product-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+            </svg>
+            <h4>Aceite para barba</h4>
+            <p>Hidrata el vello y la piel debajo. Esencial para evitar la comezón y las escamas.</p>
+          </div>
+          <div class="product-card">
+            <svg class="product-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+            <h4>Balsamo para barba</h4>
+            <p>Da forma y control. Ideal para barbas más largas que necesitan estructura.</p>
+          </div>
+          <div class="product-card">
+            <svg class="product-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            <h4>Cepillo de cerdas</h4>
+            <p>Distribuye los aceites naturales y entrena el vello en la direccion deseada.</p>
+          </div>
+          <div class="product-card">
+            <svg class="product-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="6" cy="6" r="3"/>
+              <path d="M6 9v12"/>
+              <path d="M13 6l7.5 6-7.5 6V6z"/>
+            </svg>
+            <h4>Recortadora</h4>
+            <p>Para mantener las lineas definidas entre visitas a la barbería.</p>
+          </div>
+        </div>
+        <h3>4. Higiene y detalles</h3>
+        <p>
+          Los detalles pequenos son los que separan a alguien que se cuida de alguien que realmente domina el grooming. Estos elementos a menudo pasados por alto pueden hacer o deshacer tu imagen:
+        </p>
+        <ul>
+          <li><strong>Unas:</strong> Mantenlas cortas y limpias. Considera una manicura profesional ocasional.</li>
+          <li><strong>Cejas:</strong> No deben crecer sin control. Un pequeno mantenimiento hace gran diferencia.</li>
+          <li><strong>Orejas y nariz:</strong> El vello excesivo en estas areas debe recortarse regularmente.</li>
+          <li><strong>Dientes:</strong> Cepillado, hilo dental y visitas al dentista. Una sonrisa cuidada es invaluable.</li>
+          <li><strong>Fragancia:</strong> Elige un perfume que te represente y usalo con moderacion.</li>
+        </ul>
+        <h2>Rutina diaria, semanal y mensual</h2>
+        <div class="seo-table-wrap">
+          <table class="seo-price-table seo-price-table--wide">
+            <caption>Frecuencia de una rutina de grooming</caption>
+            <thead><tr><th scope="col">Qué</th><th scope="col">Frecuencia</th><th scope="col">Nota</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Limpieza e hidratación facial</th><td data-label="Frecuencia">Diaria</td><td data-label="Nota">Por la mañana y por la noche.</td></tr>
+              <tr><th scope="row">Lavado y peinado del cabello</th><td data-label="Frecuencia">Diaria o según necesidad</td><td data-label="Nota">Usa productos adecuados para tu cabello.</td></tr>
+              <tr><th scope="row">Exfoliación y cuidado extra</th><td data-label="Frecuencia">Semanal</td><td data-label="Nota">Ajusta la frecuencia a tu piel.</td></tr>
+              <tr><th scope="row">Corte y arreglo de barba</th><td data-label="Frecuencia">Mensual o según estilo</td><td data-label="Nota">Agenda en una barbería y confirma el servicio.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Ahora que entiendes los pilares, veamos cómo integrar todo en una rutina practica que puedas mantener todos los días sin que consuma tu manana.
+        </p>
+        <h3>Rutina matutina (15-20 minutos)</h3>
+        <div class="routine-steps">
+          <div class="routine-step">
+            <div class="routine-step-number">1</div>
+            <div class="routine-step-content">
+              <h4>Ducha y limpieza (5 min)</h4>
+              <p>Agua tibia, no caliente. Lava tu cara con limpiador facial. Si lavas el cabello, termina con agua fria para cerrar las cuticulas.</p>
+            </div>
+          </div>
+          <div class="routine-step">
+            <div class="routine-step-number">2</div>
+            <div class="routine-step-content">
+              <h4>Cuidado facial (3 min)</h4>
+              <p>Aplica hidratante con SPF en rostro y cuello. Si usas tratamientos, aplicalos antes de la hidratante.</p>
+            </div>
+          </div>
+          <div class="routine-step">
+            <div class="routine-step-number">3</div>
+            <div class="routine-step-content">
+              <h4>Barba (3 min)</h4>
+              <p>Aplica aceite o balsamo. Peina con cepillo de cerdas. Verifica que las lineas esten definidas.</p>
+            </div>
+          </div>
+          <div class="routine-step">
+            <div class="routine-step-number">4</div>
+            <div class="routine-step-content">
+              <h4>Cabello (3 min)</h4>
+              <p>Seca con toalla, aplica producto de styling, peina en el estilo deseado.</p>
+            </div>
+          </div>
+          <div class="routine-step">
+            <div class="routine-step-number">5</div>
+            <div class="routine-step-content">
+              <h4>Toques finales (2 min)</h4>
+              <p>Desodorante, perfume (uno o dos toques maximo), revision final en el espejo.</p>
+            </div>
+          </div>
+        </div>
+        <h3>Rutina nocturna (5-10 minutos)</h3>
+        <p>
+          La noche es cuando tu piel se regenera. Una rutina nocturna simple pero consistente maximiza este proceso natural:
+        </p>
+        <ul>
+          <li><strong>Limpieza profunda:</strong> Remueve la suciedad, grasa y contaminacion del dia.</li>
+          <li><strong>Tratamientos:</strong> Es el momento ideal para retinol, vitamina C u otros activos.</li>
+          <li><strong>Hidratación nocturna:</strong> Usa una crema más rica que la de día, sin SPF.</li>
+          <li><strong>Labios:</strong> Aplica balsamo labial para evitar resequedad.</li>
+        </ul>
+        <!-- CTA Box -->
+        <div class="cta-box">
+          <h3 class="cta-title">Encuentra tu barbería de confianza</h3>
+          <p class="cta-text">
+            Una buena rutina de grooming incluye visitas regulares a profesionales. Descubre barberías cerca de ti y eleva tu imagen al siguiente nivel.
+          </p>
+          <div class="cta-buttons">
+            <a href="/ciudad-de-mexico/" class="cta-btn cta-btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+              </svg>
+              Explorar directorio
+            </a>
+            <a href="/blog/" class="cta-btn cta-btn-secondary">
+              Ver más consejos
+            </a>
+          </div>
+        </div>
+        <h2>El rol de la barbería en tu rutina de grooming</h2>
+        <p>
+          Por más completa que sea tu rutina en casa, hay cosas que solo un profesional puede hacer. La barbería es una pieza fundamental en el grooming del hombre moderno por varias razones:
+        </p>
+        <ul>
+          <li><strong>Precision:</strong> Un barbero profesional puede lograr lineas y degradados que son imposibles de replicar en casa.</li>
+          <li><strong>Asesoria personalizada:</strong> Un buen barbero entiende tu tipo de rostro, textura de cabello y estilo de vida para recomendarte el corte ideal.</li>
+          <li><strong>Tratamientos especializados:</strong> Desde afeitadas con navaja hasta tratamientos capilares, la barbería ofrece servicios que van más alla del corte.</li>
+          <li><strong>El ritual:</strong> Hay algo terapeutico en sentarse en el sillon de barbero. Es un momento de desconexion y autocuidado.</li>
+          <li><strong>Comunidad:</strong> Las barberías son espacios sociales donde se forjan conexiones y se comparten experiencias.</li>
+        </ul>
+        <p>
+          La frecuencia ideal de visitas depende de tu estilo. Para cortes cortos o fades, cada 2-3 semanas es recomendable. Estilos más largos pueden estirarse a 4-6 semanas. Lo importante es no esperar hasta que el corte pierda completamente su forma.
+        </p>
+        <h2>Errores comunes</h2>
+        <p>
+          Incluso los hombres más conscientes del grooming cometen errores. Aquí están los más comunes y cómo evitarlos:
+        </p>
+        <ul>
+          <li><strong>Usar productos incorrectos para tu tipo de piel o cabello:</strong> Lo que funciona para tu amigo puede no funcionar para ti. Conoce tu piel (grasa, seca, mixta) y elige productos acordes.</li>
+          <li><strong>Saltarse el protector solar:</strong> El sol es la causa numero uno del envejecimiento prematuro. Usa SPF diario, incluso en días nublados.</li>
+          <li><strong>Exagerar con los productos:</strong> Más no es mejor. Una cantidad excesiva de producto en el cabello o barba se ve grasoso y artificial.</li>
+          <li><strong>Inconsistencia:</strong> Una rutina solo funciona si la mantienes. Es mejor una rutina simple que sigas diariamente que una compleja que abandones.</li>
+          <li><strong>Ignorar el cuello:</strong> El cuello es parte de tu rutina de skincare. No lo olvides al aplicar limpiador e hidratante.</li>
+          <li><strong>Cortarte el cabello tu mismo:</strong> A menos que tengas experiencia, deja los cortes a los profesionales. Los errores tardan semanas en crecer.</li>
+        </ul>
+        <h2>Construyendo tu kit de grooming esencial</h2>
+        <p>
+          No necesitas gastar una fortuna para tener un buen arsenal de grooming. Aquí están los productos esenciales por categoria, con opciones para diferentes presupuestos:
+        </p>
+        <h3>Kit básico de skincare</h3>
+        <ul>
+          <li>Limpiador facial suave (gel o espuma)</li>
+          <li>Hidratante con SPF 30+ para el dia</li>
+          <li>Hidratante nocturno (puede ser el mismo sin SPF)</li>
+        </ul>
+        <h3>Kit básico de cabello</h3>
+        <ul>
+          <li>Shampoo de calidad (evita los con sulfatos agresivos)</li>
+          <li>Acondicionador</li>
+          <li>Un producto de styling acorde a tu look (pomada, cera o pasta)</li>
+        </ul>
+        <h3>Kit básico de barba</h3>
+        <ul>
+          <li>Aceite para barba</li>
+          <li>Cepillo de cerdas de jabali</li>
+          <li>Tijeras o recortadora para mantenimiento</li>
+        </ul>
+        <h3>Extras recomendados</h3>
+        <ul>
+          <li>Exfoliante facial (usar 1-2 veces por semana)</li>
+          <li>Balsamo labial con SPF</li>
+          <li>Fragancia signature</li>
+          <li>Cortaúñas de calidad</li>
+        </ul>
+        <!-- FAQ Section -->
+        <h2 class="faq-title">Preguntas frecuentes</h2>
+        <div class="faq-section seo-faq-list">
+          <div class="faq-item seo-faq-item">
+            <h3 class="faq-question">¿Cada cuánto debo ir a la barbería?</h3>
+            <p class="faq-answer">Para mantener un fade o un corte corto, cada 2–4 semanas; para cortes más largos, cada 4–6.</p>
+          </div>
+          <div class="faq-item seo-faq-item">
+            <h3 class="faq-question">¿Qué productos básicos necesita una rutina de grooming?</h3>
+            <p class="faq-answer">Limpiador facial, hidratante con protección solar, champú adecuado y, si usas barba, aceite o bálsamo.</p>
+          </div>
+        </div>
+        <h2>Conclusión: el grooming como estilo de vida</h2>
+        <p>
+          El grooming no es un destino, es un viaje. No se trata de alcanzar la perfeccion, sino de establecer hábitos sostenibles que te hagan sentir y ver tu mejor versión cada día. Empieza simple, se consistente y ajusta conforme descubres que funciona para ti.
+        </p>
+        <p>
+          Recuerda que invertir en tu apariencia es invertir en ti mismo. Cada minuto que dedicas a tu rutina de grooming es un mensaje a ti mismo de que vales ese tiempo y esfuerzo. Y eso, más que cualquier producto o corte, es lo que verdaderamente proyectarás al mundo.
+        </p>
+        <p>
+          <strong>Tu mejor versión comienza con una decision: la de cuidarte. Hoy es un excelente dia para empezar.</strong>
+        </p>
+      </div>
+      <!-- Article Footer -->
+      <footer class="article-footer">
+        <!-- Tags -->
+        <div class="article-tags">
+          <a href="/buscar/?q=Grooming" class="article-tag" rel="nofollow">Grooming</a>
+          <a href="/buscar/?q=Cuidado%20personal" class="article-tag" rel="nofollow">Cuidado personal</a>
+          <a href="/buscar/?q=Skincare" class="article-tag" rel="nofollow">Skincare</a>
+          <a href="/buscar/?q=Barba" class="article-tag" rel="nofollow">Barba</a>
+          <a href="/buscar/?q=Estilo%20de%20vida" class="article-tag" rel="nofollow">Estilo de vida</a>
+          <a href="/buscar/?q=Bienestar" class="article-tag" rel="nofollow">Bienestar</a>
+        </div>
+        <!-- Share -->
+        <div class="article-share">
+          <span class="share-label">Compartir:</span>
+          <div class="share-buttons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://barberia.mx/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="share-btn" aria-label="Compartir en Facebook" target="_blank" rel="noopener nofollow">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://barberia.mx/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="share-btn" aria-label="Compartir en Twitter" target="_blank" rel="noopener nofollow">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://barberia.mx/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="share-btn" aria-label="Compartir en LinkedIn" target="_blank" rel="noopener nofollow">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/?text=https://barberia.mx/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="share-btn" aria-label="Compartir en WhatsApp" target="_blank" rel="noopener nofollow">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+            <a href="https://barberia.mx/articulos/rutina-grooming-hombre-moderno-guia-completa/" class="share-btn" aria-label="Copiar enlace">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Author Box -->
+        <div class="author-box">
+          <div class="author-box-avatar">DR</div>
+          <div class="author-box-info">
+            <div class="author-box-name">Redacción Barberia.mx</div>
+            <span class="author-box-role">Editor de Estilo de Vida en Barberia.mx</span>
+            <p class="author-box-bio">
+              Contenido editorial de Barberia.mx sobre cuidado personal, cabello y barba.
+            </p>
+          </div>
+        </div>
+      </footer>
+        </article>
+      </div>
+      <!-- Sidebar with Enhanced Content -->
+      <aside class="article-sidebar">
+        <!-- Sidebar CTA Principal -->
+        <div class="sidebar-cta-main">
+          <div class="sidebar-cta-badge">Directorio Barberia.mx</div>
+          <h3 class="sidebar-cta-main-title">Encuentra tu barbería ideal</h3>
+          <p class="sidebar-cta-main-text">Consulta barberías con información publicada para complementar tu rutina</p>
+          <a href="/ciudad-de-mexico/" class="sidebar-cta-main-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            Explorar directorio
+          </a>
+        </div>
+        <!-- Barberías Recomendadas -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-header">
+            <h4 class="sidebar-section-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Barberías recomendadas
+            </h4>
+            <a href="/ciudad-de-mexico/" class="sidebar-section-link">Ver todas</a>
+          </div>
+          <div class="sidebar-barbershops">
+            <a href="/ciudad-de-mexico/barberia-condesa-cuauhtemoc/" class="sidebar-barbershop-card">
+              <div class="sidebar-barbershop-avatar">TB</div>
+              <div class="sidebar-barbershop-info">
+                <span class="sidebar-barbershop-name">The Barber Shop CDMX</span>
+                <span class="sidebar-barbershop-location">Cuauhtemoc, CDMX</span>
+                <div class="sidebar-barbershop-rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Información en ficha
+                </div>
+              </div>
+            </a>
+            <a href="/ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/" class="sidebar-barbershop-card">
+              <div class="sidebar-barbershop-avatar">GB</div>
+              <div class="sidebar-barbershop-info">
+                <span class="sidebar-barbershop-name">Gentleman Barbería</span>
+                <span class="sidebar-barbershop-location">Roma Norte, CDMX</span>
+                <div class="sidebar-barbershop-rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Información en ficha
+                </div>
+              </div>
+            </a>
+            <a href="/ciudad-de-mexico/barberia-polanco-miguel-hidalgo/" class="sidebar-barbershop-card">
+              <div class="sidebar-barbershop-avatar">KB</div>
+              <div class="sidebar-barbershop-info">
+                <span class="sidebar-barbershop-name">Kings Barbershop</span>
+                <span class="sidebar-barbershop-location">Polanco, CDMX</span>
+                <div class="sidebar-barbershop-rating">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                  Información en ficha
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Articulos de Interes -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-header">
+            <h4 class="sidebar-section-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              Artículos de interes
+            </h4>
+            <a href="/blog/" class="sidebar-section-link">Ver blog</a>
+          </div>
+          <div class="sidebar-articles">
+            <a href="/articulos/como-encontrar-barberia-cerca-de-ti/" class="sidebar-article-card">
+              <div class="sidebar-article-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+              <div class="sidebar-article-info">
+                <span class="sidebar-article-title">Cómo encontrar la mejor barbería cerca de ti</span>
+                <span class="sidebar-article-meta">
+                  <span class="sidebar-article-category negocios">Negocios</span>
+                  <span>8 min</span>
+                </span>
+              </div>
+            </a>
+            <a href="/categorias/tendencias/" class="sidebar-article-card">
+              <div class="sidebar-article-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                  <polyline points="17 6 23 6 23 12"/>
+                </svg>
+              </div>
+              <div class="sidebar-article-info">
+                <span class="sidebar-article-title">Tendencias de cortes: Lo que debes saber</span>
+                <span class="sidebar-article-meta">
+                  <span class="sidebar-article-category tendencias">Tendencias</span>
+                  <span>6 min</span>
+                </span>
+              </div>
+            </a>
+            <a href="/categorias/productos/" class="sidebar-article-card">
+              <div class="sidebar-article-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+              </div>
+              <div class="sidebar-article-info">
+                <span class="sidebar-article-title">Los mejores productos para cuidado de barba</span>
+                <span class="sidebar-article-meta">
+                  <span class="sidebar-article-category productos">Productos</span>
+                  <span>5 min</span>
+                </span>
+              </div>
+            </a>
+            <a href="/categorias/tecnicas/" class="sidebar-article-card">
+              <div class="sidebar-article-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </div>
+              <div class="sidebar-article-info">
+                <span class="sidebar-article-title">Técnicas de fade: Guía completa para barberos</span>
+                <span class="sidebar-article-meta">
+                  <span class="sidebar-article-category técnicas">Técnicas</span>
+                  <span>10 min</span>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Cómo Funciona Mini -->
+        <div class="sidebar-section sidebar-how-it-works">
+          <h4 class="sidebar-section-title-solo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Cómo usar Barberia.mx
+          </h4>
+          <div class="sidebar-steps-mini">
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">1</span>
+              <span class="sidebar-step-text-mini">Busca por tu ubicación</span>
+            </div>
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">2</span>
+              <span class="sidebar-step-text-mini">Filtra por servicios y precios</span>
+            </div>
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">3</span>
+              <span class="sidebar-step-text-mini">Revisa la información publicada</span>
+            </div>
+            <div class="sidebar-step-mini">
+              <span class="sidebar-step-number-mini">4</span>
+              <span class="sidebar-step-text-mini">Contacta y agenda tu cita</span>
+            </div>
+          </div>
+        </div>
+        <!-- Categorías -->
+        <div class="sidebar-section">
+          <h4 class="sidebar-section-title-solo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="8" y1="6" x2="21" y2="6"/>
+              <line x1="8" y1="12" x2="21" y2="12"/>
+              <line x1="8" y1="18" x2="21" y2="18"/>
+              <line x1="3" y1="6" x2="3.01" y2="6"/>
+              <line x1="3" y1="12" x2="3.01" y2="12"/>
+              <line x1="3" y1="18" x2="3.01" y2="18"/>
+            </svg>
+            Explora por categoria
+          </h4>
+          <div class="sidebar-categories">
+            <a href="/categorias/tendencias/" class="sidebar-category-tag tendencias">Tendencias</a>
+            <a href="/categorias/tecnicas/" class="sidebar-category-tag tecnicas">Técnicas</a>
+            <a href="/categorias/productos/" class="sidebar-category-tag productos">Productos</a>
+            <a href="/categorias/negocios/" class="sidebar-category-tag negocios">Negocios</a>
+            <a href="/categorias/estilo-de-vida/" class="sidebar-category-tag estilo">Estilo de vida</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- Related Articles -->
+    <section class="related-articles">
+      <h2 class="related-title">Artículos relacionados</h2>
+      <div class="related-grid">
+        <a href="/articulos/como-encontrar-barberia-cerca-de-ti/" class="related-card">
+          <div class="related-image"><img src="/img/fotos/barberia-1585747860715-700.webp" alt="Cómo encontrar la barbería ideal cerca de ti" width="700" height="525" loading="lazy"></div>
+          <div class="related-content">
+            <h3 class="related-card-title">Cómo encontrar la mejor barbería cerca de ti</h3>
+            <span class="related-meta">Negocios · 8 min</span>
+          </div>
+        </a>
+        <a href="/articulos/mejores-barberias-ciudad-de-mexico-cdmx/" class="related-card">
+          <div class="related-image"><img src="/img/fotos/barberia-1503951914875-700.webp" alt="Las mejores barberías de la Ciudad de México, una por una" width="700" height="525" loading="lazy"></div>
+          <div class="related-content">
+            <h3 class="related-card-title">Los mejores productos para cuidado de barba</h3>
+            <span class="related-meta">Productos · 6 min</span>
+          </div>
+        </a>
+        <a href="/articulos/como-encontrar-barberia-cerca-de-ti/" class="related-card">
+          <div class="related-image"><img src="/img/fotos/barberia-1585747860715-700.webp" alt="Cómo encontrar la barbería ideal cerca de ti" width="700" height="525" loading="lazy"></div>
+          <div class="related-content">
+            <h3 class="related-card-title">Tendencias de cortes masculinos que dominarán este año</h3>
+            <span class="related-meta">Tendencias · 7 min</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>

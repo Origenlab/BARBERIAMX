@@ -1,0 +1,10 @@
+---
+const date = new Intl.DateTimeFormat('es-MX', { dateStyle: 'medium', timeZone: 'America/Mexico_City' }).format(new Date());
+---
+<div class="ed-masthead" id="top" aria-label="Edición">
+  <div class="ed-masthead-inner">
+    <div class="ed-masthead-l">Directorio de barberías · México</div>
+    <div class="ed-masthead-c"><span class="ed-mh-dot" aria-hidden="true"></span> Directorio en actualización</div>
+    <div class="ed-masthead-r">Edición nacional · <time datetime={new Date().toISOString().slice(0, 10)}>{date}</time></div>
+  </div>
+</div>

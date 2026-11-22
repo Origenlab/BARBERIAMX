@@ -1,0 +1,18 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const page = await getEntry('pages', '404');
+if (!page) throw new Error('Falta la página 404 en la colección pages');
+const { data } = page;
+---
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  canonicalPath="/404.html"
+  robots="noindex, follow"
+  image={data.image}
+  bodyClass={data.bodyClass}
+>
+  <Fragment set:html={data.mainHtml} />
+</BaseLayout>

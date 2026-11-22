@@ -6,7 +6,7 @@ name: Gate de deploy (marker + verificacion de dominio)
 on:
   push:
     branches: [main]
-    paths-ignore: ['build-id.txt']
+    paths-ignore: ['public/build-id.txt']
   workflow_dispatch:
 
 permissions:
@@ -25,10 +25,10 @@ jobs:
           ref: main
       - name: Sellar y pushear build-id (marker)
         run: |
-          echo "${{ github.sha }}" > build-id.txt
+          echo "${{ github.sha }}" > public/build-id.txt
           git config user.name "gate-bot"
           git config user.email "gate-bot@users.noreply.github.com"
-          git add build-id.txt
+          git add public/build-id.txt
           git commit -m "gate: build-id ${GITHUB_SHA:0:8}"
           git push origin main
       - name: Verificar que el dominio sirve este push

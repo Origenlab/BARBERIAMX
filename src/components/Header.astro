@@ -1,0 +1,27 @@
+---
+import site, { whatsappRegistrationUrl } from '@config/site';
+
+const currentPath = Astro.url.pathname;
+---
+<nav class="navbar" id="navbar" aria-label="Navegación principal">
+  <div class="nav-container">
+    <a href="/" class="nav-logo" aria-label="BARBERIA.MX, inicio">BARBERIA<span>.MX</span></a>
+    <div class="nav-links" aria-label="Secciones">
+      {site.navigation.map((item) => (
+        <a class="nav-link" class:list={{ 'is-active': currentPath.startsWith(item.href) }} aria-current={currentPath.startsWith(item.href) ? 'page' : undefined} href={item.href}>{item.label}</a>
+      ))}
+    </div>
+    <a class="nav-btn nav-btn-primary" href={whatsappRegistrationUrl} target="_blank" rel="noopener noreferrer">Registrar barbería</a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <div class="nav-mobile-inner">
+      {site.navigation.map((item) => (
+        <a class="nav-mobile-link" class:list={{ 'is-active': currentPath.startsWith(item.href) }} aria-current={currentPath.startsWith(item.href) ? 'page' : undefined} href={item.href}>{item.label}</a>
+      ))}
+      <a class="nav-btn nav-btn-primary nav-btn-full" href={whatsappRegistrationUrl} target="_blank" rel="noopener noreferrer">Registrar por WhatsApp</a>
+    </div>
+  </div>
+</nav>

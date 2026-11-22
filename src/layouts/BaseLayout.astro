@@ -1,0 +1,78 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Masthead from '@components/Masthead.astro';
+import site from '@config/site';
+import { absoluteUrl, serializeJsonLd } from '@lib/seo';
+import '@styles/style.css';
+import '@styles/editorial.css';
+import '@styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  robots?: string;
+  image?: string;
+  bodyClass?: string;
+  schema?: unknown[];
+  scripts?: string[];
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  robots = 'index, follow, max-image-preview:large',
+  image = absoluteUrl(site.image),
+  bodyClass = '',
+  schema = [],
+  scripts = [],
+} = Astro.props;
+const canonical = absoluteUrl(canonicalPath);
+const socialImage = image.startsWith('http') ? image : absoluteUrl(image);
+---
+<!doctype html>
+<html lang={site.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ahrefs-site-verification" content="40cd9b4cc4c260d40efb96782881710bbb25965aa5bbb6d072dee8e4bf18b4f5" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content={site.themeColor} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={site.shortName} />
+    <meta property="og:locale" content={site.ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {schema.map((node) => <script type="application/ld+json" is:inline set:html={serializeJsonLd(node)} />)}
+    <script src={`https://analytics.ahrefs.com/analytics.js`} data-key={site.analytics.ahrefsKey} async></script>
+  </head>
+  <body class={bodyClass}>
+    <a href="#main" class="ed-skip">Saltar al contenido</a>
+    <Masthead />
+    <Header />
+    <slot />
+    <Footer />
+    <script src="/js/ui.js" defer></script>
+    {scripts.map((src) => <script src={src} defer></script>)}
+  </body>
+</html>
