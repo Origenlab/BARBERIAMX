@@ -29,6 +29,7 @@
     || !(statusSelect instanceof HTMLSelectElement)) return;
 
   const selects = [boroughSelect, neighborhoodSelect, serviceSelect, hoursSelect, statusSelect];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const normalize = (value) => value
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -113,6 +114,10 @@
     filterToggle.setAttribute('aria-expanded', 'false');
     filterToggle.focus();
   };
+  const scrollToGrid = () => document.querySelector('[data-cdmx-grid]')?.scrollIntoView({
+    behavior: reducedMotion ? 'auto' : 'smooth',
+    block: 'start',
+  });
 
   input.addEventListener('input', () => update({ resetPage: true }));
   clearButton?.addEventListener('click', () => {
@@ -125,12 +130,12 @@
   previous?.addEventListener('click', () => {
     currentPage = Math.max(1, currentPage - 1);
     update();
-    document.querySelector('[data-cdmx-grid]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollToGrid();
   });
   next?.addEventListener('click', () => {
     currentPage += 1;
     update();
-    document.querySelector('[data-cdmx-grid]')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollToGrid();
   });
   filterToggle?.addEventListener('click', () => {
     if (!(filterPanel instanceof HTMLElement) || !(filterToggle instanceof HTMLButtonElement)) return;

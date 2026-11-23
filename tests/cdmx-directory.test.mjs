@@ -83,10 +83,12 @@ test('la colección editorial contiene 120 fichas y cumple la distribución apro
 test('las superficies editoriales no conservan rankings, precios ni conteos obsoletos de CDMX', () => {
   const article = readFileSync(new URL('src/content/articulos/mejores-barberias-ciudad-de-mexico-cdmx.md', root), 'utf8');
   const pages = readFileSync(new URL('src/data/pages.json', root), 'utf8');
+  const index = readFileSync(new URL('src/pages/ciudad-de-mexico/index.astro', root), 'utf8');
 
   assert.doesNotMatch(article, /ranking-number|ranking-price|Barberías destacadas|\$\d/);
   assert.match(article, /120 fichas/);
-  assert.doesNotMatch(pages, /45 fichas|<dt>Fichas<\/dt><dd>5<\/dd>|Cinco barberías/);
+  assert.doesNotMatch(index, /Barberías verificadas/);
+  assert.doesNotMatch(pages, /45 fichas|data-count=\\?"45\\?"|<dt>Fichas<\/dt><dd>45<\/dd>|Cinco barberías/);
 });
 
 test('cada ficha conserva trazabilidad y solo datos publicables', () => {
@@ -103,6 +105,7 @@ test('cada ficha conserva trazabilidad y solo datos publicables', () => {
     assert.match(record.verifiedAt, /^\d{4}-\d{2}-\d{2}$/);
     assert.ok(record.sources.length >= 1, `${record.name} necesita al menos una fuente`);
     assert.ok(record.sources.every((source) => /^https:\/\//.test(source)), `${record.name} tiene una fuente inválida`);
+    assert.ok(record.hours.every(({ value }) => !/(?:^|–|, )00:00(?:$|–|,)/.test(value)), `${record.name} tiene un rango ambiguo a medianoche`);
     if (record.verificationStatus === 'verified') {
       assert.ok(record.sources.length >= 2, `${record.name} necesita dos fuentes para figurar como contrastada`);
     }
@@ -156,6 +159,7 @@ test('el catálogo compacto ofrece filtros combinables y paginación progresiva'
   const script = readFileSync(scriptUrl, 'utf8');
   assert.match(script, /PAGE_SIZE\s*=\s*24/);
   assert.match(script, /URLSearchParams/);
+  assert.match(script, /matchMedia\('\(prefers-reduced-motion: reduce\)'\)/);
   assert.doesNotMatch(script, /innerHTML|eval\(|new Function\(/);
 
   assert.match(styles, /\.cdmx-catalog\s*\{/);

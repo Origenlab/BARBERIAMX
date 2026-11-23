@@ -310,50 +310,14 @@
     "services": [
       "Servicios de barbería"
     ],
-    "hours": [
-      {
-        "day": "monday",
-        "label": "Lunes",
-        "value": "10:30–00:00"
-      },
-      {
-        "day": "tuesday",
-        "label": "Martes",
-        "value": "00:00–08:30, 10:30–20:30"
-      },
-      {
-        "day": "wednesday",
-        "label": "Miércoles",
-        "value": "09:00–20:30"
-      },
-      {
-        "day": "thursday",
-        "label": "Jueves",
-        "value": "10:30–20:30"
-      },
-      {
-        "day": "friday",
-        "label": "Viernes",
-        "value": "10:30–20:30"
-      },
-      {
-        "day": "saturday",
-        "label": "Sábado",
-        "value": "10:30–18:00"
-      },
-      {
-        "day": "sunday",
-        "label": "Domingo",
-        "value": "Cerrado"
-      }
-    ],
+    "hours": [],
     "verificationStatus": "reviewed",
     "verifiedAt": "2026-11-23",
     "sources": [
       "https://localmexico.net/negocio/rebellious-minds-barber-studio-alvaro-obregon"
     ],
     "isNew": true,
-    "description": "Rebellious Minds Barber Studio es una barbería con domicilio publicado en Molino de Rosas, Álvaro Obregón. La ficha reúne teléfono, ubicación y horario consultados el 23 de noviembre de 2026.",
+    "description": "Rebellious Minds Barber Studio es una barbería con domicilio publicado en Molino de Rosas, Álvaro Obregón. La ficha reúne el teléfono y la ubicación consultados el 23 de noviembre de 2026; el horario queda como no publicado por falta de corroboración.",
     "latitude": 19.3739752,
     "longitude": -99.1986233
   },
@@ -2487,50 +2451,14 @@
     "services": [
       "Servicios de barbería"
     ],
-    "hours": [
-      {
-        "day": "monday",
-        "label": "Lunes",
-        "value": "11:00–21:00"
-      },
-      {
-        "day": "tuesday",
-        "label": "Martes",
-        "value": "11:00–00:00"
-      },
-      {
-        "day": "wednesday",
-        "label": "Miércoles",
-        "value": "00:00–09:00, 11:00–21:00"
-      },
-      {
-        "day": "thursday",
-        "label": "Jueves",
-        "value": "11:00–21:00"
-      },
-      {
-        "day": "friday",
-        "label": "Viernes",
-        "value": "11:00–21:00"
-      },
-      {
-        "day": "saturday",
-        "label": "Sábado",
-        "value": "09:00–19:00"
-      },
-      {
-        "day": "sunday",
-        "label": "Domingo",
-        "value": "12:00–18:00"
-      }
-    ],
+    "hours": [],
     "verificationStatus": "reviewed",
     "verifiedAt": "2026-11-23",
     "sources": [
       "https://localmexico.net/negocio/art-barberia-studio-cuajimalpa-de-morelos"
     ],
     "isNew": true,
-    "description": "Art Barbería Studio es una barbería con domicilio publicado en Rosa Torres, Cuajimalpa de Morelos. La ficha reúne teléfono, ubicación y horario consultados el 23 de noviembre de 2026.",
+    "description": "Art Barbería Studio es una barbería con domicilio publicado en Rosa Torres, Cuajimalpa de Morelos. La ficha reúne el teléfono y la ubicación consultados el 23 de noviembre de 2026; el horario queda como no publicado por falta de corroboración.",
     "latitude": 19.3697277,
     "longitude": -99.28758789999999
   },
