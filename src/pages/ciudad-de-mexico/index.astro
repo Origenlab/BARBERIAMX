@@ -8,9 +8,30 @@ const entries = await getCollection('barberiasCdmx');
 const barbershops = entries
   .map(({ data }) => data)
   .sort((a, b) => a.borough.localeCompare(b.borough, 'es-MX') || a.name.localeCompare(b.name, 'es-MX'));
+
+const total = barbershops.length;
 const boroughs = [...new Map(barbershops.map((item) => [item.boroughSlug, item.borough])).entries()];
-const title = 'Barberías en CDMX: 45 fichas revisadas por alcaldía';
-const description = 'Directorio editorial de 45 barberías en Ciudad de México con domicilio, teléfono sin enlace, servicios, horarios publicados y fecha de revisión.';
+const slugify = (value: string) => value
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLocaleLowerCase('es-MX')
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-|-$/g, '');
+const neighborhoods = [...new Set(barbershops.map((item) => item.neighborhood))]
+  .sort((a, b) => a.localeCompare(b, 'es-MX'))
+  .map((name) => [slugify(name), name] as const);
+const services = [...new Set(barbershops.flatMap((item) => item.services))]
+  .sort((a, b) => a.localeCompare(b, 'es-MX'))
+  .map((name) => [slugify(name), name] as const);
+const latestReview = [...barbershops.map((item) => item.verifiedAt)].sort().at(-1) ?? '2026-11-23';
+const latestReviewLabel = new Intl.DateTimeFormat('es-MX', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(`${latestReview}T12:00:00Z`));
+const title = `Barberías en CDMX: ${total} fichas por alcaldía`;
+const description = `Directorio de ${total} barberías en Ciudad de México con domicilio, teléfono sin enlace, servicios, horarios publicados y fecha de revisión.`;
 const canonicalPath = '/ciudad-de-mexico/';
 ---
 <BaseLayout
@@ -26,107 +47,124 @@ const canonicalPath = '/ciudad-de-mexico/';
         <a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Ciudad de México</span>
       </nav>
 
-      <header class="cdmx-directory__header">
-        <div>
+      <header class="cdmx-directory__header cdmx-directory__header--compact">
+        <div class="cdmx-directory__title">
           <p class="cdmx-eyebrow">Directorio editorial · Ciudad de México</p>
-          <h1>Barberías en CDMX</h1>
+          <h1>Barberías revisadas, colonia por colonia</h1>
+          <p>Compara información pública antes de acudir. El directorio no publica rankings, reseñas ni precios sin respaldo.</p>
         </div>
-        <div class="cdmx-directory__intro">
-          <p class="cdmx-directory__count"><strong>45 fichas revisadas</strong> en las 16 alcaldías</p>
-          <p>Compara datos concretos antes de acudir: domicilio, teléfono mostrado sin enlace, servicios y horarios publicados. No usamos rankings, reseñas ni precios sin respaldo.</p>
-        </div>
+        <dl class="cdmx-directory__metrics" aria-label="Cobertura del directorio">
+          <div><dt>Fichas</dt><dd>{total}</dd></div>
+          <div><dt>Alcaldías</dt><dd>{boroughs.length}</dd></div>
+          <div><dt>Última revisión</dt><dd><time datetime={latestReview}>{latestReviewLabel}</time></dd></div>
+        </dl>
       </header>
 
-      <section class="cdmx-controls" aria-label="Buscar y filtrar barberías">
+      <section class="cdmx-searchbar" aria-label="Buscar barberías">
         <div class="cdmx-search">
-          <label for="cdmx-search">Buscar por nombre, colonia o servicio</label>
+          <label for="cdmx-search">Buscar por nombre, colonia, dirección o servicio</label>
           <div class="cdmx-search__field">
             <input id="cdmx-search" type="search" placeholder="Ej. Roma Norte, Coyoacán o barba" autocomplete="off" data-cdmx-search />
             <button type="button" data-cdmx-clear>Limpiar</button>
           </div>
         </div>
-        <div class="cdmx-filter" role="group" aria-label="Filtrar por alcaldía">
-          <button type="button" class="is-active" data-cdmx-filter="all" aria-pressed="true">Todas <span>45</span></button>
-          {boroughs.map(([slug, name]) => {
-            const count = barbershops.filter((item) => item.boroughSlug === slug).length;
-            return <button type="button" data-cdmx-filter={slug} aria-pressed="false">{name} <span>{count}</span></button>;
-          })}
+        <button
+          class="cdmx-filter-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="cdmx-filter-panel"
+          data-cdmx-filter-toggle
+        >Filtros</button>
+      </section>
+
+      <div class="cdmx-catalog">
+        <aside class="cdmx-filter-panel" id="cdmx-filter-panel" data-cdmx-filter-panel aria-label="Filtros del directorio">
+          <div class="cdmx-filter-panel__head">
+            <div><p class="cdmx-eyebrow">Afinar resultados</p><h2>Filtros</h2></div>
+            <button type="button" data-cdmx-filter-close aria-label="Cerrar filtros">Cerrar</button>
+          </div>
+
+          <div class="cdmx-filter-field">
+            <label for="filter-borough">Alcaldía</label>
+            <select id="filter-borough" data-cdmx-borough>
+              <option value="all">Todas las alcaldías</option>
+              {boroughs.map(([slug, name]) => {
+                const count = barbershops.filter((item) => item.boroughSlug === slug).length;
+                return <option value={slug}>{name} ({count})</option>;
+              })}
+            </select>
+          </div>
+
+          <div class="cdmx-filter-field">
+            <label for="filter-neighborhood">Colonia</label>
+            <select id="filter-neighborhood" data-cdmx-neighborhood>
+              <option value="all">Todas las colonias</option>
+              {neighborhoods.map(([slug, name]) => <option value={slug}>{name}</option>)}
+            </select>
+          </div>
+
+          <div class="cdmx-filter-field">
+            <label for="filter-service">Servicio publicado</label>
+            <select id="filter-service" data-cdmx-service>
+              <option value="all">Todos los servicios</option>
+              {services.map(([slug, name]) => <option value={slug}>{name}</option>)}
+            </select>
+          </div>
+
+          <div class="cdmx-filter-field">
+            <label for="filter-hours">Horario</label>
+            <select id="filter-hours" data-cdmx-hours>
+              <option value="all">Con o sin horario</option>
+              <option value="published">Horario publicado</option>
+              <option value="missing">Horario no publicado</option>
+            </select>
+          </div>
+
+          <div class="cdmx-filter-field">
+            <label for="filter-status">Estado de los datos</label>
+            <select id="filter-status" data-cdmx-status>
+              <option value="all">Todos los estados</option>
+              <option value="verified">Fuentes contrastadas</option>
+              <option value="reviewed">Datos públicos revisados</option>
+              <option value="partial">Información limitada</option>
+            </select>
+          </div>
+
+          <button class="cdmx-filter-reset" type="button" data-cdmx-reset>Restablecer filtros</button>
+        </aside>
+
+        <div class="cdmx-results">
+          <div class="cdmx-results-line" aria-live="polite">
+            <p data-cdmx-count>Mostrando 24 de {total} fichas</p>
+            <p>Datos revisados hasta <time datetime={latestReview}>{latestReviewLabel}</time></p>
+          </div>
+
+          <section class="cdmx-grid cdmx-grid--compact" aria-label="Fichas de barberías en Ciudad de México" data-cdmx-grid>
+            {barbershops.map((barbershop) => <BarbershopCard barbershop={barbershop} />)}
+          </section>
+
+          <div class="cdmx-empty" data-cdmx-empty hidden>
+            <p class="cdmx-section-number">Sin coincidencias</p>
+            <h2>No encontramos fichas con esos filtros</h2>
+            <p>Prueba con otra colonia, alcaldía, nombre o servicio.</p>
+            <button type="button" data-cdmx-empty-reset>Restablecer búsqueda</button>
+          </div>
+
+          <nav class="cdmx-pagination" aria-label="Paginación del directorio">
+            <button type="button" data-cdmx-prev>Anterior</button>
+            <p>Página <strong data-cdmx-page>1 de 5</strong></p>
+            <button type="button" data-cdmx-next>Siguiente</button>
+          </nav>
         </div>
-      </section>
-
-      <div class="cdmx-results-line" aria-live="polite">
-        <p data-cdmx-count>Mostrando 45 de 45 fichas</p>
-        <p>Última revisión general: 22 de noviembre de 2026</p>
-      </div>
-
-      <section class="cdmx-grid" aria-label="Fichas de barberías en Ciudad de México" data-cdmx-grid>
-        {barbershops.map((barbershop) => <BarbershopCard barbershop={barbershop} />)}
-      </section>
-
-      <div class="cdmx-empty" data-cdmx-empty hidden>
-        <h2>No encontramos coincidencias</h2>
-        <p>Prueba con otra colonia, alcaldía, nombre o servicio.</p>
       </div>
 
       <aside class="cdmx-method">
         <p class="cdmx-section-number">Criterio editorial</p>
         <h2>Información útil, rastreable y sin adornos</h2>
-        <p>Las fichas se construyen con datos públicos consultados en fuentes del establecimiento y directorios actuales. La fecha visible indica cuándo revisamos cada registro; si un dato no coincide entre fuentes, se omite o se marca como no publicado.</p>
+        <p>Las fichas se construyen con datos públicos. La fecha indica cuándo revisamos cada registro; si un dato no coincide entre fuentes, se omite o se marca como no publicado.</p>
       </aside>
     </div>
   </main>
 
-  <script>
-    const input = document.querySelector('[data-cdmx-search]');
-    const clear = document.querySelector('[data-cdmx-clear]');
-    const filters = [...document.querySelectorAll('[data-cdmx-filter]')];
-    const cards = [...document.querySelectorAll('[data-cdmx-card]')];
-    const count = document.querySelector('[data-cdmx-count]');
-    const empty = document.querySelector('[data-cdmx-empty]');
-    let borough = 'all';
-
-    const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es-MX').trim();
-    const update = () => {
-      const query = normalize(input instanceof HTMLInputElement ? input.value : '');
-      let visible = 0;
-      for (const card of cards) {
-        if (!(card instanceof HTMLElement)) continue;
-        const matchesBorough = borough === 'all' || card.dataset.borough === borough;
-        const matchesQuery = !query || normalize(card.dataset.search ?? '').includes(query);
-        card.hidden = !(matchesBorough && matchesQuery);
-        if (!card.hidden) visible += 1;
-      }
-      if (count) count.textContent = `Mostrando ${visible} de 45 fichas`;
-      if (empty instanceof HTMLElement) empty.hidden = visible !== 0;
-    };
-
-    const parameters = new URLSearchParams(window.location.search);
-    const requestedBorough = parameters.get('alcaldia');
-    const requestedQuery = parameters.get('q');
-    if (requestedQuery && input instanceof HTMLInputElement) input.value = requestedQuery;
-    if (requestedBorough && filters.some((button) => button.getAttribute('data-cdmx-filter') === requestedBorough)) borough = requestedBorough;
-    for (const button of filters) {
-      const active = button.getAttribute('data-cdmx-filter') === borough;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-      button.addEventListener('click', () => {
-        borough = button.getAttribute('data-cdmx-filter') ?? 'all';
-        for (const item of filters) {
-          const selected = item === button;
-          item.classList.toggle('is-active', selected);
-          item.setAttribute('aria-pressed', String(selected));
-        }
-        update();
-      });
-    }
-    input?.addEventListener('input', update);
-    clear?.addEventListener('click', () => {
-      if (input instanceof HTMLInputElement) {
-        input.value = '';
-        input.focus();
-      }
-      update();
-    });
-    update();
-  </script>
+  <script src="/js/cdmx-directory.js" defer></script>
 </BaseLayout>

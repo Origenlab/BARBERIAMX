@@ -14,7 +14,11 @@ const { barbershop } = Astro.props;
 const all = (await getCollection('barberiasCdmx')).map(({ data }) => data);
 const related = all
   .filter((item) => item.boroughSlug === barbershop.boroughSlug && item.slug !== barbershop.slug)
-  .sort((a, b) => a.name.localeCompare(b.name, 'es-MX'))
+  .sort((a, b) => {
+    const aSameNeighborhood = a.neighborhood === barbershop.neighborhood ? 0 : 1;
+    const bSameNeighborhood = b.neighborhood === barbershop.neighborhood ? 0 : 1;
+    return aSameNeighborhood - bSameNeighborhood || a.name.localeCompare(b.name, 'es-MX');
+  })
   .slice(0, 3);
 const title = `${barbershop.name} en CDMX: datos y horario`;
 const verifiedLabel = new Intl.DateTimeFormat('es-MX', {
@@ -36,5 +40,5 @@ const canonicalPath = `/ciudad-de-mexico/${barbershop.slug}/`;
     localBusinessSchema({ ...barbershop, path: canonicalPath }),
   ]}
 >
-  <BarbershopDetail barbershop={barbershop} related={related} />
+  <BarbershopDetail barbershop={barbershop} related={related} total={all.length} />
 </BaseLayout>

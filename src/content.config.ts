@@ -60,7 +60,7 @@ const barberiasCdmx = defineCollection({
     boroughSlug: z.string().regex(/^[a-z0-9-]+$/),
     neighborhood: z.string().min(1),
     address: z.string().min(1),
-    postalCode: z.string().regex(/^\d{5}$/).optional(),
+    postalCode: z.string().regex(/^\d{5}$/),
     telephone: z.string().min(1),
     services: z.array(z.string().min(1)).min(1),
     hours: z.array(z.object({

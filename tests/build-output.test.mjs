@@ -98,18 +98,22 @@ test('el build publica el sitio y excluye archivos internos', () => {
   }
 
   const searchIndex = JSON.parse(readFileSync(new URL('search-index.json', dist), 'utf8'));
-  assert.ok(searchIndex.length >= 298, 'el buscador debe incluir las 271 barberías, artículos y páginas');
+  assert.ok(searchIndex.length >= 373, 'el buscador debe incluir las fichas de CDMX, artículos y páginas');
 
   const cdmxIndex = readFileSync(new URL('ciudad-de-mexico/index.html', dist), 'utf8');
-  assert.match(cdmxIndex, /45 fichas revisadas/);
+  assert.match(cdmxIndex, /<dd>120<\/dd>/);
   assert.match(cdmxIndex, /data-cdmx-search/);
   assert.match(cdmxIndex, /data-borough="cuauhtemoc"/);
-  assert.equal((cdmxIndex.match(/class="cdmx-card"/g) ?? []).length, 45);
+  assert.equal((cdmxIndex.match(/class="cdmx-card"/g) ?? []).length, 120);
 
   const cdmxDetail = readFileSync(new URL('ciudad-de-mexico/barberia-roma-norte-cuauhtemoc/index.html', dist), 'utf8');
   const cdmxDetailMain = cdmxDetail.match(/<main\b[\s\S]*?<\/main>/)?.[0] ?? '';
   assert.match(cdmxDetail, /The Barber's Spa Roma Norte/);
   assert.match(cdmxDetail, /55 9688 6590/);
+  assert.match(cdmxDetailMain, /cdmx-detail__quick/);
+  assert.match(cdmxDetailMain, /Código postal/);
+  assert.match(cdmxDetailMain, /Transparencia editorial/);
+  assert.match(cdmxDetailMain, /Volver a las 120 barberías en CDMX/);
   assert.doesNotMatch(cdmxDetailMain, /href="tel:/);
   assert.doesNotMatch(cdmxDetailMain, /href="https?:|wa\.me|localmexico\.net|thebarbersspa\.mx/);
   assert.doesNotMatch(cdmxDetailMain, /aggregateRating|reviewCount|Abierto ahora/);
@@ -127,7 +131,7 @@ test('el build publica el sitio y excluye archivos internos', () => {
   }
 
   const cdmxResults = searchIndex.filter(({ url }) => url.startsWith('/ciudad-de-mexico/'));
-  assert.equal(cdmxResults.length, 46, 'el buscador debe incluir el índice y las 45 fichas de CDMX');
+  assert.equal(cdmxResults.length, 121, 'el buscador debe incluir el índice y las 120 fichas de CDMX');
 
   const sitemap = readFileSync(new URL('sitemap-0.xml', dist), 'utf8');
   assert.equal(sitemap.includes('https://barberia.mx/buscar/'), false, 'una ruta noindex no debe estar en el sitemap');

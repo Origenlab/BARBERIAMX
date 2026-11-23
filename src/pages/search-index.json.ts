@@ -18,7 +18,7 @@ export const GET: APIRoute = async () => {
       terms: [data.name, data.locality, data.region, data.telephone].filter(Boolean),
     })),
     {
-      title: 'Barberías en CDMX: 45 fichas revisadas',
+      title: 'Barberías en CDMX: 120 fichas revisadas',
       url: '/ciudad-de-mexico/',
       type: 'Directorio CDMX',
       description: 'Directorio de barberías en las 16 alcaldías de Ciudad de México.',
