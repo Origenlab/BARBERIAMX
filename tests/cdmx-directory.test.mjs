@@ -24,21 +24,60 @@ const alcaldias = [
   'Xochimilco',
 ];
 
+const metasPorAlcaldia = {
+  'Álvaro Obregón': 9,
+  Azcapotzalco: 6,
+  'Benito Juárez': 14,
+  Coyoacán: 10,
+  'Cuajimalpa de Morelos': 4,
+  Cuauhtémoc: 18,
+  'Gustavo A. Madero': 9,
+  Iztacalco: 4,
+  Iztapalapa: 9,
+  'La Magdalena Contreras': 3,
+  'Miguel Hidalgo': 12,
+  'Milpa Alta': 3,
+  Tláhuac: 3,
+  Tlalpan: 7,
+  'Venustiano Carranza': 5,
+  Xochimilco: 4,
+};
+
+const normalize = (value) => value
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLocaleLowerCase('es-MX')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const digits = (value) => value.replace(/\D/g, '');
+
 const load = () => JSON.parse(readFileSync(dataUrl, 'utf8'));
 
-test('la colección editorial contiene 45 fichas reales y cubre las 16 alcaldías', () => {
+test('la colección editorial contiene 120 fichas y cumple la distribución aprobada', () => {
   assert.equal(existsSync(dataUrl), true, 'falta src/data/barberias-cdmx.json');
   const records = load();
 
-  assert.equal(records.length, 45);
-  assert.equal(records.filter(({ isNew }) => isNew).length, 40);
-  assert.equal(records.filter(({ verificationStatus }) => verificationStatus === 'verified').length, 4);
-  assert.equal(records.filter(({ verificationStatus }) => verificationStatus === 'reviewed').length, 40);
-  assert.equal(records.filter(({ verificationStatus }) => verificationStatus === 'partial').length, 1);
+  assert.equal(records.length, 120);
+  assert.equal(records.filter(({ isNew }) => isNew).length, 75);
   assert.deepEqual([...new Set(records.map(({ borough }) => borough))].sort(), [...alcaldias].sort());
-  assert.equal(new Set(records.map(({ slug }) => slug)).size, records.length, 'los slugs deben ser únicos');
-  assert.equal(new Set(records.map(({ telephone }) => telephone)).size, records.length, 'los teléfonos deben ser únicos');
-  assert.equal(new Set(records.map(({ address }) => address)).size, records.length, 'los domicilios deben ser únicos');
+
+  const counts = Object.fromEntries(alcaldias.map((borough) => [
+    borough,
+    records.filter((record) => record.borough === borough).length,
+  ]));
+  assert.deepEqual(counts, metasPorAlcaldia);
+
+  const unique = (values, label) => {
+    const normalized = values.map(normalize);
+    assert.equal(new Set(normalized).size, records.length, `${label} deben ser únicos`);
+  };
+
+  unique(records.map(({ id }) => id), 'los identificadores');
+  unique(records.map(({ slug }) => slug), 'los slugs');
+  unique(records.map(({ telephone }) => digits(telephone)), 'los teléfonos');
+  unique(records.map(({ address }) => address), 'los domicilios');
+  unique(records.map(({ name, address }) => `${name} ${address}`), 'los negocios');
 });
 
 test('las superficies editoriales no conservan rankings, precios ni conteos obsoletos de CDMX', () => {
@@ -46,7 +85,7 @@ test('las superficies editoriales no conservan rankings, precios ni conteos obso
   const pages = readFileSync(new URL('src/data/pages.json', root), 'utf8');
 
   assert.doesNotMatch(article, /ranking-number|ranking-price|Barberías destacadas|\$\d/);
-  assert.match(article, /45 fichas/);
+  assert.match(article, /120 fichas/);
   assert.doesNotMatch(pages, /45 fichas verificadas|<dt>Fichas<\/dt><dd>5<\/dd>|Cinco barberías/);
 });
 
@@ -59,9 +98,16 @@ test('cada ficha conserva trazabilidad y solo datos publicables', () => {
     assert.ok(record.name.trim());
     assert.ok(record.address.trim());
     assert.ok(record.telephone.trim());
-    assert.match(record.verifiedAt, /^2026-\d{2}-\d{2}$/);
+    assert.match(record.postalCode, /^\d{5}$/, `${record.name} necesita código postal válido`);
+    assert.equal(digits(record.telephone).length, 10, `${record.name} necesita teléfono de diez dígitos`);
+    assert.match(record.verifiedAt, /^\d{4}-\d{2}-\d{2}$/);
     assert.ok(record.sources.length >= 1, `${record.name} necesita al menos una fuente`);
     assert.ok(record.sources.every((source) => /^https:\/\//.test(source)), `${record.name} tiene una fuente inválida`);
+    if (record.verificationStatus === 'verified') {
+      assert.ok(record.sources.length >= 2, `${record.name} necesita dos fuentes para figurar como contrastada`);
+    }
+    assert.ok(record.description.length >= 80 && record.description.length <= 400, `${record.name} necesita descripción editorial completa`);
+    assert.doesNotMatch(record.description, /\b(?:mejor|número uno|premium garantizado|recomendad[ao])\b/i, `${record.name} contiene una afirmación promocional`);
     assert.doesNotMatch(record.name, /[\u{1F300}-\u{1FAFF}]/u, `${record.name} debe usar un nombre editorial limpio`);
     assert.equal('website' in record, false, `${record.name} no debe publicar sitio web`);
     assert.equal('socialNetworks' in record, false, `${record.name} no debe publicar redes sociales`);
@@ -74,6 +120,7 @@ test('el esquema y las rutas de CDMX son componentes dedicados', () => {
 
   assert.match(contentConfig, /barberiasCdmx/);
   assert.match(contentConfig, /file\('src\/data\/barberias-cdmx\.json'\)/);
+  assert.doesNotMatch(contentConfig, /postalCode:[\s\S]{0,80}\.optional\(\)/, 'el código postal debe ser obligatorio');
   assert.equal(existsSync(new URL('src/components/BarbershopCard.astro', root)), true);
   assert.equal(existsSync(new URL('src/components/BarbershopDetail.astro', root)), true);
   assert.equal(existsSync(new URL('src/pages/ciudad-de-mexico/index.astro', root)), true);
