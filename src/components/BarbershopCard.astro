@@ -19,12 +19,22 @@ const date = new Intl.DateTimeFormat('es-MX', {
   year: 'numeric',
   timeZone: 'UTC',
 }).format(new Date(`${barbershop.verifiedAt}T12:00:00Z`));
+const slugify = (value: string) => value
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLocaleLowerCase('es-MX')
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-|-$/g, '');
 ---
 <a
   class:list={['cdmx-card', { 'cdmx-card--related': related }]}
   href={`/ciudad-de-mexico/${barbershop.slug}/`}
   data-cdmx-card
   data-borough={barbershop.boroughSlug}
+  data-neighborhood={slugify(barbershop.neighborhood)}
+  data-services={`|${barbershop.services.map(slugify).join('|')}|`}
+  data-has-hours={String(barbershop.hours.length > 0)}
+  data-status={barbershop.verificationStatus}
   data-search={`${barbershop.name} ${barbershop.neighborhood} ${barbershop.borough} ${barbershop.address} ${barbershop.services.join(' ')}`.toLocaleLowerCase('es-MX')}
 >
   <div class="cdmx-card__topline">

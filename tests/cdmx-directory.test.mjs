@@ -126,3 +126,34 @@ test('el esquema y las rutas de CDMX son componentes dedicados', () => {
   assert.equal(existsSync(new URL('src/pages/ciudad-de-mexico/index.astro', root)), true);
   assert.equal(existsSync(new URL('src/pages/ciudad-de-mexico/[slug].astro', root)), true);
 });
+
+test('el catálogo compacto ofrece filtros combinables y paginación progresiva', () => {
+  const index = readFileSync(new URL('src/pages/ciudad-de-mexico/index.astro', root), 'utf8');
+  const card = readFileSync(new URL('src/components/BarbershopCard.astro', root), 'utf8');
+
+  assert.match(index, /const total = barbershops\.length/);
+  assert.match(index, /\$\{total\} fichas/);
+  assert.match(index, /data-cdmx-filter-panel/);
+  assert.match(index, /data-cdmx-filter-toggle/);
+  assert.match(index, /data-cdmx-borough/);
+  assert.match(index, /data-cdmx-neighborhood/);
+  assert.match(index, /data-cdmx-service/);
+  assert.match(index, /data-cdmx-hours/);
+  assert.match(index, /data-cdmx-status/);
+  assert.match(index, /data-cdmx-prev/);
+  assert.match(index, /data-cdmx-next/);
+  assert.match(index, /data-cdmx-page/);
+  assert.match(index, /<script src="\/js\/cdmx-directory\.js" defer><\/script>/);
+
+  assert.match(card, /data-neighborhood=/);
+  assert.match(card, /data-services=/);
+  assert.match(card, /data-has-hours=/);
+  assert.match(card, /data-status=/);
+
+  const scriptUrl = new URL('public/js/cdmx-directory.js', root);
+  assert.equal(existsSync(scriptUrl), true, 'falta el controlador progresivo del directorio');
+  const script = readFileSync(scriptUrl, 'utf8');
+  assert.match(script, /PAGE_SIZE\s*=\s*24/);
+  assert.match(script, /URLSearchParams/);
+  assert.doesNotMatch(script, /innerHTML|eval\(|new Function\(/);
+});
