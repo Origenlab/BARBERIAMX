@@ -7,9 +7,10 @@ type Barbershop = CollectionEntry<'barberiasCdmx'>['data'];
 interface Props {
   barbershop: Barbershop;
   related: Barbershop[];
+  total: number;
 }
 
-const { barbershop, related } = Astro.props;
+const { barbershop, related, total } = Astro.props;
 const days = [
   ['monday', 'Lunes'],
   ['tuesday', 'Martes'],
@@ -29,7 +30,7 @@ const verifiedDate = new Intl.DateTimeFormat('es-MX', {
 const status = {
   verified: { label: 'Fuentes contrastadas', className: '' },
   reviewed: { label: 'Datos públicos revisados', className: 'cdmx-status--reviewed' },
-  partial: { label: 'Datos parciales', className: 'cdmx-status--partial' },
+  partial: { label: 'Información limitada', className: 'cdmx-status--partial' },
 }[barbershop.verificationStatus];
 ---
 <main id="main" class="cdmx-detail">
@@ -41,7 +42,7 @@ const status = {
     </nav>
 
     <header class="cdmx-detail__header">
-      <div>
+      <div class="cdmx-detail__intro">
         <p class="cdmx-eyebrow">Ficha editorial · {barbershop.borough}</p>
         <h1>{barbershop.name}</h1>
         <p class="cdmx-detail__lead">{barbershop.description}</p>
@@ -53,16 +54,22 @@ const status = {
       </aside>
     </header>
 
+    <dl class="cdmx-detail__quick" aria-label="Resumen de la ficha">
+      <div><dt>Colonia</dt><dd>{barbershop.neighborhood}</dd></div>
+      <div><dt>Alcaldía</dt><dd>{barbershop.borough}</dd></div>
+      <div><dt>Teléfono</dt><dd><span class="cdmx-phone">{barbershop.telephone}</span></dd></div>
+      <div><dt>Código postal</dt><dd>{barbershop.postalCode}</dd></div>
+    </dl>
+
     <div class="cdmx-detail__grid">
       <div class="cdmx-detail__main">
         <section class="cdmx-panel" aria-labelledby="datos-contacto">
           <p class="cdmx-section-number">01</p>
-          <h2 id="datos-contacto">Datos de la barbería</h2>
+          <h2 id="datos-contacto">Ubicación y contacto</h2>
           <dl class="cdmx-detail__facts">
-            <div><dt>Colonia</dt><dd>{barbershop.neighborhood}</dd></div>
-            <div><dt>Alcaldía</dt><dd>{barbershop.borough}</dd></div>
             <div><dt>Domicilio</dt><dd>{barbershop.address}</dd></div>
             <div><dt>Teléfono</dt><dd><span class="cdmx-phone">{barbershop.telephone}</span></dd></div>
+            <div><dt>Código postal</dt><dd>{barbershop.postalCode}</dd></div>
           </dl>
           <p class="cdmx-note">El teléfono se muestra únicamente como dato informativo. Confirma disponibilidad y horario directamente con el establecimiento antes de acudir.</p>
         </section>
@@ -74,10 +81,21 @@ const status = {
             {barbershop.services.map((service) => <li>{service}</li>)}
           </ul>
         </section>
+
+        <section class="cdmx-panel cdmx-transparency" aria-labelledby="transparencia-editorial">
+          <p class="cdmx-section-number">03</p>
+          <h2 id="transparencia-editorial">Transparencia editorial</h2>
+          <p>Esta ficha reúne información pública disponible para facilitar una comparación básica. No constituye una recomendación, un ranking ni una reseña del establecimiento.</p>
+          <dl>
+            <div><dt>Estado de los datos</dt><dd>{status.label}</dd></div>
+            <div><dt>Última revisión</dt><dd><time datetime={barbershop.verifiedAt}>{verifiedDate}</time></dd></div>
+          </dl>
+          <p class="cdmx-note">Los datos pueden cambiar después de la fecha de revisión. Si detectas una corrección necesaria, comunícala al equipo editorial de Barbería.mx.</p>
+        </section>
       </div>
 
       <aside class="cdmx-panel cdmx-hours" aria-labelledby="horario-semanal">
-        <p class="cdmx-section-number">03</p>
+        <p class="cdmx-section-number">04</p>
         <h2 id="horario-semanal">Horario publicado</h2>
         <dl>
           {days.map(([day, label]) => (
@@ -104,6 +122,6 @@ const status = {
       </div>
     </section>}
 
-    <a class="cdmx-back" href="/ciudad-de-mexico/">← Volver a las 45 barberías en CDMX</a>
+    <a class="cdmx-back" href="/ciudad-de-mexico/">← Volver a las {total} barberías en CDMX</a>
   </div>
 </main>
