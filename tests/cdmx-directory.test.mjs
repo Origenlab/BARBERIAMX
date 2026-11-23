@@ -130,6 +130,7 @@ test('el esquema y las rutas de CDMX son componentes dedicados', () => {
 test('el catálogo compacto ofrece filtros combinables y paginación progresiva', () => {
   const index = readFileSync(new URL('src/pages/ciudad-de-mexico/index.astro', root), 'utf8');
   const card = readFileSync(new URL('src/components/BarbershopCard.astro', root), 'utf8');
+  const styles = readFileSync(new URL('src/styles/editorial.css', root), 'utf8');
 
   assert.match(index, /const total = barbershops\.length/);
   assert.match(index, /\$\{total\} fichas/);
@@ -156,4 +157,10 @@ test('el catálogo compacto ofrece filtros combinables y paginación progresiva'
   assert.match(script, /PAGE_SIZE\s*=\s*24/);
   assert.match(script, /URLSearchParams/);
   assert.doesNotMatch(script, /innerHTML|eval\(|new Function\(/);
+
+  assert.match(styles, /\.cdmx-catalog\s*\{/);
+  assert.match(styles, /\.cdmx-filter-panel\s*\{/);
+  assert.match(styles, /\.cdmx-pagination\s*\{/);
+  assert.match(styles, /\.cdmx-detail__quick\s*\{/);
+  assert.match(styles, /@media\s*\(prefers-reduced-motion:\s*reduce\)/);
 });
