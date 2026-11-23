@@ -86,7 +86,7 @@ test('las superficies editoriales no conservan rankings, precios ni conteos obso
 
   assert.doesNotMatch(article, /ranking-number|ranking-price|Barberías destacadas|\$\d/);
   assert.match(article, /120 fichas/);
-  assert.doesNotMatch(pages, /45 fichas verificadas|<dt>Fichas<\/dt><dd>5<\/dd>|Cinco barberías/);
+  assert.doesNotMatch(pages, /45 fichas|<dt>Fichas<\/dt><dd>5<\/dd>|Cinco barberías/);
 });
 
 test('cada ficha conserva trazabilidad y solo datos publicables', () => {
