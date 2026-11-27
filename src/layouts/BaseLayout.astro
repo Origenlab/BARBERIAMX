@@ -37,7 +37,6 @@ const socialImage = image.startsWith('http') ? image : absoluteUrl(image);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="ahrefs-site-verification" content="40cd9b4cc4c260d40efb96782881710bbb25965aa5bbb6d072dee8e4bf18b4f5" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content={robots} />
@@ -64,7 +63,6 @@ const socialImage = image.startsWith('http') ? image : absoluteUrl(image);
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     {schema.map((node) => <script type="application/ld+json" is:inline set:html={serializeJsonLd(node)} />)}
-    <script src={`https://analytics.ahrefs.com/analytics.js`} data-key={site.analytics.ahrefsKey} async></script>
   </head>
   <body class={bodyClass}>
     <a href="#main" class="ed-skip">Saltar al contenido</a>
